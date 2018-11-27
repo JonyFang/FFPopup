@@ -96,7 +96,7 @@ typedef struct FFPopupLayout FFPopupLayout;
 
 extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical);
 
-extern const FFPopupLayout FFPopupLayoutCenter;
+extern const FFPopupLayout FFPopupLayout_Center;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -165,6 +165,12 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion The default value is `NO`.
  */
 @property (nonatomic, assign) BOOL shouldDismissOnContentTouch;
+
+/**
+ A block to be executed when showing animation started.
+ The default value is nil.
+ */
+@property (nonatomic, copy, nullable) void(^willStartShowingBlock)(void);
 
 /**
  A block to be executed when showing animation finished.
@@ -258,17 +264,25 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)dismissAnimated:(BOOL)animated;
 
 #pragma mark - ReadOnly Properties
-
 @property (nonatomic, strong, readonly) UIView *backgroundView;
 @property (nonatomic, strong, readonly) UIView *containerView;
 @property (nonatomic, assign, readonly) BOOL isBeingShown;
 @property (nonatomic, assign, readonly) BOOL isShowing;
 @property (nonatomic, assign, readonly) BOOL isBeingDismissed;
 
-- (void)willStartShowing;
-- (void)didFinishShowing;
-- (void)willStartDismissing;
-- (void)didFinishDismissing;
+@end
+
+#pragma mark - UIView Category
+@interface UIView (FFPopup)
+/**
+ Iterate the subviews, if you find a FFPopup and block it.
+ */
+- (void)containsPopupBlock:(void (^)(FFPopup *popup))block;
+
+/**
+ Iterate over superviews until you find a FFPopup and dismiss it.
+ */
+- (void)dismissShowingPopup;
 
 @end
 
