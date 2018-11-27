@@ -294,6 +294,86 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
             } else {
                 ///Otherwise use relative layout. Default value is center.
                 NSValue *layoutValue = parameters[kParametersLayoutName];
+                FFPopupLayout layout = layoutValue ? [layoutValue FFPopupLayoutValue] : FFPopupLayout_Center;
+                ///Layout of the horizontal.
+                switch (layout.horizontal) {
+                    case FFPopupHorizontalLayout_Left:
+                        finalContainerFrame.origin.x = 0.0;
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleRightMargin;
+                        break;
+                    case FFPopupHoricontalLayout_Right:
+                        finalContainerFrame.origin.x = CGRectGetWidth(strongSelf.bounds) - CGRectGetWidth(containerFrame);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleLeftMargin;
+                        break;
+                    case FFPopupHorizontalLayout_LeftOfCenter:
+                        finalContainerFrame.origin.x = floorf(CGRectGetWidth(strongSelf.bounds) / 3.0 - CGRectGetWidth(containerFrame) * 0.5);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+                        break;
+                    case FFPopupHorizontalLayout_RightOfCenter:
+                        finalContainerFrame.origin.x = floorf(CGRectGetWidth(strongSelf.bounds) * 2.0 / 3.0 - CGRectGetWidth(containerFrame) * 0.5);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+                        break;
+                    case FFPopupHorizontalLayout_Center:
+                        finalContainerFrame.origin.x = floorf((CGRectGetWidth(strongSelf.bounds) - CGRectGetWidth(containerFrame)) * 0.5);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+                        break;
+                    default:
+                        break;
+                }
+                ///Layout of the vertical.
+                switch (layout.vertical) {
+                    case FFPopupVerticalLayout_Top:
+                        finalContainerFrame.origin.y = 0.0;
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleBottomMargin;
+                        break;
+                    case FFPopupVerticalLayout_AboveCenter:
+                        finalContainerFrame.origin.y = floorf(CGRectGetHeight(self.bounds) / 3.0 - CGRectGetHeight(containerFrame) * 0.5);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+                        break;
+                    case FFPopupVerticalLayout_Center:
+                        finalContainerFrame.origin.y = floorf((CGRectGetHeight(self.bounds) - CGRectGetHeight(containerFrame)) * 0.5);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+                        break;
+                    case FFPopupVerticalLayout_BelowCenter:
+                        finalContainerFrame.origin.y = floorf(CGRectGetHeight(self.bounds) * 2.0 / 3.0 - CGRectGetHeight(containerFrame) * 0.5);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+                        break;
+                    case FFPopupVerticalLayout_Bottom:
+                        finalContainerFrame.origin.y = CGRectGetHeight(self.bounds) - CGRectGetHeight(containerFrame);
+                        containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleTopMargin;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
+            strongSelf.containerView.autoresizingMask = containerAutoresizingMask;
+            
+            /// Animate contentView if needed.
+            switch (strongSelf.showType) {
+                case FFPopupShowType_FadeIn: {
+                    strongSelf.containerView.alpha = 0.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    strongSelf.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+                        strongSelf.containerView.alpha = 1.0;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_GrowIn: break;
+                case FFPopupShowType_ShrinkIn: break;
+                case FFPopupShowType_SlideInFromTop: break;
+                case FFPopupShowType_SlideInFromBottom: break;
+                case FFPopupShowType_SlideInFromLeft: break;
+                case FFPopupShowType_SlideInFromRight: break;
+                case FFPopupShowType_BounceIn: break;
+                case FFPopupShowType_BounceInFromTop: break;
+                case FFPopupShowType_BounceInFromBottom: break;
+                case FFPopupShowType_BounceInFromLeft: break;
+                case FFPopupShowType_BounceInFromRight: break;
+                default:
+                    break;
             }
         });
     }

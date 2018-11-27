@@ -67,6 +67,7 @@ typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
  */
 typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
     FFPopupVerticalLayout_Custom,
+    FFPopupVerticalLayout_Top,
     FFPopupVerticalLayout_AboveCenter,
     FFPopupVerticalLayout_Center,
     FFPopupVerticalLayout_BelowCenter,
