@@ -26,21 +26,34 @@ FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerti
 
 const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFPopupVerticalLayout_Center };
 
+/**
+ FFPopupLayout Value.
+ Typically, you should not use this class directly.
+ */
 @interface NSValue (FFPopupLayout)
 + (NSValue *)valueWithFFPopupLayout:(FFPopupLayout)layout;
 - (FFPopupLayout)FFPopupLayoutValue;
 @end
 
+/**
+ Interate the views to find a FFPopup.
+ */
+@interface UIView (FFPopup)
+///Iterate the subviews, if you find a FFPopup and block it.
+- (void)containsPopupBlock:(void (^)(FFPopup *popup))block;
+///Iterate over superviews until you find a FFPopup and dismiss it.
+- (void)dismissShowingPopup:(BOOL)animated;
+@end
+
+/**
+ FFPopup Class.
+ */
 @interface FFPopup ()
 @property (nonatomic, strong) UIView *backgroundView;
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, assign) BOOL isShowing;
 @property (nonatomic, assign) BOOL isBeingShown;
 @property (nonatomic, assign) BOOL isBeingDismissed;
-
-- (void)updateInterfaceOrientation;
-- (void)didChangeStatusbarOrientation:(NSNotification *)notification;
-- (void)dismiss;
 
 @end
 
@@ -144,6 +157,10 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
             [popup dismissAnimated:NO];
         }];
     }
+}
+
++ (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated {
+    [view dismissShowingPopup:animated];
 }
 
 #pragma mark - Public Instance Methods
@@ -680,7 +697,19 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
 
 @end
 
-#pragma mark - UIView Category
+@implementation NSValue (FFPopupLayout)
++ (NSValue *)valueWithFFPopupLayout:(FFPopupLayout)layout {
+    return [NSValue valueWithBytes:&layout objCType:@encode(FFPopupLayout)];
+}
+
+- (FFPopupLayout)FFPopupLayoutValue {
+    FFPopupLayout layout;
+    [self getValue:&layout];
+    return layout;
+}
+
+@end
+
 @implementation UIView (FFPopup)
 - (void)containsPopupBlock:(void (^)(FFPopup *popup))block {
     for (UIView *subview in self.subviews) {
@@ -692,28 +721,15 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
     }
 }
 
-- (void)dismissShowingPopup {
+- (void)dismissShowingPopup:(BOOL)animated {
     UIView *view = self;
     while (view) {
         if ([view isKindOfClass:[FFPopup class]]) {
-            [(FFPopup *)view dismissAnimated:YES];
+            [(FFPopup *)view dismissAnimated:animated];
             break;
         }
         view = view.superview;
     }
-}
-
-@end
-
-@implementation NSValue (FFPopupLayout)
-+ (NSValue *)valueWithFFPopupLayout:(FFPopupLayout)layout {
-    return [NSValue valueWithBytes:&layout objCType:@encode(FFPopupLayout)];
-}
-
-- (FFPopupLayout)FFPopupLayoutValue {
-    FFPopupLayout layout;
-    [self getValue:&layout];
-    return layout;
 }
 
 @end

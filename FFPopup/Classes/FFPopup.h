@@ -221,6 +221,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)dismissAllPopups;
 
 /**
+ Dismiss super popup.
+ Iterate over superviews until you find a `FFPopup` and dismiss it.
+ */
++ (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated;
+
+/**
  Show popup with center layout.
  `FFPopupVerticalLayout_Center` & `FFPopupHorizontalLayout_Center`
  Showing animation is determined by `showType`.
@@ -270,20 +276,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) BOOL isBeingShown;
 @property (nonatomic, assign, readonly) BOOL isShowing;
 @property (nonatomic, assign, readonly) BOOL isBeingDismissed;
-
-@end
-
-#pragma mark - UIView Category
-@interface UIView (FFPopup)
-/**
- Iterate the subviews, if you find a FFPopup and block it.
- */
-- (void)containsPopupBlock:(void (^)(FFPopup *popup))block;
-
-/**
- Iterate over superviews until you find a FFPopup and dismiss it.
- */
-- (void)dismissShowingPopup;
 
 @end
 
