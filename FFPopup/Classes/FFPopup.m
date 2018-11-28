@@ -177,6 +177,10 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
     [self showWithParameters:parameters.mutableCopy];
 }
 
+- (void)dismissAnimated:(BOOL)animated {
+    [self dismiss:animated];
+}
+
 #pragma mark - Private Methods
 - (void)showWithParameters:(NSDictionary *)parameters {
     /// If popup can be shown
@@ -287,17 +291,17 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
             if (centerValue) {
                 CGPoint centerInView = centerValue.CGPointValue;
                 CGPoint centerInSelf;
-                ///Convert coordinates from provided view to self.
+                /// Convert coordinates from provided view to self.
                 UIView *fromView = parameters[kParametersViewName];
                 centerInSelf = fromView != nil ? [self convertPoint:centerInView toView:fromView] : centerInView;
                 finalContainerFrame.origin.x = centerInSelf.x - CGRectGetWidth(finalContainerFrame)*0.5;
                 finalContainerFrame.origin.y = centerInSelf.y - CGRectGetHeight(finalContainerFrame)*0.5;
                 containerAutoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
             } else {
-                ///Otherwise use relative layout. Default value is center.
+                /// Otherwise use relative layout. Default value is center.
                 NSValue *layoutValue = parameters[kParametersLayoutName];
                 FFPopupLayout layout = layoutValue ? [layoutValue FFPopupLayoutValue] : FFPopupLayout_Center;
-                ///Layout of the horizontal.
+                /// Layout of the horizontal.
                 switch (layout.horizontal) {
                     case FFPopupHorizontalLayout_Left:
                         finalContainerFrame.origin.x = 0.0;
@@ -323,7 +327,7 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
                         break;
                 }
                 
-                ///Layout of the vertical.
+                /// Layout of the vertical.
                 switch (layout.vertical) {
                     case FFPopupVerticalLayout_Top:
                         finalContainerFrame.origin.y = 0.0;
@@ -495,12 +499,183 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
     }
 }
 
+- (void)dismiss:(BOOL)animated {
+    if (_isShowing && !_isBeingDismissed) {
+        _isShowing = NO;
+        _isBeingShown = NO;
+        _isBeingDismissed = YES;
+        
+        /// Cancel previous `-dismissAnimated:` requests.
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(dismiss) object:nil];
+        
+        if (self.willStartDismissingBlock) {
+            self.willStartDismissingBlock();
+        }
+        
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            __strong typeof(weakSelf) strongSelf = self;
+            /// Animate backgroundView if needed.
+            void (^backgroundAnimationBlock)(void) = ^(void) {
+                strongSelf.backgroundView.alpha = 0.0;
+            };
+            
+            /// Custom backgroundView dismissing animation.
+            if (animated && strongSelf.showType != FFPopupShowType_None) {
+                CGFloat duration = strongSelf.dismissOutDuration ?: kDefaultAnimateDuration;
+                [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:backgroundAnimationBlock completion:NULL];
+            } else {
+                backgroundAnimationBlock();
+            }
+            
+            /// Setup completion block.
+            void (^completionBlock)(BOOL) = ^(BOOL finished) {
+                [strongSelf removeFromSuperview];
+                strongSelf.isBeingShown = NO;
+                strongSelf.isShowing = NO;
+                strongSelf.isBeingDismissed = NO;
+                if (strongSelf.didFinishDismissingBlock) {
+                    strongSelf.didFinishDismissingBlock();
+                }
+            };
+            
+            NSTimeInterval bounceDurationA = strongSelf.dismissOutDuration ?: kDefaultAnimateDuration;
+            NSTimeInterval bounceDurationB = bounceDurationA * 2.0;
+            
+            /// Animate contentView if needed.
+            if (animated) {
+                NSTimeInterval dismissOutDuration = strongSelf.dismissOutDuration ?: kDefaultAnimateDuration;
+                switch (strongSelf.dismissType) {
+                    case FFPopupDismissType_FadeOut: {
+                        [UIView animateWithDuration:dismissOutDuration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+                            strongSelf.containerView.alpha = 0.0;
+                        } completion:completionBlock];
+                    }   break;
+                    case FFPopupDismissType_GrowOut: {
+                        [UIView animateKeyframesWithDuration:dismissOutDuration delay:0.0 options:kAnimationOptionCurve animations:^{
+                            strongSelf.containerView.alpha = 0.0;
+                            strongSelf.containerView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+                        } completion:completionBlock];
+                    }   break;
+                    case FFPopupDismissType_ShrinkOut: {
+                        [UIView animateWithDuration:dismissOutDuration delay:0.0 options:kAnimationOptionCurve animations:^{
+                            strongSelf.containerView.alpha = 0.0;
+                            strongSelf.containerView.transform = CGAffineTransformMakeScale(0.8, 0.8);
+                        } completion:completionBlock];
+                    }   break;
+                    case FFPopupDismissType_SlideOutToTop: {
+                        CGRect finalFrame = strongSelf.containerView.frame;
+                        finalFrame.origin.y = - CGRectGetHeight(finalFrame);
+                        [UIView animateWithDuration:dismissOutDuration delay:0.0 options:kAnimationOptionCurve animations:^{
+                            strongSelf.containerView.frame = finalFrame;
+                        } completion:completionBlock];
+                    }   break;
+                    case FFPopupDismissType_SlideOutToBottom: {
+                        CGRect finalFrame = strongSelf.containerView.frame;
+                        finalFrame.origin.y = CGRectGetHeight(strongSelf.bounds);
+                        [UIView animateWithDuration:dismissOutDuration delay:0.0 options:kAnimationOptionCurve animations:^{
+                            strongSelf.containerView.frame = finalFrame;
+                        } completion:completionBlock];
+                    }   break;
+                    case FFPopupDismissType_SlideOutToLeft: {
+                        CGRect finalFrame = strongSelf.containerView.frame;
+                        finalFrame.origin.x = - CGRectGetWidth(finalFrame);
+                        [UIView animateWithDuration:dismissOutDuration delay:0.0 options:kAnimationOptionCurve animations:^{
+                            strongSelf.containerView.frame = finalFrame;
+                        } completion:completionBlock];
+                    }   break;
+                    case FFPopupDismissType_SlideOutToRight: {
+                        CGRect finalFrame = strongSelf.containerView.frame;
+                        finalFrame.origin.x = CGRectGetWidth(strongSelf.bounds);
+                        [UIView animateWithDuration:dismissOutDuration delay:0.0 options:kAnimationOptionCurve animations:^{
+                            strongSelf.containerView.frame = finalFrame;
+                        } completion:completionBlock];
+                    }   break;
+                    case FFPopupDismissType_BounceOut: {
+                        [UIView animateWithDuration:bounceDurationA delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                            strongSelf.containerView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+                        } completion:^(BOOL finished) {
+                            [UIView animateWithDuration:bounceDurationB delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                                strongSelf.containerView.alpha = 0.0;
+                                strongSelf.containerView.transform = CGAffineTransformMakeScale(0.1, 0.1);
+                            } completion:completionBlock];
+                        }];
+                    }   break;
+                    case FFPopupDismissType_BounceOutToTop: {
+                        CGRect finalFrameA = strongSelf.containerView.frame;
+                        finalFrameA.origin.y += 20.0;
+                        CGRect finalFrameB = strongSelf.containerView.frame;
+                        finalFrameB.origin.y = - CGRectGetHeight(finalFrameB);
+                        [UIView animateWithDuration:bounceDurationA delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                            strongSelf.containerView.frame = finalFrameA;
+                        } completion:^(BOOL finished) {
+                            [UIView animateWithDuration:bounceDurationB delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                                strongSelf.containerView.frame = finalFrameB;
+                            } completion:completionBlock];
+                        }];
+                    }   break;
+                    case FFPopupDismissType_BounceOutToBottom: {
+                        CGRect finalFrameA = strongSelf.containerView.frame;
+                        finalFrameA.origin.y -= 20;
+                        CGRect finalFrameB = strongSelf.containerView.frame;
+                        finalFrameB.origin.y = CGRectGetHeight(self.bounds);
+                        [UIView animateWithDuration:bounceDurationA delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                            strongSelf.containerView.frame = finalFrameA;
+                        } completion:^(BOOL finished) {
+                            [UIView animateWithDuration:bounceDurationB delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                                strongSelf.containerView.frame = finalFrameB;
+                            } completion:completionBlock];
+                        }];
+                    }   break;
+                    case FFPopupDismissType_BounceOutToLeft: {
+                        CGRect finalFrameA = strongSelf.containerView.frame;
+                        finalFrameA.origin.x += 20.0;
+                        CGRect finalFrameB = strongSelf.containerView.frame;
+                        finalFrameB.origin.x = - CGRectGetWidth(finalFrameB);
+                        [UIView animateWithDuration:bounceDurationA delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                            strongSelf.containerView.frame = finalFrameA;
+                        } completion:^(BOOL finished) {
+                            [UIView animateWithDuration:bounceDurationB delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                                strongSelf.containerView.frame = finalFrameB;
+                            } completion:completionBlock];
+                        }];
+                    }   break;
+                    case FFPopupDismissType_BounceOutToRight: {
+                        CGRect finalFrameA = strongSelf.containerView.frame;
+                        finalFrameA.origin.x -= 20.0;
+                        CGRect finalFrameB = strongSelf.containerView.frame;
+                        finalFrameB.origin.x = CGRectGetWidth(strongSelf.bounds);
+                        [UIView animateWithDuration:bounceDurationA delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                            strongSelf.containerView.frame = finalFrameA;
+                        } completion:^(BOOL finished) {
+                            [UIView animateWithDuration:bounceDurationB delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                                strongSelf.containerView.frame = finalFrameB;
+                            } completion:completionBlock];
+                        }];
+                    }   break;
+                    default: {
+                        strongSelf.containerView.alpha = 0.0;
+                        completionBlock(YES);
+                    }   break;
+                }
+            } else {
+                strongSelf.containerView.alpha = 0.0;
+                completionBlock(YES);
+            }
+        });
+    }
+}
+
 - (void)didChangeStatusbarOrientation:(NSNotification *)notification {
     [self updateInterfaceOrientation];
 }
 
 - (void)updateInterfaceOrientation {
     self.frame = self.window.bounds;
+}
+
+- (void)dismiss {
+    [self dismiss:YES];
 }
 
 @end
