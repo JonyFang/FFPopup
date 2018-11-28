@@ -8,6 +8,8 @@
 
 #import "FFPopup.h"
 
+static const CGFloat kDefaultSpringDamping = 0.8;
+static const CGFloat kDefaultSpringVelocity = 10.0;
 static const CGFloat kDefaultAnimateDuration = 0.15;
 static const NSInteger kAnimationOptionCurve = (7 << 16);
 static NSString *const kParametersViewName = @"parameters.view";
@@ -320,6 +322,7 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
                     default:
                         break;
                 }
+                
                 ///Layout of the vertical.
                 switch (layout.vertical) {
                     case FFPopupVerticalLayout_Top:
@@ -361,19 +364,132 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
                         strongSelf.containerView.alpha = 1.0;
                     } completion:completionBlock];
                 }   break;
-                case FFPopupShowType_GrowIn: break;
-                case FFPopupShowType_ShrinkIn: break;
-                case FFPopupShowType_SlideInFromTop: break;
-                case FFPopupShowType_SlideInFromBottom: break;
-                case FFPopupShowType_SlideInFromLeft: break;
-                case FFPopupShowType_SlideInFromRight: break;
-                case FFPopupShowType_BounceIn: break;
-                case FFPopupShowType_BounceInFromTop: break;
-                case FFPopupShowType_BounceInFromBottom: break;
-                case FFPopupShowType_BounceInFromLeft: break;
-                case FFPopupShowType_BounceInFromRight: break;
-                default:
-                    break;
+                case FFPopupShowType_GrowIn: {
+                    strongSelf.containerView.alpha = 0.0;
+                    strongSelf.containerView.frame = finalContainerFrame;
+                    strongSelf.containerView.transform = CGAffineTransformMakeScale(0.85, 0.85);
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 options:kAnimationOptionCurve animations:^{
+                        strongSelf.containerView.alpha = 1.0;
+                        strongSelf.containerView.transform = CGAffineTransformIdentity;
+                        strongSelf.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_ShrinkIn: {
+                    strongSelf.containerView.alpha = 0.0;
+                    strongSelf.frame = finalContainerFrame;
+                    strongSelf.transform = CGAffineTransformMakeScale(1.1, 1.1);
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 options:kAnimationOptionCurve animations:^{
+                        strongSelf.containerView.alpha = 1.0;
+                        strongSelf.frame = finalContainerFrame;
+                        strongSelf.transform = CGAffineTransformIdentity;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_SlideInFromTop: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.y = - CGRectGetHeight(finalContainerFrame);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 options:kAnimationOptionCurve animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_SlideInFromBottom: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.y = CGRectGetHeight(self.bounds);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 options:kAnimationOptionCurve animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_SlideInFromLeft: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.x = - CGRectGetWidth(finalContainerFrame);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 options:kAnimationOptionCurve animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_SlideInFromRight: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.x = CGRectGetWidth(self.bounds);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 options:kDefaultAnimateDuration animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_BounceIn: {
+                    strongSelf.containerView.alpha = 0.0;
+                    strongSelf.containerView.frame = finalContainerFrame;
+                    strongSelf.containerView.transform = CGAffineTransformMakeScale(0.1, 0.1);
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:kDefaultSpringDamping initialSpringVelocity:kDefaultSpringVelocity options:0 animations:^{
+                        strongSelf.containerView.alpha = 1.0;
+                        strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_BounceInFromTop: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.y = - CGRectGetHeight(finalContainerFrame);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:kDefaultSpringDamping initialSpringVelocity:kDefaultSpringVelocity options:0 animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_BounceInFromBottom: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.y = CGRectGetHeight(self.bounds);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:kDefaultSpringDamping initialSpringVelocity:kDefaultSpringVelocity options:0 animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_BounceInFromLeft: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.x = - CGRectGetWidth(finalContainerFrame);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:kDefaultSpringDamping initialSpringVelocity:kDefaultSpringVelocity options:0 animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                case FFPopupShowType_BounceInFromRight: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    CGRect startFrame = finalContainerFrame;
+                    startFrame.origin.x = CGRectGetWidth(self.bounds);
+                    strongSelf.containerView.frame = startFrame;
+                    CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
+                    [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:kDefaultSpringDamping initialSpringVelocity:kDefaultSpringVelocity options:0 animations:^{
+                        strongSelf.containerView.frame = finalContainerFrame;
+                    } completion:completionBlock];
+                }   break;
+                default: {
+                    strongSelf.containerView.alpha = 1.0;
+                    strongSelf.containerView.frame = finalContainerFrame;
+                    strongSelf.containerView.transform = CGAffineTransformIdentity;
+                    completionBlock(YES);
+                }   break;
             }
         });
     }
