@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FFHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    FFHomeViewController *vc = [FFHomeViewController new];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.window setRootViewController:navVC];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
