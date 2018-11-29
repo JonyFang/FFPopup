@@ -14,6 +14,7 @@
 		D3A5F74321AF851F005888D9 /* FFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74221AF851F005888D9 /* FFHomeViewController.m */; };
 		D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */; };
 		D3A5F74F21AF9868005888D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */; };
+		D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */; };
 		DCC5697964AAFEA23761005D /* Pods_FFPopup_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0B5EF842E5D0E9BC4D591F /* Pods_FFPopup_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSelectionViewController.m; sourceTree = "<group>"; };
 		D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFPopup_Example-Prefix.pch"; sourceTree = "<group>"; };
+		D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCustomContentView.h; sourceTree = "<group>"; };
+		D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCustomContentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 				D3A5F72C21AF790C005888D9 /* AppDelegate.m */,
 				D3A5F74C21AF97C8005888D9 /* Home */,
 				D3A5F74D21AF97CF005888D9 /* Selection */,
+				D3A5F75121AFD9D1005888D9 /* CustomContentView */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -132,6 +136,15 @@
 				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
 			);
 			path = Selection;
+			sourceTree = "<group>";
+		};
+		D3A5F75121AFD9D1005888D9 /* CustomContentView */ = {
+			isa = PBXGroup;
+			children = (
+				D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */,
+				D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */,
+			);
+			path = CustomContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +272,7 @@
 				D3A5F73B21AF790F005888D9 /* main.m in Sources */,
 				D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */,
 				D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */,
+				D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
