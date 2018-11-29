@@ -13,6 +13,8 @@
 		D3A5F73521AF790F005888D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73421AF790F005888D9 /* Assets.xcassets */; };
 		D3A5F73821AF790F005888D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */; };
 		D3A5F73B21AF790F005888D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F73A21AF790F005888D9 /* main.m */; };
+		D3A5F74321AF851F005888D9 /* FFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74221AF851F005888D9 /* FFHomeViewController.m */; };
+		D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */; };
 		DCC5697964AAFEA23761005D /* Pods_FFPopup_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0B5EF842E5D0E9BC4D591F /* Pods_FFPopup_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,10 @@
 		D3A5F73721AF790F005888D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3A5F73921AF790F005888D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3A5F73A21AF790F005888D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3A5F74121AF851F005888D9 /* FFHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeViewController.h; sourceTree = "<group>"; };
+		D3A5F74221AF851F005888D9 /* FFHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeViewController.m; sourceTree = "<group>"; };
+		D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFSelectionViewController.h; sourceTree = "<group>"; };
+		D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 			children = (
 				D3A5F72B21AF790C005888D9 /* AppDelegate.h */,
 				D3A5F72C21AF790C005888D9 /* AppDelegate.m */,
+				D3A5F74121AF851F005888D9 /* FFHomeViewController.h */,
+				D3A5F74221AF851F005888D9 /* FFHomeViewController.m */,
+				D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */,
+				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
 				D3A5F72E21AF790C005888D9 /* ViewController.h */,
 				D3A5F72F21AF790C005888D9 /* ViewController.m */,
 				D3A5F73121AF790C005888D9 /* Main.storyboard */,
@@ -215,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A5F73021AF790C005888D9 /* ViewController.m in Sources */,
+				D3A5F74321AF851F005888D9 /* FFHomeViewController.m in Sources */,
 				D3A5F73B21AF790F005888D9 /* main.m in Sources */,
+				D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */,
 				D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
