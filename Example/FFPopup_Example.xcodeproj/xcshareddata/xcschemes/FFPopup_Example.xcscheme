@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F20FB68539AC85B2B9AB11E1B8092922"
-               BuildableName = "Pods_FFPopup_Example.framework"
-               BlueprintName = "Pods-FFPopup_Example"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "D3A5F72721AF790C005888D9"
+               BuildableName = "FFPopup_Example.app"
+               BlueprintName = "FFPopup_Example"
+               ReferencedContainer = "container:FFPopup_Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3A5F72721AF790C005888D9"
+            BuildableName = "FFPopup_Example.app"
+            BlueprintName = "FFPopup_Example"
+            ReferencedContainer = "container:FFPopup_Example.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,16 +51,22 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F20FB68539AC85B2B9AB11E1B8092922"
-            BuildableName = "Pods_FFPopup_Example.framework"
-            BlueprintName = "Pods-FFPopup_Example"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "D3A5F72721AF790C005888D9"
+            BuildableName = "FFPopup_Example.app"
+            BlueprintName = "FFPopup_Example"
+            ReferencedContainer = "container:FFPopup_Example.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -60,6 +75,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3A5F72721AF790C005888D9"
+            BuildableName = "FFPopup_Example.app"
+            BlueprintName = "FFPopup_Example"
+            ReferencedContainer = "container:FFPopup_Example.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

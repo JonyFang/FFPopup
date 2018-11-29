@@ -33,6 +33,7 @@
 		D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFSelectionViewController.h; sourceTree = "<group>"; };
 		D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSelectionViewController.m; sourceTree = "<group>"; };
 		D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFPopup_Example-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 		D3A5F74B21AF8987005888D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */,
 				D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */,
 				D3A5F73421AF790F005888D9 /* Assets.xcassets */,
 				D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */,
@@ -232,12 +234,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FFPopup/FFPopup.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFPopup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -391,6 +395,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FFPopup_Example/Resources/FFPopup_Example-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FFPopup_Example/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -409,6 +415,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FFPopup_Example/Resources/FFPopup_Example-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FFPopup_Example/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

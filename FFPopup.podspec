@@ -24,8 +24,10 @@ Pod::Spec.new do |s|
   s.requires_arc        = true
   s.framework           = "UIKit"
   s.platform            = :ios, "8.0"
+  s.ios.deployment_target = "8.0"
 
   s.source_files        = "FFPopup/Classes/*.{h,m}"
+  #s.public_header_files = "FFPopup/*.{h}"
   s.source              = { :git => "https://github.com/JonyFang/FFPopup.git", :tag => "#{s.version}" }
 
 end

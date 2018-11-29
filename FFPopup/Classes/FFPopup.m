@@ -206,8 +206,8 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
         _isShowing = NO;
         _isBeingDismissed = NO;
         
-        if (!_willStartShowingBlock) {
-            _willStartShowingBlock();
+        if (self.willStartShowingBlock != nil) {
+            self.willStartShowingBlock();
         }
         
         __weak typeof(self) weakSelf = self;
@@ -556,8 +556,9 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
                 }
             };
             
-            NSTimeInterval bounceDurationA = strongSelf.dismissOutDuration ?: kDefaultAnimateDuration;
-            NSTimeInterval bounceDurationB = bounceDurationA * 2.0;
+            NSTimeInterval duration = strongSelf.dismissOutDuration ?: kDefaultAnimateDuration;
+            NSTimeInterval bounceDurationA = duration * 1.0 / 3.0;
+            NSTimeInterval bounceDurationB = duration * 2.0 / 3.0;
             
             /// Animate contentView if needed.
             if (animated) {

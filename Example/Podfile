@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 inhibit_all_warnings!
 use_frameworks!
@@ -6,6 +7,11 @@ def local_pods
   pod 'FFPopup', :path => '../'
 end
 
+def shared_pods
+  pod 'Masonry'
+end
+
 target 'FFPopup_Example' do
   local_pods
+  shared_pods
 end

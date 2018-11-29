@@ -1,16 +1,23 @@
 PODS:
   - FFPopup (0.0.1)
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - FFPopup (from `../`)
+  - Masonry
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
 
 EXTERNAL SOURCES:
   FFPopup:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FFPopup: 7ae42f3b55593c7127ad801d1ad8bf2d7d02d5e3
+  FFPopup: 954746aa5dac4dbec5d9f3ff7b201c0ecee5ecaf
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: e36daec4bb24b8493659212b04b0253b97660ad5
+PODFILE CHECKSUM: 5caac1d460e28a431228c6a9bdde44dbe4bf83aa
 
 COCOAPODS: 1.5.3
