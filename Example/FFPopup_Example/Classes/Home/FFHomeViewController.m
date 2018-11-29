@@ -30,7 +30,7 @@
     [self.view addSubview:self.popupButton];
     /// Make Constraints
     [_popupButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view.mas_bottom).offset(-44);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-22);
         make.right.equalTo(self.view.mas_right).offset(-44);
         make.left.equalTo(self.view.mas_left).offset(44);
         make.height.mas_equalTo(44);
