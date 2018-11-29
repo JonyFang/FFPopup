@@ -1,0 +1,6 @@
+framework module Pods_FFPopup_Example {
+  umbrella header "Pods-FFPopup_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

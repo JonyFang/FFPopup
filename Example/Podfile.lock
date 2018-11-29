@@ -1,0 +1,16 @@
+PODS:
+  - FFPopup (0.0.1)
+
+DEPENDENCIES:
+  - FFPopup (from `../`)
+
+EXTERNAL SOURCES:
+  FFPopup:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FFPopup: 7ae42f3b55593c7127ad801d1ad8bf2d7d02d5e3
+
+PODFILE CHECKSUM: e36daec4bb24b8493659212b04b0253b97660ad5
+
+COCOAPODS: 1.5.3
