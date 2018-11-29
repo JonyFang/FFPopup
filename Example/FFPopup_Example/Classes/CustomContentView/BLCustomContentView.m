@@ -49,20 +49,20 @@
     }];
     [_descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.titleLabel.mas_bottom).offset(26.0);
-        make.left.equalTo(self.contentView.mas_left).offset(16.0);
-        make.right.equalTo(self.contentView.mas_right).offset(-16.0);
+        make.left.equalTo(self.contentView.mas_left).offset(20.0);
+        make.right.equalTo(self.contentView.mas_right).offset(-20.0);
     }];
     [_closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.contentView.mas_bottom).offset(-20.0);
-        make.left.equalTo(self.contentView.mas_left).offset(16.0);
-        make.right.equalTo(self.contentView.mas_right).offset(-16.0);
-        make.height.mas_equalTo(32.0);
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-18.0);
+        make.left.equalTo(self.contentView.mas_left).offset(20.0);
+        make.right.equalTo(self.contentView.mas_right).offset(-20.0);
+        make.height.mas_equalTo(44.0);
     }];
 }
 
 - (void)closeButtonClicked:(UIButton *)button {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickedCloseButton)]) {
-        [self.delegate didClickedCloseButton];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickedCloseButton:)]) {
+        [self.delegate didClickedCloseButton:button];
     }
 }
 
@@ -104,10 +104,10 @@
         _closeButton = [UIButton new];
         _closeButton.backgroundColor = [UIColor colorWithRed:0.0/255.0 green:111.0/255.0 blue:255.0/255.0 alpha:1.0];
         _closeButton.titleLabel.textColor = UIColor.whiteColor;
-        _closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0];
+        _closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
         [_closeButton setTitle:@"Dismiss Popup" forState:UIControlStateNormal];
         [_closeButton addTarget:self action:@selector(closeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        _closeButton.layer.cornerRadius = 16;
+        _closeButton.layer.cornerRadius = 22;
         _closeButton.layer.masksToBounds = YES;
     }
     return _closeButton;

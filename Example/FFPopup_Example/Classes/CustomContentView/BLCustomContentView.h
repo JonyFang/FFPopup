@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol BLCustomContentViewDelegate <NSObject>
-- (void)didClickedCloseButton;
+- (void)didClickedCloseButton:(UIButton *)button;
 @end
 
 @interface BLCustomContentView : UIView
