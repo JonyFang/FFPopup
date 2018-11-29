@@ -102,7 +102,6 @@
 				D3A5F72C21AF790C005888D9 /* AppDelegate.m */,
 				D3A5F74C21AF97C8005888D9 /* Home */,
 				D3A5F74D21AF97CF005888D9 /* Selection */,
-				D3A5F75121AFD9D1005888D9 /* CustomContentView */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -123,8 +122,8 @@
 		D3A5F74C21AF97C8005888D9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D3A5F74121AF851F005888D9 /* FFHomeViewController.h */,
-				D3A5F74221AF851F005888D9 /* FFHomeViewController.m */,
+				D3A5F75621AFF216005888D9 /* Controllers */,
+				D3A5F75521AFF20D005888D9 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -138,13 +137,22 @@
 			path = Selection;
 			sourceTree = "<group>";
 		};
-		D3A5F75121AFD9D1005888D9 /* CustomContentView */ = {
+		D3A5F75521AFF20D005888D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */,
 				D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */,
 			);
-			path = CustomContentView;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3A5F75621AFF216005888D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3A5F74121AF851F005888D9 /* FFHomeViewController.h */,
+				D3A5F74221AF851F005888D9 /* FFHomeViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
