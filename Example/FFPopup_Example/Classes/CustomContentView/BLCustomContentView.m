@@ -70,7 +70,7 @@
 - (UIView *)contentView {
     if (!_contentView) {
         _contentView = [UIView new];
-        _contentView.backgroundColor = UIColor.whiteColor;
+        _contentView.backgroundColor = [UIColor colorWithRed:251.0/255.0 green:251.0/255.0 blue:251.0/255.0 alpha:1.0];
         _contentView.layer.cornerRadius = 6.0;
         _contentView.layer.masksToBounds = YES;
     }
