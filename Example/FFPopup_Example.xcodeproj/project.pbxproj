@@ -131,8 +131,8 @@
 		D3A5F74D21AF97CF005888D9 /* Selection */ = {
 			isa = PBXGroup;
 			children = (
-				D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */,
-				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
+				D3A5F75721AFF252005888D9 /* Controllers */,
+				D3A5F75821AFF25A005888D9 /* Views */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -153,6 +153,22 @@
 				D3A5F74221AF851F005888D9 /* FFHomeViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D3A5F75721AFF252005888D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */,
+				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D3A5F75821AFF25A005888D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
