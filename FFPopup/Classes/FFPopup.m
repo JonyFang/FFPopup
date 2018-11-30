@@ -89,19 +89,8 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
         _isShowing = NO;
         _isBeingDismissed = NO;
         
-        self.backgroundView = [UIView new];
-        _backgroundView.backgroundColor = UIColor.clearColor;
-        _backgroundView.userInteractionEnabled = NO;
-        _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _backgroundView.frame = self.bounds;
-        
-        self.containerView = [UIView new];
-        _containerView.autoresizesSubviews = NO;
-        _containerView.userInteractionEnabled = YES;
-        _containerView.backgroundColor = UIColor.clearColor;
-        
-        [self addSubview:_backgroundView];
-        [self addSubview:_containerView];
+        [self addSubview:self.backgroundView];
+        [self addSubview:self.containerView];
         
         /// Register for notifications
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeStatusbarOrientation:) name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
@@ -698,6 +687,28 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
 
 - (void)dismiss {
     [self dismiss:YES];
+}
+
+#pragma mark - Properties
+- (UIView *)backgroundView {
+    if (!_backgroundView) {
+        _backgroundView = [UIView new];
+        _backgroundView.backgroundColor = UIColor.clearColor;
+        _backgroundView.userInteractionEnabled = NO;
+        _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _backgroundView.frame = self.bounds;
+    }
+    return _backgroundView;
+}
+
+- (UIView *)containerView {
+    if (!_containerView) {
+        _containerView = [UIView new];
+        _containerView.autoresizesSubviews = NO;
+        _containerView.userInteractionEnabled = YES;
+        _containerView.backgroundColor = UIColor.clearColor;
+    }
+    return _containerView;
 }
 
 @end
