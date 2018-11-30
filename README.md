@@ -236,7 +236,23 @@ The default value is `FFPopupMaskType_Dimmed`.
 Creat a new popup with custom values.
 
 ```objc
+/**
+ Convenience Initializers
+ Creat a new popup with `contentView`.
+ */
 + (FFPopup *)popupWithContentView:(UIView *)contentView;
+
+/**
+ Convenience Initializers
+ Creat a new popup with custom values.
+ 
+ @param contentView The view you want to appear in popup.
+ @param showType    The default value is `FFPopupShowType_ShrinkIn`.
+ @param dismissType The default value is `FFPopupDismissType_ShrinkOut`.
+ @param maskType    The default value is `FFPopupMaskType_Dimmed`.
+ @param shouldDismissOnBackgroundTouch  The default value is `YES`.
+ @param shouldDismissOnContentTouch     The default value is `NO`.
+ */
 + (FFPopup *)popupWithContentView:(UIView *)contentView
                          showType:(FFPopupShowType)showType
                       dismissType:(FFPopupDismissType)dismissType
@@ -248,23 +264,70 @@ Creat a new popup with custom values.
 #### 7,Showing the Popup
 
 ```objc
+/**
+ Show popup with center layout.
+ `FFPopupVerticalLayout_Center` & `FFPopupHorizontalLayout_Center`
+ Showing animation is determined by `showType`.
+ */
 - (void)show;
+
+/**
+ Show popup with specified layout.
+ Showing animation is determined by `showType`.
+ */
 - (void)showWithLayout:(FFPopupLayout)layout;
+
+/**
+ Show and then dismiss popup after `duration`.
+ If duration is `0.0` or `less`, it will be considered infinity.
+ */
 - (void)showWithDuration:(NSTimeInterval)duration;
+
+/**
+ Show popup with specified `layout` and then dismissed after `duration`.
+ If duration is `0.0` or `less`, it will be considered infinity.
+ */
 - (void)showWithLayout:(FFPopupLayout)layout duration:(NSTimeInterval)duration;
+
+/**
+ Show popup at point in view's coordinate system.
+ If view is nil, will use screen base coordinates.
+ */
 - (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view;
+
+/**
+ Show popup at point in view's coordinate system and then dismissed after duration.
+ If view is nil, will use screen base coordinates.
+ If duration is `0.0` or `less`, it will be considered infinity.
+ */
 - (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view duration:(NSTimeInterval)duration;
 ```
 
 #### 8.Dismissing the Popup
 
 ```objc
+/**
+ Dismiss popup.
+ Use `dismissType` if animated is `YES`.
+ */
 - (void)dismissAnimated:(BOOL)animated;
 ```
 
 ```objc
+ /**
+ Dismiss all the popups in the app.
+ */
 + (void)dismissAllPopups;
+
+/**
+ Dismiss the popup for contentView.
+ */
 + (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated;
+
+/**
+ Dismiss super popup.
+ Iterate over superviews until you find a `FFPopup` and dismiss it.
+ */
 + (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated;
 ```
 
