@@ -116,8 +116,7 @@ Import the library where you want to use it.
 ```objc
 #import <FFPopup.h>
 
-FFPopup *popup = [FFPopup popupWithContentView:self.contentView];
-[popup show];
+[[FFPopup popupWithContentView:self.contentView] show];
 
 // Do something...
 
