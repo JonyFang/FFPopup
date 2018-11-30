@@ -193,7 +193,7 @@ The default value is `FFPopupMaskType_Dimmed`.
 | FFPopupMaskType_Clear |
 | FFPopupMaskType_Dimmed |
 
-#### 4.Durations
+#### 4.Other Properties
 
 | Property Name | Description | Default Value |
 | :------ | :------ | :------: |
@@ -203,14 +203,74 @@ The default value is `FFPopupMaskType_Dimmed`.
 | shouldDismissOnBackgroundTouch | If `YES`, the popup will dismiss when background is touched. | YES |
 | shouldDismissOnContentTouch | If `YES`, the popup will dismiss when content view is touched. | NO |
 
+#### 5.Blocks
+
+```objc
+/**
+ A block to be executed when showing animation started.
+ The default value is nil.
+ */
+@property (nonatomic, copy, nullable) void(^willStartShowingBlock)(void);
+
+/**
+ A block to be executed when showing animation finished.
+ The default value is nil.
+ */
+@property (nonatomic, copy, nullable) void(^didFinishShowingBlock)(void);
+
+/**
+ A block to be executed when dismissing animation started.
+ The default value is nil.
+ */
+@property (nonatomic, copy, nullable) void(^willStartDismissingBlock)(void);
+
+/**
+ A block to be executed when dismissing animation finished.
+ The default value is nil.
+ */
+@property (nonatomic, copy, nullable) void(^didFinishDismissingBlock)(void);
+```
+
+#### 6.Convenience Initializers
+
+Creat a new popup with custom values.
+
+```objc
++ (FFPopup *)popupWithContentView:(UIView *)contentView;
++ (FFPopup *)popupWithContentView:(UIView *)contentView showType:(FFPopupShowType)showType dismissType:(FFPopupDismissType)dismissType maskType:(FFPopupMaskType)maskType dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch;
+```
+
+#### 7,Showing the Popup
+
+```objc
+- (void)show;
+- (void)showWithLayout:(FFPopupLayout)layout;
+- (void)showWithDuration:(NSTimeInterval)duration;
+- (void)showWithLayout:(FFPopupLayout)layout duration:(NSTimeInterval)duration;
+- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view;
+- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view duration:(NSTimeInterval)duration;
+```
+
+#### 8.Dismissing the Popup
+
+```objc
+- (void)dismissAnimated:(BOOL)animated;
+```
+
+```objc
++ (void)dismissAllPopups;
++ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated;
++ (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated;
+```
+
 ## Live Demo
 
-## Backers
+My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8) (Never Forget Important Days) is using FFPopup. You can download it and try it on your multiple devices to experience the effect.
 
-## Sponsors
-
-## Contributors
-
-## Donations
+<a href="https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8">
+  <img src="https://github.com/JonyFang/FFPopup/Resources/download-on-the-appstore.png">
+</a>
 
 ## License
+
+`FFPopup` is available under the [MIT license](https://github.com/JonyFang/FFPopup/LICENSE). See the LICENSE file for more info.
