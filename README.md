@@ -237,7 +237,12 @@ Creat a new popup with custom values.
 
 ```objc
 + (FFPopup *)popupWithContentView:(UIView *)contentView;
-+ (FFPopup *)popupWithContentView:(UIView *)contentView showType:(FFPopupShowType)showType dismissType:(FFPopupDismissType)dismissType maskType:(FFPopupMaskType)maskType dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch;
++ (FFPopup *)popupWithContentView:(UIView *)contentView
+                         showType:(FFPopupShowType)showType
+                      dismissType:(FFPopupDismissType)dismissType
+                         maskType:(FFPopupMaskType)maskType
+         dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch
+            dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch;
 ```
 
 #### 7,Showing the Popup
@@ -268,9 +273,9 @@ Creat a new popup with custom values.
 My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8) (Never Forget Important Days) is using FFPopup. You can download it and try it on your multiple devices to experience the effect.
 
 <a href="https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8">
-  <img src="https://github.com/JonyFang/FFPopup/Resources/download-on-the-appstore.png">
+  <img src="/Resources/download-on-the-appstore.png">
 </a>
 
 ## License
 
-`FFPopup` is available under the [MIT license](https://github.com/JonyFang/FFPopup/LICENSE). See the LICENSE file for more info.
+`FFPopup` is available under the [MIT license](/LICENSE). See the LICENSE file for more info.
