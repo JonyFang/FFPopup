@@ -119,13 +119,9 @@ Import the library where you want to use it.
 FFPopup *popup = [FFPopup popupWithContentView:self.contentView];
 [popup show];
 
-__weak typeof(self) weakSelf = self;
-dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-    // Do something...
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [FFPopup dismissPopupForView:weakSelf.contentView animated: YES];
-    });
-});
+// Do something...
+
+[FFPopup dismissPopupForView:self.contentView animated: YES];
 ``` 
 
 - Swift
