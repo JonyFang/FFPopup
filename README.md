@@ -127,9 +127,75 @@ Import the library where you want to use it.
 
 ```swift
 import FFPopup
+
+FFPopup.init(contentView:self.contentView).show()
+
+// Do something...
+
+FFPopup.dismiss(for:self.contentView animated:true)
 ```
 
 ## Customization
+
+#### 1.FFPopupShowType
+
+Animation transition for presenting contentView. Controled how the popup will be presented.
+
+The default value is `FFPopupShowType_ShrinkIn`.
+
+- FFPopupShowType_None
+- FFPopupShowType_FadeIn
+- FFPopupShowType_GrowIn
+- FFPopupShowType_ShrinkIn
+- FFPopupShowType_SlideInFromTop
+- FFPopupShowType_SlideInFromBottom
+- FFPopupShowType_SlideInFromLeft
+- FFPopupShowType_SlideInFromRight
+- FFPopupShowType_BounceIn
+- FFPopupShowType_BounceInFromTop
+- FFPopupShowType_BounceInFromBottom
+- FFPopupShowType_BounceInFromLeft
+- FFPopupShowType_BounceInFromRight
+
+#### 2.FFPopupDismissType
+
+Animation transition for dismissing contentView. Controled how the popup will be dismissed.
+
+The default value is `FFPopupDismissType_ShrinkOut`.
+
+- FFPopupDismissType_None
+- FFPopupDismissType_FadeOut
+- FFPopupDismissType_GrowOut
+- FFPopupDismissType_ShrinkOut
+- FFPopupDismissType_SlideOutToTop
+- FFPopupDismissType_SlideOutToBottom
+- FFPopupDismissType_SlideOutToLeft
+- FFPopupDismissType_SlideOutToRight
+- FFPopupDismissType_BounceOut
+- FFPopupDismissType_BounceOutToTop
+- FFPopupDismissType_BounceOutToBottom
+- FFPopupDismissType_BounceOutToLeft
+- FFPopupDismissType_BounceOutToRight
+
+#### 3.FFPopupMaskType
+
+Mask prevents background touches from passing to underlying views. Controled whether to allow interaction with the underlying view.
+
+The default value is `FFPopupMaskType_Dimmed`.
+
+- FFPopupMaskType_None
+- FFPopupMaskType_Clear
+- FFPopupMaskType_Dimmed
+
+#### 4.Durations
+
+| Property Name | Description | Default Value |
+| :------ | :------ | :------: |
+| dimmedMaskAlpha | Overrides alpha value for dimmed mask. | 0.5 |
+| showInDuration | Overrides animation duration for show in. | 0.15 |
+| dismissOutDuration | Overrides animation duration for dismiss out. | 0.15 |
+| shouldDismissOnBackgroundTouch | If `YES`, the popup will dismiss when background is touched. | YES |
+| shouldDismissOnContentTouch | If `YES`, the popup will dismiss when content view is touched. | NO |
 
 ## Live Demo
 
