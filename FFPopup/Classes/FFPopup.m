@@ -159,6 +159,10 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
     }
 }
 
++ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated {
+    [view dismissShowingPopup:animated];
+}
+
 + (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated {
     [view dismissShowingPopup:animated];
 }

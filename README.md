@@ -12,7 +12,7 @@ FFPopup is a lightweight library for presenting custom views as a popup.
 	- [x] Slide In from top, bottom, left, right
 	- [x] Bounce In
 	- [x] Bounce In from top, bottom, left, right
-	- [ ] Custom
+	- [ ] Support custom
 
 - Support several popup dismiss types
 	- [x] None
@@ -22,7 +22,7 @@ FFPopup is a lightweight library for presenting custom views as a popup.
 	- [x] Slide Out to top, bottom, left, right
 	- [x] Bounce Out
 	- [x] Bounce Out to top, bottom, left, right
-	- [ ] Custom
+	- [ ] Support custom
 
 - Layout the popup in the horizontal direction
 	- [x] Left
@@ -30,7 +30,7 @@ FFPopup is a lightweight library for presenting custom views as a popup.
 	- [x] Center
 	- [x] Right of center
 	- [x] Right
-	- [ ] Custom
+	- [ ] Support custom
 
 - Layout the popup in the vertical direction
 	- [x] Top
@@ -38,14 +38,17 @@ FFPopup is a lightweight library for presenting custom views as a popup.
 	- [x] Center
 	- [x] Below center
 	- [x] Bottom
-	- [ ] Custom
+	- [ ] Support custom
 
 - Controled whether to allow interaction with the underlying view
 	- [x] Allow interaction with underlying view
 	- [x] Don't allow interaction with underlying view
 	- [x] Don't allow interaction with underlying view, dim background
 	- [ ] Don't allow interaction with underlying view, blur background
-	- [ ] Custom
+	- [ ] Support custom
+
+- Others
+	- [ ] Complete Documentation
 
 ## Requirements
 
@@ -64,7 +67,7 @@ $ open FFPopup_Example.xcworkspace
 
 ## Installation
 
-### CocoaPods
+#### CocoaPods
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager, which automates and simplifies the process of using 3rd-party libraries like `FFPopup` in your projects. First, add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
@@ -86,7 +89,7 @@ Second, install `FFPopup` into your project:
 pod install
 ```
 
-### Manually
+#### Manually
 
 Alternatively you can directly add the `FFPopup.h` and `FFPopup.m` source files to your project.
 
@@ -105,6 +108,31 @@ use_frameworks!
 If you added `FFPopup` manually, just add a [bridging header](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html) file to your project with the `FFPopup` header included.
 
 ## Usage
+
+Import the library where you want to use it.
+
+- Objective-C
+
+```objc
+#import <FFPopup.h>
+
+FFPopup *popup = [FFPopup popupWithContentView:self.contentView];
+[popup show];
+
+__weak typeof(self) weakSelf = self;
+dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+	// Do something...
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[FFPopup dismissPopupForView:weakSelf.contentView animated: YES];
+	});
+});
+``` 
+
+- Swift
+
+```swift
+import FFPopup
+```
 
 ## Customization
 

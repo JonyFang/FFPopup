@@ -221,6 +221,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)dismissAllPopups;
 
 /**
+ Dismiss the popup for contentView.
+ */
++ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated;
+
+/**
  Dismiss super popup.
  Iterate over superviews until you find a `FFPopup` and dismiss it.
  */
