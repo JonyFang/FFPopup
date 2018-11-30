@@ -143,19 +143,21 @@ Animation transition for presenting contentView. Controled how the popup will be
 
 The default value is `FFPopupShowType_ShrinkIn`.
 
-- FFPopupShowType_None
-- FFPopupShowType_FadeIn
-- FFPopupShowType_GrowIn
-- FFPopupShowType_ShrinkIn
-- FFPopupShowType_SlideInFromTop
-- FFPopupShowType_SlideInFromBottom
-- FFPopupShowType_SlideInFromLeft
-- FFPopupShowType_SlideInFromRight
-- FFPopupShowType_BounceIn
-- FFPopupShowType_BounceInFromTop
-- FFPopupShowType_BounceInFromBottom
-- FFPopupShowType_BounceInFromLeft
-- FFPopupShowType_BounceInFromRight
+| FFPopupShowType |
+| :------ |
+| FFPopupShowType_None |
+| FFPopupShowType_FadeIn |
+| FFPopupShowType_GrowIn |
+| FFPopupShowType_ShrinkIn |
+| FFPopupShowType_SlideInFromTop |
+| FFPopupShowType_SlideInFromBottom |
+| FFPopupShowType_SlideInFromLeft |
+| FFPopupShowType_SlideInFromRight |
+| FFPopupShowType_BounceIn |
+| FFPopupShowType_BounceInFromTop |
+| FFPopupShowType_BounceInFromBottom |
+| FFPopupShowType_BounceInFromLeft |
+| FFPopupShowType_BounceInFromRight |
 
 #### 2.FFPopupDismissType
 
@@ -163,19 +165,21 @@ Animation transition for dismissing contentView. Controled how the popup will be
 
 The default value is `FFPopupDismissType_ShrinkOut`.
 
-- FFPopupDismissType_None
-- FFPopupDismissType_FadeOut
-- FFPopupDismissType_GrowOut
-- FFPopupDismissType_ShrinkOut
-- FFPopupDismissType_SlideOutToTop
-- FFPopupDismissType_SlideOutToBottom
-- FFPopupDismissType_SlideOutToLeft
-- FFPopupDismissType_SlideOutToRight
-- FFPopupDismissType_BounceOut
-- FFPopupDismissType_BounceOutToTop
-- FFPopupDismissType_BounceOutToBottom
-- FFPopupDismissType_BounceOutToLeft
-- FFPopupDismissType_BounceOutToRight
+| FFPopupDismissType |
+| :------ |
+| FFPopupDismissType_None |
+| FFPopupDismissType_FadeOut |
+| FFPopupDismissType_GrowOut |
+| FFPopupDismissType_ShrinkOut |
+| FFPopupDismissType_SlideOutToTop |
+| FFPopupDismissType_SlideOutToBottom |
+| FFPopupDismissType_SlideOutToLeft |
+| FFPopupDismissType_SlideOutToRight |
+| FFPopupDismissType_BounceOut |
+| FFPopupDismissType_BounceOutToTop |
+| FFPopupDismissType_BounceOutToBottom |
+| FFPopupDismissType_BounceOutToLeft |
+| FFPopupDismissType_BounceOutToRight |
 
 #### 3.FFPopupMaskType
 
@@ -183,9 +187,11 @@ Mask prevents background touches from passing to underlying views. Controled whe
 
 The default value is `FFPopupMaskType_Dimmed`.
 
-- FFPopupMaskType_None
-- FFPopupMaskType_Clear
-- FFPopupMaskType_Dimmed
+| FFPopupMaskType |
+| :------ |
+| FFPopupMaskType_None |
+| FFPopupMaskType_Clear |
+| FFPopupMaskType_Dimmed |
 
 #### 4.Durations
 
