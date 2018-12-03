@@ -1,6 +1,4 @@
-<p align="center">
-  <img height="358" src="/Resources/ffpopup-logo.png" />
-</p>
+![FFPopup](/Resources/ffpopup-logo.png)
 
 *FFPopup is a lightweight library for presenting custom views as a popup.*
 
