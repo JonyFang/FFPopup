@@ -261,7 +261,7 @@ Creat a new popup with custom values.
             dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch;
 ```
 
-#### 7,Showing the Popup
+#### 7.Showing the Popup
 
 ```objc
 /**
