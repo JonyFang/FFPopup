@@ -1,6 +1,6 @@
 ![FFPopup](/Resources/ffpopup-logo.png)
 
-*FFPopup is a lightweight library for presenting custom views as a popup.*
+> FFPopup is a lightweight library for presenting custom views as a popup.
 
 ## Features
 
