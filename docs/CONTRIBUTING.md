@@ -7,8 +7,7 @@ We welcome any types of contribution, not only code. You can help by
 
 - **Q&A**: file issues that you're facing. The more detailed, the better. Offering the steps that can reproduce the issue is the best.
 - **Marketing**: writing blogs or posts, howto's tutorial and so on
-- **Code**: firstly take a look at the [open issues](https://github.com/JonyFang/FFPopup/issues) or [to-do list](https://github.com/caiyue1993/IceCream#make-it-better). You can change the code and raise a PR to us. Even if you couldn't write code, commenting on them, showing that you care about a given issue matters. It really helps.
-- **Money**: maintaining a active project takes time and much effort. We welcome [financial support](https://github.com/caiyue1993/IceCream#donation).
+- **Code**: firstly take a look at the [open issues](https://github.com/JonyFang/FFPopup/issues) or [TODO list](). You can change the code and raise a PR to us. Even if you couldn't write code, commenting on them, showing that you care about a given issue matters. It really helps.
 
 ## How to Pull Request?
 
@@ -16,7 +15,7 @@ Working on your first Pull Request? You can learn how from this official tutoria
 
 ## Questions
 
-If you have any questions, you can file an issue. Or you can reach us at yuecai.nju@gmail.com
+If you have any questions, you can file an issue. Or you can reach us at jony.chunfang@gmail.com
 
 
 

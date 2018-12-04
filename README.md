@@ -331,6 +331,16 @@ Creat a new popup with custom values.
 + (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated;
 ```
 
+## TODO List
+
+This is the to-do list for the FFPopup project. You can join us to become a contributor.
+
+- [ ] Support blur option for background mask
+- [ ] Support for keyboard show/hide
+- [ ] Support for drag-to-dismiss
+
+See the [CONTRIBUTING](/docs/CONTRIBUTING.md) file for contributing guidelines.
+
 ## Live Demo
 
 My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8) (Never Forget Important Days) is using FFPopup. You can download it and try it on your multiple devices to experience the effect.
