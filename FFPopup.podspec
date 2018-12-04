@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name                = "FFPopup"
-  s.version             = "0.0.1"
-  s.summary             = "A lightweight library for presenting custom views as a popup in iOS."
+  s.version             = "0.1.0"
+  s.summary             = "Presenting custom views as a popup in iOS."
 
   s.description         = <<-DESC
   A lightweight library for presenting custom views as a popup in iOS.
@@ -27,7 +27,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
 
   s.source_files        = "FFPopup/Classes/*.{h,m}"
-  #s.public_header_files = "FFPopup/*.{h}"
   s.source              = { :git => "https://github.com/JonyFang/FFPopup.git", :tag => "#{s.version}" }
 
 end
