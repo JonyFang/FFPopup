@@ -1,6 +1,6 @@
-# FFPopup
+![FFPopup](/Resources/ffpopup-logo.png)
 
-FFPopup is a lightweight library for presenting custom views as a popup.
+> FFPopup is a lightweight library for presenting custom views as a popup.
 
 ## Features
 
@@ -261,7 +261,7 @@ Creat a new popup with custom values.
             dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch;
 ```
 
-#### 7,Showing the Popup
+#### 7.Showing the Popup
 
 ```objc
 /**
