@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03E6C18745D7D3CFAD4F513DE97B954B /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = ECBBB506D4D551AB1A637EE3145A459E /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C05E28C46C39569390B0801305229AB /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D90DCCB0EEB93FD571A90346FFD32A3 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C05E28C46C39569390B0801305229AB /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = 48023162B497373A6950BAC487ADE9A2 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CB26840B2CD2CDB40F8A29A935233E3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 61881F60AB333EA86CE7881063A4BA60 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24AA095821D4A1EE5818A0374DFCD08B /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0183E721D7FD6AF70B4A911C1B1B95 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DE42535C0E05A1A3286ED803E85E79E /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4875E63FFAFF84A3CDFE99F28B551E /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -27,12 +27,12 @@
 		7D9BEB9485ECCD971795DBFCF49CCB4D /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 0925CC604B01F156279E8952DDE3EDDB /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		882B2A0F67B11F979070B55065E07C8E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A214B89738295B4A4B00EEB1960E8865 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		892469602EA886064AC260E8CC7E6657 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A649F9297535214EF97548C9EA9FA33 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CBC799D34802DFBB89A6B15C01E720A /* FFPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = B538D9968B359942D92CB9AC1667507D /* FFPopup.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8CBC799D34802DFBB89A6B15C01E720A /* FFPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = D345ED9AC8E92E743C09411C257E80D4 /* FFPopup.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		905D1782AAC32A97C31C04CAC2DF8886 /* Pods-FFPopup_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B1DF6ED27141D56A5AAB42087FD27F /* Pods-FFPopup_Example-dummy.m */; };
 		9DF1CD6D437EF1F3334EF52497102528 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F8187F5CAD09C6C6B2B54C65B4A807C9 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8C408D75305620614559E91CBC969DF /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C550CDA10D592ABB6A0383A3509F05 /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AD1678277DCDA9B2B95CAD46B43FD649 /* FFPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C8897E753D6912F641906548019D96 /* FFPopup-dummy.m */; };
-		BD1EDE00EF6FA48F160E673813D34C34 /* FFPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B1463014ACFBB87151FC2D1C944E1 /* FFPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD1678277DCDA9B2B95CAD46B43FD649 /* FFPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA888A87A1DFEE80A7E61E7318202AC /* FFPopup-dummy.m */; };
+		BD1EDE00EF6FA48F160E673813D34C34 /* FFPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E78E69CC1EF0CEE41BA9596F35D2D60E /* FFPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0E60F0CEF08F6B87CA7E77161017610 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F69E835336330FF06E7268D32D667C9 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7F8E19DF007724D472F873813DC9EF8 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C6D5C71A7A4B3156186EC98A377E8543 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAD12EC4165B2CC0B80A5E7168037F4B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 96DCAB46CA2931B8140F2639F17404AF /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,9 +69,10 @@
 		0925CC604B01F156279E8952DDE3EDDB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		0E3CD255E2A20A595BB583427DEA17A8 /* Pods_FFPopup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FFPopup_Example.framework; path = "Pods-FFPopup_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19365A72460A64C15164BBEAD839DC31 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A55B2BD43EA3E9C9D7D9BDCF85042D1 /* FFPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FFPopup.modulemap; sourceTree = "<group>"; };
 		1F0183E721D7FD6AF70B4A911C1B1B95 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		1FB8A9BDAB144F118F7F74E1F2B74097 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
-		298D9F51524943120D769F90DE5F8758 /* FFPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FFPopup.xcconfig; sourceTree = "<group>"; };
+		23167F479F12EA9E8408D2CA891E9B8A /* FFPopup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = FFPopup.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2B8F2E880302754E4049F36E08CDE6ED /* Pods-FFPopup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FFPopup_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2F69E835336330FF06E7268D32D667C9 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
@@ -79,16 +80,18 @@
 		36C40591902578632718E317104564A2 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
 		3839A1AD8E883475BF8F8C6274F8A953 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
 		3980E01C213ECEDEABAC38C1CFD3946D /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		4A715AC4258CF69DB21F55A9BD699CA2 /* FFPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FFPopup-prefix.pch"; sourceTree = "<group>"; };
+		3B5754B8743F4BA12AF71936C2CC25B0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		42B96ECE0460E281BAD490772E68EC72 /* FFPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FFPopup.xcconfig; sourceTree = "<group>"; };
+		48023162B497373A6950BAC487ADE9A2 /* FFPopup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FFPopup.h; path = FFPopup/Classes/FFPopup.h; sourceTree = "<group>"; };
+		4AA888A87A1DFEE80A7E61E7318202AC /* FFPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FFPopup-dummy.m"; sourceTree = "<group>"; };
+		51BBED228B1C160B42444DFB27BC1F3F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		537638D0C329C86D4ED401237F5D895F /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		5A649F9297535214EF97548C9EA9FA33 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		5D90DCCB0EEB93FD571A90346FFD32A3 /* FFPopup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FFPopup.h; path = FFPopup/Classes/FFPopup.h; sourceTree = "<group>"; };
 		611E26C24600589F4729E5EF510272FB /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		61881F60AB333EA86CE7881063A4BA60 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		61B1DF6ED27141D56A5AAB42087FD27F /* Pods-FFPopup_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FFPopup_Example-dummy.m"; sourceTree = "<group>"; };
-		62B38C11EE79D323A3D0C04C45C384F1 /* FFPopup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = FFPopup.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		681840FC6CC2EE8B2F156CE5C4B4715E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		6E4875E63FFAFF84A3CDFE99F28B551E /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		6FD90A8DB2A3722DBEE5416D3601C4A3 /* FFPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FFPopup-prefix.pch"; sourceTree = "<group>"; };
 		73388DBCD2A819FF3856181EB29137D9 /* Pods-FFPopup_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FFPopup_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		74E404AA6957590324067E330E0EC533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		77F2CF8861113B6F7AAE7EA65C6A7C1B /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -96,31 +99,29 @@
 		7EC0A25DD6F58D072A4ACFC92D9237BF /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		818E990F262EC48F8DAAFD014D7E9234 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		8223B4B9D2A5B7C0F33D1BC8949FA9F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89C8897E753D6912F641906548019D96 /* FFPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FFPopup-dummy.m"; sourceTree = "<group>"; };
-		8B167270F5420B0EC4F646F40F4C1000 /* FFPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FFPopup.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96DCAB46CA2931B8140F2639F17404AF /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		981E1F097D73CFBFB74075001AD6A43F /* CONTRIBUTING.md */ = {isa = PBXFileReference; includeInIndex = 1; name = CONTRIBUTING.md; path = docs/CONTRIBUTING.md; sourceTree = "<group>"; };
 		986CB32629319F7F2256662716334944 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		9C9932FEFB75FBC7A5A8F4F86309959F /* Pods-FFPopup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FFPopup_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A02D339E60E114FCC992372E93245BA1 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		A214B89738295B4A4B00EEB1960E8865 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		A5D6AD032340BA4EDAA07C151FD3E069 /* Pods-FFPopup_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FFPopup_Example-umbrella.h"; sourceTree = "<group>"; };
 		AD04C760F0EB4FE7B23D85D56145A97F /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		ADF18120795BA856E08C3439D61A5FE3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C550CDA10D592ABB6A0383A3509F05 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		B538D9968B359942D92CB9AC1667507D /* FFPopup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FFPopup.m; path = FFPopup/Classes/FFPopup.m; sourceTree = "<group>"; };
-		BA4F06F188F791AA1B0988C728F95128 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		C484EF8499F67EC81CA7E27930A63CDC /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		C6D5C71A7A4B3156186EC98A377E8543 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		CD60639AA22C8753AEAB116FA82B695D /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F4256A596FB646AD2A3EF9CB439D80 /* Pods-FFPopup_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FFPopup_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D345ED9AC8E92E743C09411C257E80D4 /* FFPopup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FFPopup.m; path = FFPopup/Classes/FFPopup.m; sourceTree = "<group>"; };
+		D4BF2A94200E6B298705C6C1EF2C7D8D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E77198CEE0CF691E7915471E9F19CD96 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		E78E69CC1EF0CEE41BA9596F35D2D60E /* FFPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FFPopup-umbrella.h"; sourceTree = "<group>"; };
 		EC5B4796DB98BFF78B5721F56BBDD929 /* FFPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FFPopup.framework; path = FFPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBBB506D4D551AB1A637EE3145A459E /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		F0DA8F93CF85D0968D8410388375B32B /* Pods-FFPopup_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FFPopup_Example-resources.sh"; sourceTree = "<group>"; };
 		F46A39D1F58767E5774B792267D456DB /* Pods-FFPopup_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FFPopup_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F8187F5CAD09C6C6B2B54C65B4A807C9 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		F88B1463014ACFBB87151FC2D1C944E1 /* FFPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FFPopup-umbrella.h"; sourceTree = "<group>"; };
 		FF217FE4E512E3883BAD867868CB42D9 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
 		FF3818136FED67BD32E3A7FAEDE4F68F /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,48 +165,37 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		0DA127C8D188C3A9E92BB217622BADC2 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				62B38C11EE79D323A3D0C04C45C384F1 /* FFPopup.podspec */,
-				BA4F06F188F791AA1B0988C728F95128 /* LICENSE */,
-				681840FC6CC2EE8B2F156CE5C4B4715E /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		242B8AC159F629A9EAC91D278AA002A5 /* FFPopup */ = {
-			isa = PBXGroup;
-			children = (
-				5D90DCCB0EEB93FD571A90346FFD32A3 /* FFPopup.h */,
-				B538D9968B359942D92CB9AC1667507D /* FFPopup.m */,
-				0DA127C8D188C3A9E92BB217622BADC2 /* Pod */,
-				293955D6C9B9AAAFB54642F5271234B9 /* Support Files */,
-			);
-			name = FFPopup;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		293955D6C9B9AAAFB54642F5271234B9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8B167270F5420B0EC4F646F40F4C1000 /* FFPopup.modulemap */,
-				298D9F51524943120D769F90DE5F8758 /* FFPopup.xcconfig */,
-				89C8897E753D6912F641906548019D96 /* FFPopup-dummy.m */,
-				4A715AC4258CF69DB21F55A9BD699CA2 /* FFPopup-prefix.pch */,
-				F88B1463014ACFBB87151FC2D1C944E1 /* FFPopup-umbrella.h */,
-				ADF18120795BA856E08C3439D61A5FE3 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/FFPopup";
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				06CDD10DE71306278CF89108B3036DFD /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64CF195B35141050D708616376AF5B9E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A55B2BD43EA3E9C9D7D9BDCF85042D1 /* FFPopup.modulemap */,
+				42B96ECE0460E281BAD490772E68EC72 /* FFPopup.xcconfig */,
+				4AA888A87A1DFEE80A7E61E7318202AC /* FFPopup-dummy.m */,
+				6FD90A8DB2A3722DBEE5416D3601C4A3 /* FFPopup-prefix.pch */,
+				E78E69CC1EF0CEE41BA9596F35D2D60E /* FFPopup-umbrella.h */,
+				51BBED228B1C160B42444DFB27BC1F3F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FFPopup";
+			sourceTree = "<group>";
+		};
+		79B13EF4E49C24D2CD5AEA1DDEA5FA22 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				981E1F097D73CFBFB74075001AD6A43F /* CONTRIBUTING.md */,
+				23167F479F12EA9E8408D2CA891E9B8A /* FFPopup.podspec */,
+				D4BF2A94200E6B298705C6C1EF2C7D8D /* LICENSE */,
+				3B5754B8743F4BA12AF71936C2CC25B0 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -312,10 +302,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA901405AB4D6EB1DE3804B509EED9C1 /* FFPopup */ = {
+			isa = PBXGroup;
+			children = (
+				48023162B497373A6950BAC487ADE9A2 /* FFPopup.h */,
+				D345ED9AC8E92E743C09411C257E80D4 /* FFPopup.m */,
+				79B13EF4E49C24D2CD5AEA1DDEA5FA22 /* Pod */,
+				64CF195B35141050D708616376AF5B9E /* Support Files */,
+			);
+			name = FFPopup;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		FF346A3A8B5D65733D42598ED0CDA2B1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				242B8AC159F629A9EAC91D278AA002A5 /* FFPopup */,
+				FA901405AB4D6EB1DE3804B509EED9C1 /* FFPopup */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -530,7 +532,7 @@
 /* Begin XCBuildConfiguration section */
 		0EAE69280F7BCBD7E445C4BAB933C59F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 298D9F51524943120D769F90DE5F8758 /* FFPopup.xcconfig */;
+			baseConfigurationReference = 42B96ECE0460E281BAD490772E68EC72 /* FFPopup.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -673,7 +675,7 @@
 		};
 		6B245542B9D751C868660C08A352F9CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 298D9F51524943120D769F90DE5F8758 /* FFPopup.xcconfig */;
+			baseConfigurationReference = 42B96ECE0460E281BAD490772E68EC72 /* FFPopup.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

@@ -1,5 +1,5 @@
 PODS:
-  - FFPopup (0.0.1)
+  - FFPopup (0.1.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FFPopup: 954746aa5dac4dbec5d9f3ff7b201c0ecee5ecaf
+  FFPopup: a14354889f075134de81b1cf1fae16f3bb3fef93
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 5caac1d460e28a431228c6a9bdde44dbe4bf83aa
