@@ -1,10 +1,22 @@
 ![FFPopup](/Resources/ffpopup-logo.png)
 
-[![Version](https://img.shields.io/cocoapods/v/FFPopup.svg)](http://cocoapods.org/pods/FFPopup)
-[![Platform](https://img.shields.io/cocoapods/p/FFPopup.svg)](http://cocoapods.org/pods/FFPopup)
-[![Liscense](https://img.shields.io/cocoapods/l/FFPopup.svg)](http://cocoapods.org/pods/FFPopup)
-[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jonyfang/FFPopup/issues)
-[![Twitter](https://img.shields.io/badge/twitter-@JonyFang-blue.svg?style=flat)](http://twitter.com/jony_chunfang)
+<p align="center">
+	<a href="http://cocoapods.org/pods/FFPopup">
+        <img src="https://img.shields.io/cocoapods/v/FFPopup.svg" alt="Cocoapods Version">
+    </a>
+    <a href="http://cocoapods.org/pods/FFPopup">
+        <img src="https://img.shields.io/cocoapods/p/FFPopup.svg" alt="Platform">
+    </a>
+    <a href="LICENSE">
+        <img src="https://img.shields.io/cocoapods/l/FFPopup.svg" alt="MIT License">
+    </a>
+    <a href="https://github.com/jonyfang/FFPopup/issues">
+        <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="FFPopup Issues">
+    </a>
+    <a href="http://twitter.com/jony_chunfang">
+        <img src="https://img.shields.io/badge/twitter-@JonyFang-blue.svg?style=flat" alt="Twitter">
+    </a>
+</p>
 
 > FFPopup is a lightweight library for presenting custom views as a popup.
 
