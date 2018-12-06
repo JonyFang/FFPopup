@@ -1,5 +1,11 @@
 ![FFPopup](/Resources/ffpopup-logo.png)
 
+[![Version](https://img.shields.io/cocoapods/v/FFPopup.svg)](http://cocoapods.org/pods/FFPopup)
+[![Platform](https://img.shields.io/cocoapods/p/FFPopup.svg)](http://cocoapods.org/pods/FFPopup)
+[![Liscense](https://img.shields.io/cocoapods/l/FFPopup.svg)](http://cocoapods.org/pods/FFPopup)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jonyfang/FFPopup/issues)
+[![Twitter](https://img.shields.io/badge/twitter-@JonyFang-blue.svg?style=flat)](http://twitter.com/jony_chunfang)
+
 > FFPopup is a lightweight library for presenting custom views as a popup.
 
 ## Features
