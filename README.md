@@ -18,7 +18,7 @@
     </a>
 </p>
 
-> FFPopup is a lightweight library for presenting custom views as a popup.
+<p align="center">FFPopup is a lightweight library for presenting custom views as a popup.</p>
 
 ## Features
 
