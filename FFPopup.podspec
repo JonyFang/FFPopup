@@ -18,12 +18,10 @@ Pod::Spec.new do |s|
   s.homepage            = "https://github.com/JonyFang/FFPopup"
   s.license             = { :type => "MIT", :file => "LICENSE" }
   s.author              = { "JonyFang" => "jony.chunfang@gmail.com" }
-  
-  s.social_media_url    = "https://twitter.com/jony_chunfang"
+  s.social_media_url    = "https://www.jonyfang.com"
 
   s.requires_arc        = true
   s.framework           = "UIKit"
-  # s.platform            = :ios, "8.0"
   s.ios.deployment_target = "8.0"
 
   s.source_files        = "FFPopup/Classes/*.{h,m}"
