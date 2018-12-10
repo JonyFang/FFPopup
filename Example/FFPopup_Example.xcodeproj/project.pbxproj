@@ -16,6 +16,7 @@
 		D3A5F74F21AF9868005888D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */; };
 		D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */; };
 		D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */; };
+		D3CA120E21BE6D4400EC8FC7 /* FFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */; };
 		DCC5697964AAFEA23761005D /* Pods_FFPopup_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0B5EF842E5D0E9BC4D591F /* Pods_FFPopup_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCustomContentView.m; sourceTree = "<group>"; };
 		D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeTableViewCell.h; sourceTree = "<group>"; };
 		D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeTableViewCell.m; sourceTree = "<group>"; };
+		D3CA120C21BE6D4400EC8FC7 /* FFTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTableViewCell.h; sourceTree = "<group>"; };
+		D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */,
 				D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */,
 				D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */,
+				D3CA120C21BE6D4400EC8FC7 /* FFTableViewCell.h */,
+				D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			files = (
 				D3A5F74321AF851F005888D9 /* FFHomeViewController.m in Sources */,
 				D3A5F73B21AF790F005888D9 /* main.m in Sources */,
+				D3CA120E21BE6D4400EC8FC7 /* FFTableViewCell.m in Sources */,
 				D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */,
 				D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */,
 				D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */,
