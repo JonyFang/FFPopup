@@ -134,16 +134,13 @@
 		D3A5F75521AFF20D005888D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D3CA121521BE976E00EC8FC7 /* Common */,
 				D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */,
 				D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */,
 				D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */,
 				D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */,
 				D3CA120F21BE765200EC8FC7 /* FFSelectionTableViewCell.h */,
 				D3CA121021BE765200EC8FC7 /* FFSelectionTableViewCell.m */,
-				D3CA120C21BE6D4400EC8FC7 /* FFTableViewCell.h */,
-				D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */,
-				D3CA121221BE96A600EC8FC7 /* FFTableView.h */,
-				D3CA121321BE96A600EC8FC7 /* FFTableView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +154,17 @@
 				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D3CA121521BE976E00EC8FC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D3CA120C21BE6D4400EC8FC7 /* FFTableViewCell.h */,
+				D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */,
+				D3CA121221BE96A600EC8FC7 /* FFTableView.h */,
+				D3CA121321BE96A600EC8FC7 /* FFTableView.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
