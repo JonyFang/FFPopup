@@ -6,12 +6,12 @@
 //  Copyright © 2018年 JonyFang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FFTableViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FFHomeTableViewCell : UITableViewCell
-
+@interface FFHomeTableViewCell : FFTableViewCell
+- (void)updateTitle:(NSString *)title subtitle:(NSString *)subtitle;
 @end
 
 NS_ASSUME_NONNULL_END
