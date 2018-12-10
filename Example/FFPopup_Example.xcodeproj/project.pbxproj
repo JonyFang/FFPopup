@@ -15,6 +15,7 @@
 		D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */; };
 		D3A5F74F21AF9868005888D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */; };
 		D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */; };
+		D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */; };
 		DCC5697964AAFEA23761005D /* Pods_FFPopup_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0B5EF842E5D0E9BC4D591F /* Pods_FFPopup_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFPopup_Example-Prefix.pch"; sourceTree = "<group>"; };
 		D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCustomContentView.h; sourceTree = "<group>"; };
 		D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCustomContentView.m; sourceTree = "<group>"; };
+		D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeTableViewCell.h; sourceTree = "<group>"; };
+		D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +103,8 @@
 			children = (
 				D3A5F72B21AF790C005888D9 /* AppDelegate.h */,
 				D3A5F72C21AF790C005888D9 /* AppDelegate.m */,
-				D3A5F74C21AF97C8005888D9 /* Home */,
-				D3A5F74D21AF97CF005888D9 /* Selection */,
+				D3A5F75621AFF216005888D9 /* Controllers */,
+				D3A5F75521AFF20D005888D9 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -119,29 +122,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D3A5F74C21AF97C8005888D9 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D3A5F75621AFF216005888D9 /* Controllers */,
-				D3A5F75521AFF20D005888D9 /* Views */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		D3A5F74D21AF97CF005888D9 /* Selection */ = {
-			isa = PBXGroup;
-			children = (
-				D3A5F75721AFF252005888D9 /* Controllers */,
-				D3A5F75821AFF25A005888D9 /* Views */,
-			);
-			path = Selection;
-			sourceTree = "<group>";
-		};
 		D3A5F75521AFF20D005888D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */,
 				D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */,
+				D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */,
+				D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,24 +138,10 @@
 			children = (
 				D3A5F74121AF851F005888D9 /* FFHomeViewController.h */,
 				D3A5F74221AF851F005888D9 /* FFHomeViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D3A5F75721AFF252005888D9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
 				D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */,
 				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D3A5F75821AFF25A005888D9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +269,7 @@
 				D3A5F73B21AF790F005888D9 /* main.m in Sources */,
 				D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */,
 				D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */,
+				D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */,
 				D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
