@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FFSelectionTableViewCell : FFTableViewCell
-- (void)cellDidSelected:(BOOL)selected;
+- (void)updateTitle:(NSString *)title selected:(BOOL)selected;
 + (CGFloat)height;
 @end
 

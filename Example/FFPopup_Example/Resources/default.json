@@ -1,13 +1,57 @@
 {
 	"data": {
 		"layout": [
-            {"name": "Horizontal", "selected": "Center", "types": ["Left", "Left of Center", "Center", "Right of Center", "Right"]},
-            {"name": "Vertical", "selected": "Center", "types": ["Top", "Above Center", "Center", "Blow Center", "Bottom"]}
+            {"name": "Horizontal", "types": [
+                {"title": "Left", "type": "1", "selected": "0"},
+                {"title": "Left of Center", "type": "2", "selected": "0"},
+                {"title": "Center", "type": "3", "selected": "1"},
+                {"title": "Right of Center", "type": "4", "selected": "0"},
+                {"title": "Right", "type": "5", "selected": "0"}]
+            },
+            {"name": "Vertical", "types": [
+                {"title": "Top", "type": "1", "selected": "0"},
+                {"title": "Above Center", "type": "2", "selected": "0"},
+                {"title": "Center", "type": "3", "selected": "1"},
+                {"title": "Below Center", "type": "4", "selected": "0"},
+                {"title": "Bottom", "type": "5", "selected": "0"}]
+            }
         ],
-		"mask": {"name": "Show", "selected": "Dimmed", "types": ["None", "Clear", "Dimmed"]},
+		"mask": {"name": "Background", "types": [
+            {"title": "None", "type": "0", "selected": "0"},
+            {"title": "Clear", "type": "1", "selected": "0"},
+            {"title": "Dimmed", "type": "2", "selected": "1"}]
+        },
 		"animation": [
-            {"name": "Show", "selected": "Bounce from Top", "types": ["None", "Fade in", "Grow in", "Shrink in", "Slide from Top", "Slide from Bottom", "Slide from Left", "Slide from Right", "Bounce in", "Bounce from Top", "Bounce from Bottom", "Bounce from Left", "Bounce from Right"]},
-            {"name": "Dismiss", "selected": "Bounce to Bottom", "types": ["None", "Fade out", "Grow out", "Shrink out", "Slide to Top", "Slide to Bottom", "Slide to Left", "Slide to Right", "Bounce out", "Bounce to Top", "Bounce to Bottom", "Bounce to Left", "Bounce to Right"]}
+            {"name": "Show", "types": [
+                {"title": "None", "type": "0", "selected": "0"},
+                {"title": "Fade in", "type": "1", "selected": "0"},
+                {"title": "Grow in", "type": "2", "selected": "0"},
+                {"title": "Shrink in", "type": "3", "selected": "0"},
+                {"title": "Slide from Top", "type": "4", "selected": "0"},
+                {"title": "Slide from Bottom", "type": "5", "selected": "0"},
+                {"title": "Slide from Left", "type": "6", "selected": "0"},
+                {"title": "Slide from Right", "type": "7", "selected": "0"},
+                {"title": "Bounce in", "type": "8", "selected": "0"},
+                {"title": "Bounce from Top", "type": "9", "selected": "1"},
+                {"title": "Bounce from Bottom", "type": "10", "selected": "0"},
+                {"title": "Bounce from Left", "type": "11", "selected": "0"},
+                {"title": "Bounce from Right", "type": "12", "selected": "0"}]
+            },
+            {"name": "Dismiss", "types": [
+                {"title": "None", "type": "0", "selected": "0"},
+                {"title": "Fade out", "type": "1", "selected": "0"},
+                {"title": "Grow out", "type": "2", "selected": "0"},
+                {"title": "Shrink out", "type": "3", "selected": "0"},
+                {"title": "Slide to Top", "type": "4", "selected": "0"},
+                {"title": "Slide to Bottom", "type": "5", "selected": "0"},
+                {"title": "Slide to Left", "type": "6", "selected": "0"},
+                {"title": "Slide to Right", "type": "7", "selected": "0"},
+                {"title": "Bounce out", "type": "8", "selected": "0"},
+                {"title": "Bounce to Top", "type": "9", "selected": "0"},
+                {"title": "Bounce to Bottom", "type": "10", "selected": "1"},
+                {"title": "Bounce to Left", "type": "11", "selected": "0"},
+                {"title": "Bounce to Right", "type": "12", "selected": "0"}]
+            }
         ],
 		"background": {"name": "Dismiss when background is touched", "enable": "1"},
 		"content": {"name": "Dismiss when content is touched", "enable": "0"},

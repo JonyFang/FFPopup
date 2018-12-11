@@ -25,9 +25,11 @@
 }
 
 #pragma mark - Public Methods
-- (void)cellDidSelected:(BOOL)selected {
+- (void)updateTitle:(NSString *)title selected:(BOOL)selected {
     NSString *imageName = selected ? @"" : @"";
     _stateImageView.image = [UIImage imageNamed:imageName];
+    _titleLabel.text = title;
+    _stateImageView.backgroundColor = selected ? [UIColor greenColor] : [UIColor grayColor];
 }
 
 + (CGFloat)height {

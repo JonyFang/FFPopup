@@ -13,6 +13,10 @@
 #import "FFHomeTableViewCell.h"
 #import "FFSelectionTableViewCell.h"
 
+#import "YYModel.h"
+#import "FFPopupModel.h"
+#import "FFPopupHelper.h"
+
 #define K_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define K_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
@@ -20,6 +24,7 @@
 @property (nonatomic, strong) UIButton *popupButton;
 @property (nonatomic, strong) BLCustomContentView *contentView;
 @property (nonatomic, strong) FFTableView *tableView;
+@property (nonatomic, strong) FFPopupModel *model;
 @end
 
 @implementation FFHomeViewController
@@ -28,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViews];
+    [self configureData];
 }
 
 #pragma mark - Private Methods
@@ -48,6 +54,12 @@
     }];
 }
 
+- (void)configureData {
+    FFPopupModel *model = [FFPopupModel yy_modelWithJSON:[FFPopupHelper readLocalFileWithName:@"default"][@"data"]];
+    self.model = model;
+    [_tableView reloadData];
+}
+
 - (void)popupButtonClicked:(UIButton *)button {
     FFPopup *popup = [FFPopup popupWithContentView:self.contentView showType:FFPopupShowType_BounceInFromTop dismissType:FFPopupDismissType_BounceOutToBottom maskType:FFPopupMaskType_Dimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
     [popup show];
@@ -60,22 +72,91 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return section == 0 ? _model.layout.count : (section == 1 ? _model.animation.count : 1);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
-    [cell updateTitle:@"Layout" subtitle:@"center"];
-    return cell;
+    if (indexPath.section == 0) {
+        FFStateItemModel *itemModel = _model.layout[indexPath.row];
+        FFItemModel *item;
+        for (FFItemModel *temp in itemModel.types) {
+            if (temp.selected) {
+                item = temp;
+                break;
+            }
+        }
+        FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
+        [cell updateTitle:itemModel.name subtitle:item.title];
+        return cell;
+    } else if (indexPath.section == 1) {
+        FFStateItemModel *itemModel = _model.animation[indexPath.row];
+        FFItemModel *item = [FFItemModel new];
+        for (FFItemModel *temp in itemModel.types) {
+            if (temp.selected) {
+                item = temp;
+                break;
+            }
+        }
+        FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
+        [cell updateTitle:itemModel.name subtitle:item.title];
+        return cell;
+    } else if (indexPath.section == 2) {
+        FFStateItemModel *itemModel = _model.mask;
+        FFItemModel *item = [FFItemModel new];
+        for (FFItemModel *temp in itemModel.types) {
+            if (temp.selected) {
+                item = temp;
+                break;
+            }
+        }
+        FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
+        [cell updateTitle:itemModel.name subtitle:item.title];
+        return cell;
+    } else if (indexPath.section == 3) {
+        FFActionItemModel *itemModel = _model.background;
+        FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
+        [cell updateTitle:itemModel.name selected:itemModel.enable];
+        return cell;
+    } else if (indexPath.section == 4) {
+        FFActionItemModel *itemModel = _model.content;
+        FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
+        [cell updateTitle:itemModel.name selected:itemModel.enable];
+        return cell;
+    } else {
+        FFActionItemModel *itemModel = _model.duration;
+        FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
+        [cell updateTitle:itemModel.name selected:itemModel.enable];
+        return cell;
+    }
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [FFHomeTableViewCell height];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *header = [UIView new];
+    header.backgroundColor = [UIColor lightGrayColor];
+    return header;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footer = [UIView new];
+    footer.backgroundColor = [UIColor clearColor];
+    return footer;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 22.0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.001;
 }
 
 #pragma mark - Properties
@@ -106,7 +187,7 @@
 
 - (FFTableView *)tableView {
     if (!_tableView) {
-        _tableView = [[FFTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView = [[FFTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
