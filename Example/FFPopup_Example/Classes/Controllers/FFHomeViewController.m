@@ -140,7 +140,7 @@
             return cell;
         }   break;
         default:
-            return UITableViewCell.new; 
+            return UITableViewCell.new;
             break;
     }
 }
