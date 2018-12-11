@@ -9,13 +9,17 @@
 #import "FFHomeViewController.h"
 #import "BLCustomContentView.h"
 #import "FFPopup.h"
+#import "FFTableView.h"
+#import "FFHomeTableViewCell.h"
+#import "FFSelectionTableViewCell.h"
 
 #define K_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define K_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
-@interface FFHomeViewController () <BLCustomContentViewDelegate>
+@interface FFHomeViewController () <BLCustomContentViewDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UIButton *popupButton;
 @property (nonatomic, strong) BLCustomContentView *contentView;
+@property (nonatomic, strong) FFTableView *tableView;
 @end
 
 @implementation FFHomeViewController
@@ -30,12 +34,17 @@
 - (void)setupViews {
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.popupButton];
+    [self.view addSubview:self.tableView];
     /// Make Constraints
     [_popupButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-22);
         make.right.equalTo(self.view.mas_right).offset(-44);
         make.left.equalTo(self.view.mas_left).offset(44);
         make.height.mas_equalTo(44);
+    }];
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.popupButton.mas_top).offset(-22);
     }];
 }
 
@@ -47,6 +56,26 @@
 #pragma mark - BLCustomContentViewDelegate
 - (void)didClickedCloseButton:(UIButton *)button {
     [FFPopup dismissSuperPopupIn:button animated:YES];
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
+    [cell updateTitle:@"Layout" subtitle:@"center"];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [FFHomeTableViewCell height];
 }
 
 #pragma mark - Properties
@@ -73,6 +102,19 @@
         _contentView.delegate = self;
     }
     return _contentView;
+}
+
+- (FFTableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[FFTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        [_tableView registerClass:[FFHomeTableViewCell class] forCellReuseIdentifier:kFFHomeTableViewCell];
+        [_tableView registerClass:[FFSelectionTableViewCell class] forCellReuseIdentifier:kFFSelectionTableViewCell];
+    }
+    return _tableView;
 }
 
 @end

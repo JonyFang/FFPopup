@@ -1,23 +1,27 @@
 PODS:
   - FFPopup (0.1.0)
   - Masonry (1.1.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - FFPopup (from `../`)
   - Masonry
+  - YYModel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
+    - YYModel
 
 EXTERNAL SOURCES:
   FFPopup:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FFPopup: a14354889f075134de81b1cf1fae16f3bb3fef93
+  FFPopup: 17c664c06e7abe2daecad05c1a058a8d928bcc4c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 5caac1d460e28a431228c6a9bdde44dbe4bf83aa
+PODFILE CHECKSUM: af4603205e15d0a51cd07ba26f39f8d743bb8a0e
 
 COCOAPODS: 1.5.3

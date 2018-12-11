@@ -9,6 +9,7 @@ end
 
 def shared_pods
   pod 'Masonry'
+  pod 'YYModel'
 end
 
 target 'FFPopup_Example' do

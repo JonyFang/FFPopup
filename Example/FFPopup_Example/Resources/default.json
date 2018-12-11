@@ -1,0 +1,16 @@
+{
+	"data": {
+		"layout": [
+            {"name": "Horizontal", "selected": "Center", "types": ["Left", "Left of Center", "Center", "Right of Center", "Right"]},
+            {"name": "Vertical", "selected": "Center", "types": ["Top", "Above Center", "Center", "Blow Center", "Bottom"]}
+        ],
+		"mask": {"name": "Show", "selected": "Dimmed", "types": ["None", "Clear", "Dimmed"]},
+		"animation": [
+            {"name": "Show", "selected": "Bounce from Top", "types": ["None", "Fade in", "Grow in", "Shrink in", "Slide from Top", "Slide from Bottom", "Slide from Left", "Slide from Right", "Bounce in", "Bounce from Top", "Bounce from Bottom", "Bounce from Left", "Bounce from Right"]},
+            {"name": "Dismiss", "selected": "Bounce to Bottom", "types": ["None", "Fade out", "Grow out", "Shrink out", "Slide to Top", "Slide to Bottom", "Slide to Left", "Slide to Right", "Bounce out", "Bounce to Top", "Bounce to Bottom", "Bounce to Left", "Bounce to Right"]}
+        ],
+		"background": {"name": "Dismiss when background is touched", "enable": "1"},
+		"content": {"name": "Dismiss when content is touched", "enable": "0"},
+		"duration": {"name": "Duration for dismiss out", "enable": "0"}
+	}
+}

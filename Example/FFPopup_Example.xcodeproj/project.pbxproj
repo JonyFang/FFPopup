@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3472EC621BF95C200E86376 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = D3472EC521BF95C200E86376 /* default.json */; };
 		D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F72C21AF790C005888D9 /* AppDelegate.m */; };
 		D3A5F73521AF790F005888D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73421AF790F005888D9 /* Assets.xcassets */; };
 		D3A5F73821AF790F005888D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		4B0B5EF842E5D0E9BC4D591F /* Pods_FFPopup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFPopup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51543BA1342248409BEFC13E /* Pods-FFPopup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7188CC60FFF3C214650E931F /* Pods-FFPopup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D3472EC521BF95C200E86376 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
 		D3A5F72821AF790C005888D9 /* FFPopup_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFPopup_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A5F72B21AF790C005888D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3A5F72C21AF790C005888D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		D3A5F74B21AF8987005888D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3472EC521BF95C200E86376 /* default.json */,
 				D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */,
 				D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */,
 				D3A5F73421AF790F005888D9 /* Assets.xcassets */,
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A5F73821AF790F005888D9 /* LaunchScreen.storyboard in Resources */,
+				D3472EC621BF95C200E86376 /* default.json in Resources */,
 				D3A5F73521AF790F005888D9 /* Assets.xcassets in Resources */,
 				D3A5F74F21AF9868005888D9 /* Default-568h@2x.png in Resources */,
 			);
@@ -268,6 +272,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FFPopup/FFPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -275,6 +280,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

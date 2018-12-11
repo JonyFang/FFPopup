@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FFSelectionTableViewCell : FFTableViewCell
 - (void)cellDidSelected:(BOOL)selected;
++ (CGFloat)height;
 @end
 
 NS_ASSUME_NONNULL_END

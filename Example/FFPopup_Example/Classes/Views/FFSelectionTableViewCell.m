@@ -30,6 +30,10 @@
     _stateImageView.image = [UIImage imageNamed:imageName];
 }
 
++ (CGFloat)height {
+    return 50.0;
+}
+
 #pragma mark - Private Methods
 - (void)setupViews {
     [self.contentView addSubview:self.titleLabel];
