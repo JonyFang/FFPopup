@@ -10,6 +10,7 @@
 		D3472EC621BF95C200E86376 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = D3472EC521BF95C200E86376 /* default.json */; };
 		D3472ECA21BF983900E86376 /* FFPopupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472EC921BF983900E86376 /* FFPopupModel.m */; };
 		D3472ECD21BF9F6C00E86376 /* FFPopupHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */; };
+		D3472ED021BFC66C00E86376 /* FFSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472ECF21BFC66C00E86376 /* FFSectionHeader.m */; };
 		D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F72C21AF790C005888D9 /* AppDelegate.m */; };
 		D3A5F73521AF790F005888D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73421AF790F005888D9 /* Assets.xcassets */; };
 		D3A5F73821AF790F005888D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,8 @@
 		D3472EC921BF983900E86376 /* FFPopupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPopupModel.m; sourceTree = "<group>"; };
 		D3472ECB21BF9F6C00E86376 /* FFPopupHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopupHelper.h; sourceTree = "<group>"; };
 		D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPopupHelper.m; sourceTree = "<group>"; };
+		D3472ECE21BFC66C00E86376 /* FFSectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFSectionHeader.h; sourceTree = "<group>"; };
+		D3472ECF21BFC66C00E86376 /* FFSectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSectionHeader.m; sourceTree = "<group>"; };
 		D3A5F72821AF790C005888D9 /* FFPopup_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFPopup_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A5F72B21AF790C005888D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3A5F72C21AF790C005888D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				D3CA121521BE976E00EC8FC7 /* Common */,
+				D3472ECE21BFC66C00E86376 /* FFSectionHeader.h */,
+				D3472ECF21BFC66C00E86376 /* FFSectionHeader.m */,
 				D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */,
 				D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */,
 				D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */,
@@ -322,6 +327,7 @@
 				D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */,
 				D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */,
 				D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */,
+				D3472ED021BFC66C00E86376 /* FFSectionHeader.m in Sources */,
 				D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

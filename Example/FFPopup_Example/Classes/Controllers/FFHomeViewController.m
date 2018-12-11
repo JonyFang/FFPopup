@@ -10,6 +10,7 @@
 #import "BLCustomContentView.h"
 #import "FFPopup.h"
 #import "FFTableView.h"
+#import "FFSectionHeader.h"
 #import "FFHomeTableViewCell.h"
 #import "FFSelectionTableViewCell.h"
 
@@ -80,57 +81,67 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        FFStateItemModel *itemModel = _model.layout[indexPath.row];
-        FFItemModel *item;
-        for (FFItemModel *temp in itemModel.types) {
-            if (temp.selected) {
-                item = temp;
-                break;
+    switch (indexPath.section) {
+        case 0: {
+            FFStateItemModel *itemModel = _model.layout[indexPath.row];
+            FFItemModel *item;
+            for (FFItemModel *temp in itemModel.types) {
+                if (temp.selected) {
+                    item = temp;
+                    break;
+                }
             }
-        }
-        FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
-        [cell updateTitle:itemModel.name subtitle:item.title];
-        return cell;
-    } else if (indexPath.section == 1) {
-        FFStateItemModel *itemModel = _model.animation[indexPath.row];
-        FFItemModel *item = [FFItemModel new];
-        for (FFItemModel *temp in itemModel.types) {
-            if (temp.selected) {
-                item = temp;
-                break;
+            FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
+            [cell updateTitle:itemModel.name subtitle:item.title];
+            return cell;
+        }   break;
+        case 1: {
+            FFStateItemModel *itemModel = _model.animation[indexPath.row];
+            FFItemModel *item = [FFItemModel new];
+            for (FFItemModel *temp in itemModel.types) {
+                if (temp.selected) {
+                    item = temp;
+                    break;
+                }
             }
-        }
-        FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
-        [cell updateTitle:itemModel.name subtitle:item.title];
-        return cell;
-    } else if (indexPath.section == 2) {
-        FFStateItemModel *itemModel = _model.mask;
-        FFItemModel *item = [FFItemModel new];
-        for (FFItemModel *temp in itemModel.types) {
-            if (temp.selected) {
-                item = temp;
-                break;
+            FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
+            [cell updateTitle:itemModel.name subtitle:item.title];
+            return cell;
+        }   break;
+        case 2: {
+            FFStateItemModel *itemModel = _model.mask;
+            FFItemModel *item = [FFItemModel new];
+            for (FFItemModel *temp in itemModel.types) {
+                if (temp.selected) {
+                    item = temp;
+                    break;
+                }
             }
-        }
-        FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
-        [cell updateTitle:itemModel.name subtitle:item.title];
-        return cell;
-    } else if (indexPath.section == 3) {
-        FFActionItemModel *itemModel = _model.background;
-        FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
-        [cell updateTitle:itemModel.name selected:itemModel.enable];
-        return cell;
-    } else if (indexPath.section == 4) {
-        FFActionItemModel *itemModel = _model.content;
-        FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
-        [cell updateTitle:itemModel.name selected:itemModel.enable];
-        return cell;
-    } else {
-        FFActionItemModel *itemModel = _model.duration;
-        FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
-        [cell updateTitle:itemModel.name selected:itemModel.enable];
-        return cell;
+            FFHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFHomeTableViewCell];
+            [cell updateTitle:itemModel.name subtitle:item.title];
+            return cell;
+        }   break;
+        case 3: {
+            FFActionItemModel *itemModel = _model.background;
+            FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
+            [cell updateTitle:itemModel.name selected:itemModel.enable];
+            return cell;
+        }   break;
+        case 4: {
+            FFActionItemModel *itemModel = _model.content;
+            FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
+            [cell updateTitle:itemModel.name selected:itemModel.enable];
+            return cell;
+        }   break;
+        case 5: {
+            FFActionItemModel *itemModel = _model.duration;
+            FFSelectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFFSelectionTableViewCell];
+            [cell updateTitle:itemModel.name selected:itemModel.enable];
+            return cell;
+        }   break;
+        default:
+            return UITableViewCell.new; 
+            break;
     }
 }
 
@@ -140,8 +151,31 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *header = [UIView new];
-    header.backgroundColor = [UIColor lightGrayColor];
+    FFSectionHeader *header = [[FFSectionHeader alloc] initWithFrame:CGRectMake(0, 0, K_SCREEN_WIDTH, [FFSectionHeader height])];
+    NSString *title = @"";
+    switch (section) {
+        case 0:
+            title = @"Layout";
+            break;
+        case 1:
+            title = @"Animation";
+            break;
+        case 2:
+            title = @"Mask";
+            break;
+        case 3:
+            title = @"Background";
+            break;
+        case 4:
+            title = @"Content";
+            break;
+        case 5:
+            title = @"Duration";
+            break;
+        default:
+            break;
+    }
+    [header updateTitle:title];
     return header;
 }
 
@@ -152,7 +186,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 22.0;
+    return [FFSectionHeader height];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
