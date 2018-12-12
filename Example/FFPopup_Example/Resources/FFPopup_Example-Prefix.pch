@@ -10,5 +10,6 @@
 #define FFPopup_Example_Prefix_pch
 
 #import "Masonry.h"
+#import "UIColor+FFHex.h"
 
 #endif /* FFPopup_Example_Prefix_pch */
