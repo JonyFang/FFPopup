@@ -22,6 +22,8 @@
 #define K_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define K_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
+static const CGFloat kDefaultDismissAfterDuration = 2.0;
+
 @interface FFHomeViewController () <BLCustomContentViewDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UIButton *popupButton;
 @property (nonatomic, strong) BLCustomContentView *contentView;
@@ -121,7 +123,7 @@
     popup.maskType = maskType;
     popup.shouldDismissOnBackgroundTouch = shouldDismissOnBackgroundTouch;
     popup.shouldDismissOnContentTouch = shouldDismissOnContentTouch;
-    [popup showWithLayout:layout duration:shouldDismissOutAfterDuration ? 2.0 : 0.0];
+    [popup showWithLayout:layout duration:shouldDismissOutAfterDuration ? kDefaultDismissAfterDuration : 0.0];
 }
 
 #pragma mark - BLCustomContentViewDelegate
