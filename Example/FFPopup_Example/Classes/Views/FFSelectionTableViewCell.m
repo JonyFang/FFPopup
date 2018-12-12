@@ -26,10 +26,9 @@
 
 #pragma mark - Public Methods
 - (void)updateTitle:(NSString *)title selected:(BOOL)selected {
-    NSString *imageName = selected ? @"" : @"";
+    NSString *imageName = selected ? @"icon_check_highlight" : @"icon_check_default";
     _stateImageView.image = [UIImage imageNamed:imageName];
     _titleLabel.text = title;
-    _stateImageView.backgroundColor = selected ? [UIColor greenColor] : [UIColor grayColor];
 }
 
 + (CGFloat)height {
@@ -66,8 +65,7 @@
 - (UIImageView *)stateImageView {
     if (!_stateImageView) {
         _stateImageView = [UIImageView new];
-        _stateImageView.image = [UIImage imageNamed:@""];
-        _stateImageView.backgroundColor = UIColor.grayColor;
+        _stateImageView.image = [UIImage imageNamed:@"icon_check_default"];
     }
     return _stateImageView;
 }
