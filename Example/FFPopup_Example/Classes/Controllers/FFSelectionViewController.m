@@ -11,7 +11,7 @@
 #import "FFSelectionTableViewCell.h"
 #import "FFPopupModel.h"
 
-@interface FFSelectionViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FFSelectionViewController () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 @property (nonatomic, strong) FFTableView *tableView;
 @property (nonatomic, strong) FFPopupModel *model;
 @property (nonatomic, assign) FFSelectionType type;
@@ -70,6 +70,7 @@
     [backBtn addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backBarItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backBarItem;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)backButtonClicked:(UIButton *)button {
