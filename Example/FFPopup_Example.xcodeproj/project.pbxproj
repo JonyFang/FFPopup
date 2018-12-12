@@ -19,6 +19,7 @@
 		D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */; };
 		D3A5F74F21AF9868005888D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */; };
 		D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */; };
+		D3B4C21821C11B5000DCF5EB /* UIColor+FFHex.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4C21721C11B5000DCF5EB /* UIColor+FFHex.m */; };
 		D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */; };
 		D3CA120E21BE6D4400EC8FC7 /* FFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */; };
 		D3CA121121BE765200EC8FC7 /* FFSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA121021BE765200EC8FC7 /* FFSelectionTableViewCell.m */; };
@@ -52,6 +53,8 @@
 		D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFPopup_Example-Prefix.pch"; sourceTree = "<group>"; };
 		D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCustomContentView.h; sourceTree = "<group>"; };
 		D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCustomContentView.m; sourceTree = "<group>"; };
+		D3B4C21621C11B5000DCF5EB /* UIColor+FFHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+FFHex.h"; sourceTree = "<group>"; };
+		D3B4C21721C11B5000DCF5EB /* UIColor+FFHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FFHex.m"; sourceTree = "<group>"; };
 		D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeTableViewCell.h; sourceTree = "<group>"; };
 		D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeTableViewCell.m; sourceTree = "<group>"; };
 		D3CA120C21BE6D4400EC8FC7 /* FFTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTableViewCell.h; sourceTree = "<group>"; };
@@ -96,8 +99,6 @@
 			children = (
 				D3472EC821BF983900E86376 /* FFPopupModel.h */,
 				D3472EC921BF983900E86376 /* FFPopupModel.m */,
-				D3472ECB21BF9F6C00E86376 /* FFPopupHelper.h */,
-				D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +138,7 @@
 				D3A5F75621AFF216005888D9 /* Controllers */,
 				D3A5F75521AFF20D005888D9 /* Views */,
 				D3472EC721BF97EF00E86376 /* Models */,
+				D3B4C21521C11B0E00DCF5EB /* Others */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -180,6 +182,17 @@
 				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D3B4C21521C11B0E00DCF5EB /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D3472ECB21BF9F6C00E86376 /* FFPopupHelper.h */,
+				D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */,
+				D3B4C21621C11B5000DCF5EB /* UIColor+FFHex.h */,
+				D3B4C21721C11B5000DCF5EB /* UIColor+FFHex.m */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		D3CA121521BE976E00EC8FC7 /* Common */ = {
@@ -326,6 +339,7 @@
 				D3CA120E21BE6D4400EC8FC7 /* FFTableViewCell.m in Sources */,
 				D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */,
 				D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */,
+				D3B4C21821C11B5000DCF5EB /* UIColor+FFHex.m in Sources */,
 				D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */,
 				D3472ED021BFC66C00E86376 /* FFSectionHeader.m in Sources */,
 				D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */,
