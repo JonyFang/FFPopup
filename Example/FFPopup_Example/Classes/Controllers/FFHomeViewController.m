@@ -64,8 +64,64 @@
 }
 
 - (void)popupButtonClicked:(UIButton *)button {
-    FFPopup *popup = [FFPopup popupWithContentView:self.contentView showType:FFPopupShowType_BounceInFromTop dismissType:FFPopupDismissType_BounceOutToBottom maskType:FFPopupMaskType_Dimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
-    [popup show];
+    FFPopupHorizontalLayout horizontalLayout = FFPopupHorizontalLayout_Center;
+    FFPopupVerticalLayout verticalLayout = FFPopupVerticalLayout_Center;
+    FFPopupShowType showType = FFPopupShowType_BounceInFromTop;
+    FFPopupDismissType dismissType = FFPopupDismissType_BounceOutToBottom;
+    FFPopupMaskType maskType = FFPopupMaskType_Dimmed;
+    BOOL shouldDismissOnBackgroundTouch = YES;
+    BOOL shouldDismissOnContentTouch = NO;
+    BOOL shouldDismissOutAfterDuration = NO;
+    
+    ///Layout
+    for (FFItemModel *item in _model.layout.firstObject.types) {
+        if (item.selected) {
+            horizontalLayout = item.type;
+            break;
+        }
+    }
+    for (FFItemModel *item in _model.layout.lastObject.types) {
+        if (item.selected) {
+            verticalLayout = item.type;
+            break;
+        }
+    }
+    FFPopupLayout layout = FFPopupLayoutMake(horizontalLayout, verticalLayout);
+    ///Animation
+    for (FFItemModel *item in _model.animation.firstObject.types) {
+        if (item.selected) {
+            showType = item.type;
+            break;
+        }
+    }
+    for (FFItemModel *item in _model.animation.lastObject.types) {
+        if (item.selected) {
+            dismissType = item.type;
+            break;
+        }
+    }
+    ///Mask
+    for (FFItemModel *item in _model.mask.types) {
+        if (item.selected) {
+            maskType = item.type;
+            break;
+        }
+    }
+    ///Whether dismiss popup when background is touched.
+    shouldDismissOnBackgroundTouch = _model.background.enable;
+    ///Whether dismiss popup when content is touched.
+    shouldDismissOnContentTouch = _model.content.enable;
+    ///Whether dismiss popup after duration.
+    shouldDismissOutAfterDuration = _model.duration.enable;
+    
+    ///Configure popup & pop it.
+    FFPopup *popup = [FFPopup popupWithContentView:self.contentView];
+    popup.showType = showType;
+    popup.dismissType = dismissType;
+    popup.maskType = maskType;
+    popup.shouldDismissOnBackgroundTouch = shouldDismissOnBackgroundTouch;
+    popup.shouldDismissOnContentTouch = shouldDismissOnContentTouch;
+    [popup showWithLayout:layout duration:shouldDismissOutAfterDuration ? 2.0 : 0.0];
 }
 
 #pragma mark - BLCustomContentViewDelegate
