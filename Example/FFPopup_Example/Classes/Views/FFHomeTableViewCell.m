@@ -12,6 +12,7 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *subtitleLabel;
 @property (nonatomic, strong) UIImageView *arrowImageView;
+@property (nonatomic, strong) UIView *separator;
 @end
 
 @implementation FFHomeTableViewCell
@@ -41,6 +42,7 @@
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.subtitleLabel];
     [self.contentView addSubview:self.arrowImageView];
+    [self.contentView addSubview:self.separator];
     //Make Constraints
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.mas_left).offset(16.0);
@@ -54,6 +56,10 @@
     [_subtitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.arrowImageView.mas_left).offset(-6);
         make.centerY.equalTo(self.arrowImageView.mas_centerY);
+    }];
+    [_separator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.contentView);
+        make.height.mas_equalTo(1);
     }];
 }
 
@@ -84,6 +90,14 @@
         _arrowImageView.image = [UIImage imageNamed:@"icon_arrow_right"];
     }
     return _arrowImageView;
+}
+
+- (UIView *)separator {
+    if (!_separator) {
+        _separator = [UIView new];
+        _separator.backgroundColor = [UIColor FFLightGray];
+    }
+    return _separator;
 }
 
 @end

@@ -11,6 +11,7 @@
 @interface FFSelectionTableViewCell ()
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *stateImageView;
+@property (nonatomic, strong) UIView *separator;
 @end
 
 @implementation FFSelectionTableViewCell
@@ -40,6 +41,7 @@
     self.contentView.backgroundColor = UIColor.whiteColor;
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.stateImageView];
+    [self.contentView addSubview:self.separator];
     ///Make Constraints
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.mas_left).offset(16);
@@ -49,6 +51,10 @@
         make.right.equalTo(self.contentView.mas_right).offset(-16);
         make.centerY.equalTo(self.contentView.mas_centerY);
         make.width.height.mas_equalTo(16);
+    }];
+    [_separator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.contentView);
+        make.height.mas_equalTo(1);
     }];
 }
 
@@ -69,6 +75,14 @@
         _stateImageView.image = [UIImage imageNamed:@"icon_check_default"];
     }
     return _stateImageView;
+}
+
+- (UIView *)separator {
+    if (!_separator) {
+        _separator = [UIView new];
+        _separator.backgroundColor = [UIColor FFLightGray];
+    }
+    return _separator;
 }
 
 @end
