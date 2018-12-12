@@ -39,6 +39,7 @@
 
 #pragma mark - Private Methods
 - (void)setupViews {
+    self.title = @"FFPopup Example";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.popupButton];
     [self.view addSubview:self.tableView];
