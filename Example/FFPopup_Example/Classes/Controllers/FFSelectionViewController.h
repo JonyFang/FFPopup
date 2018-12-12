@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, FFSelectionType) {
 
 @class FFPopupModel;
 @interface FFSelectionViewController : UIViewController
+@property (nonatomic, copy, nullable) void(^selectedBlock)(void);
 - (void)configureWithType:(FFSelectionType)type model:(FFPopupModel *)model;
 @end
 

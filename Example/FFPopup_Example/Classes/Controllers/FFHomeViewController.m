@@ -160,11 +160,32 @@
         case 2:
             type = FFSelectionType_Mask;
             break;
+        case 3: {
+            _model.background.enable = !_model.background.enable;
+            [_tableView reloadData];
+            return;
+        }   break;
+        case 4: {
+            _model.content.enable = !_model.content.enable;
+            [_tableView reloadData];
+            return;
+        }   break;
+        case 5: {
+            _model.duration.enable = !_model.duration.enable;
+            [_tableView reloadData];
+            return;
+        }   break;
         default:
             break;
     }
     FFSelectionViewController *vc = [FFSelectionViewController new];
     [vc configureWithType:type model:_model];
+    __weak typeof(self) weakSelf = self;
+    vc.selectedBlock = ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+        });
+    };
     [self.navigationController pushViewController:vc animated:YES];
 }
 

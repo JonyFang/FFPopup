@@ -54,6 +54,8 @@
             break;
     }
     self.title = title;
+    self.model = model;
+    self.type = type;
     [_tableView reloadData];
 }
 
@@ -99,7 +101,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //
+    for (FFItemModel *temp in _items) {
+        if (temp.selected) {
+            temp.selected = !temp.selected;
+            break;
+        }
+    }
+    FFItemModel *item = _items[indexPath.row];
+    item.selected = !item.selected;
+    [_tableView reloadData];
+    
+    if (_selectedBlock) {
+        _selectedBlock();
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
