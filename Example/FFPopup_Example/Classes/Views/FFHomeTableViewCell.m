@@ -80,8 +80,7 @@
 - (UIImageView *)arrowImageView {
     if (!_arrowImageView) {
         _arrowImageView = [UIImageView new];
-        _arrowImageView.image = [UIImage imageNamed:@""];
-        _arrowImageView.backgroundColor = UIColor.grayColor;
+        _arrowImageView.image = [UIImage imageNamed:@"icon_arrow_right"];
     }
     return _arrowImageView;
 }
