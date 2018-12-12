@@ -11,7 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (FFHex)
-+ (UIColor*)colorWithHex:(NSUInteger)hex;
+
++ (UIColor *)colorWithHex:(NSUInteger)hex;
+
++ (UIColor *)FFBlack;
++ (UIColor *)FFGray;
++ (UIColor *)FFLightGray;
++ (UIColor *)FFBlue;
+
 @end
 
 NS_ASSUME_NONNULL_END
