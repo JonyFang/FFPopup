@@ -10,8 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FFSelectionViewController : UIViewController
+typedef NS_ENUM(NSUInteger, FFSelectionType) {
+    FFSelectionType_None,
+    FFSelectionType_HorizontalLayout,
+    FFSelectionType_VerticalLayout,
+    FFSelectionType_ShowAnimation,
+    FFSelectionType_DismissAnimation,
+    FFSelectionType_Mask
+};
 
+@class FFPopupModel;
+@interface FFSelectionViewController : UIViewController
+- (void)configureWithType:(FFSelectionType)type model:(FFPopupModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END

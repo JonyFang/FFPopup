@@ -7,6 +7,7 @@
 //
 
 #import "FFHomeViewController.h"
+#import "FFSelectionViewController.h"
 #import "BLCustomContentView.h"
 #import "FFPopup.h"
 #import "FFTableView.h"
@@ -147,6 +148,26 @@
 }
 
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    FFSelectionType type = FFSelectionType_None;
+    switch (indexPath.section) {
+        case 0:
+            type = indexPath.row == 0 ? FFSelectionType_HorizontalLayout : FFSelectionType_VerticalLayout;
+            break;
+        case 1:
+            type = indexPath.row == 0 ? FFSelectionType_ShowAnimation : FFSelectionType_DismissAnimation;
+            break;
+        case 2:
+            type = FFSelectionType_Mask;
+            break;
+        default:
+            break;
+    }
+    FFSelectionViewController *vc = [FFSelectionViewController new];
+    [vc configureWithType:type model:_model];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [FFHomeTableViewCell height];
 }
