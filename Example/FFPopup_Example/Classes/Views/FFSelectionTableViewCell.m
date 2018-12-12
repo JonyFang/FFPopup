@@ -37,6 +37,7 @@
 
 #pragma mark - Private Methods
 - (void)setupViews {
+    self.contentView.backgroundColor = UIColor.whiteColor;
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.stateImageView];
     ///Make Constraints
@@ -56,7 +57,7 @@
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
         _titleLabel.font = [UIFont systemFontOfSize:16.0];
-        _titleLabel.textColor = UIColor.blackColor;
+        _titleLabel.textColor = UIColor.FFBlack;
         _titleLabel.textAlignment = NSTextAlignmentLeft;
     }
     return _titleLabel;

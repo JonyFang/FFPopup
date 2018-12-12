@@ -104,7 +104,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *header = [UIView new];
-    header.backgroundColor = [UIColor whiteColor];
+    header.backgroundColor = [UIColor FFLightGray];
     return header;
 }
 
@@ -124,7 +124,7 @@
 - (FFTableView *)tableView {
     if (!_tableView) {
         _tableView = [[FFTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.backgroundColor = [UIColor FFLightGray];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;

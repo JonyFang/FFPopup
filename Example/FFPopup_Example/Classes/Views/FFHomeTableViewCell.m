@@ -37,6 +37,7 @@
 
 #pragma mark - Private Methods
 - (void)setupViews {
+    self.contentView.backgroundColor = UIColor.whiteColor;
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.subtitleLabel];
     [self.contentView addSubview:self.arrowImageView];
@@ -61,7 +62,7 @@
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
         _titleLabel.font = [UIFont systemFontOfSize:16.0];
-        _titleLabel.textColor = UIColor.blackColor;
+        _titleLabel.textColor = UIColor.FFBlack;
         _titleLabel.textAlignment = NSTextAlignmentLeft;
     }
     return _titleLabel;
@@ -71,7 +72,7 @@
     if (!_subtitleLabel) {
         _subtitleLabel = [UILabel new];
         _subtitleLabel.font = [UIFont systemFontOfSize:14.0];
-        _subtitleLabel.textColor = UIColor.grayColor;
+        _subtitleLabel.textColor = UIColor.FFGray;
         _subtitleLabel.textAlignment = NSTextAlignmentRight;
     }
     return _subtitleLabel;

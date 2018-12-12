@@ -41,7 +41,7 @@
 #pragma mark - Private Methods
 - (void)setupViews {
     self.title = @"FFPopup Example";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor FFLightGray];
     [self.view addSubview:self.popupButton];
     [self.view addSubview:self.tableView];
     /// Make Constraints
@@ -219,7 +219,7 @@
 - (UIButton *)popupButton {
     if (!_popupButton) {
         _popupButton = [UIButton new];
-        _popupButton.backgroundColor = UIColor.blueColor;
+        _popupButton.backgroundColor = UIColor.FFBlue;
         _popupButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
         [_popupButton setTitle:@"Show Popup" forState:UIControlStateNormal];
         [_popupButton addTarget:self action:@selector(popupButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -244,7 +244,7 @@
 - (FFTableView *)tableView {
     if (!_tableView) {
         _tableView = [[FFTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.backgroundColor = [UIColor FFLightGray];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;

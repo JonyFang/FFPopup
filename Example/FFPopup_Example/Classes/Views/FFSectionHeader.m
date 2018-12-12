@@ -33,7 +33,7 @@
 }
 
 - (void)setupViews {
-    self.backgroundColor = [UIColor colorWithRed:249/255.0 green:249/255.0 blue:251/255.0 alpha:1.0];
+    self.backgroundColor = [UIColor FFLightGray];
     [self addSubview:self.titleLabel];
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).offset(16);
@@ -44,7 +44,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
-        _titleLabel.textColor = [UIColor lightGrayColor];
+        _titleLabel.textColor = [UIColor FFGray];
         _titleLabel.textAlignment = NSTextAlignmentLeft;
         _titleLabel.font = [UIFont systemFontOfSize:12.0];
     }
