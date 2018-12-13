@@ -372,7 +372,7 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
                     strongSelf.containerView.alpha = 0.0;
                     strongSelf.containerView.transform = CGAffineTransformIdentity;
                     CGRect startFrame = finalContainerFrame;
-                    strongSelf.frame = startFrame;
+                    strongSelf.containerView.frame = startFrame;
                     CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
                     [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
                         strongSelf.containerView.alpha = 1.0;
@@ -380,24 +380,25 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
                 }   break;
                 case FFPopupShowType_GrowIn: {
                     strongSelf.containerView.alpha = 0.0;
-                    strongSelf.containerView.frame = finalContainerFrame;
+                    CGRect startFrame = finalContainerFrame;
+                    strongSelf.containerView.frame = startFrame;
                     strongSelf.containerView.transform = CGAffineTransformMakeScale(0.85, 0.85);
                     CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
                     [UIView animateWithDuration:duration delay:0.0 options:kAnimationOptionCurve animations:^{
                         strongSelf.containerView.alpha = 1.0;
                         strongSelf.containerView.transform = CGAffineTransformIdentity;
-                        strongSelf.frame = finalContainerFrame;
+                        strongSelf.containerView.frame = finalContainerFrame;
                     } completion:completionBlock];
                 }   break;
                 case FFPopupShowType_ShrinkIn: {
                     strongSelf.containerView.alpha = 0.0;
-                    strongSelf.frame = finalContainerFrame;
-                    strongSelf.transform = CGAffineTransformMakeScale(1.1, 1.1);
+                    strongSelf.containerView.frame = finalContainerFrame;
+                    strongSelf.containerView.transform = CGAffineTransformMakeScale(1.1, 1.1);
                     CGFloat duration = strongSelf.showInDuration ?: kDefaultAnimateDuration;
                     [UIView animateWithDuration:duration delay:0.0 options:kAnimationOptionCurve animations:^{
                         strongSelf.containerView.alpha = 1.0;
-                        strongSelf.frame = finalContainerFrame;
-                        strongSelf.transform = CGAffineTransformIdentity;
+                        strongSelf.containerView.frame = finalContainerFrame;
+                        strongSelf.containerView.transform = CGAffineTransformIdentity;
                     } completion:completionBlock];
                 }   break;
                 case FFPopupShowType_SlideInFromTop: {
