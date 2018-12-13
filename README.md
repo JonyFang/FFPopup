@@ -159,7 +159,7 @@ FFPopup.dismiss(for:self.contentView animated:true)
 
 Animation transition for presenting contentView. Controled how the popup will be presented.
 
-The default value is `FFPopupShowType_ShrinkIn`.
+The default value is `FFPopupShowType_BounceInFromTop`.
 
 | FFPopupShowType |
 | :------ |
@@ -181,7 +181,7 @@ The default value is `FFPopupShowType_ShrinkIn`.
 
 Animation transition for dismissing contentView. Controled how the popup will be dismissed.
 
-The default value is `FFPopupDismissType_ShrinkOut`.
+The default value is `FFPopupDismissType_BounceOutToBottom`.
 
 | FFPopupDismissType |
 | :------ |
@@ -265,8 +265,8 @@ Creat a new popup with custom values.
  Creat a new popup with custom values.
  
  @param contentView The view you want to appear in popup.
- @param showType    The default value is `FFPopupShowType_ShrinkIn`.
- @param dismissType The default value is `FFPopupDismissType_ShrinkOut`.
+ @param showType    The default value is `FFPopupShowType_BounceInFromTop`.
+ @param dismissType The default value is `FFPopupDismissType_BounceOutToBottom`.
  @param maskType    The default value is `FFPopupMaskType_Dimmed`.
  @param shouldDismissOnBackgroundTouch  The default value is `YES`.
  @param shouldDismissOnContentTouch     The default value is `NO`.
