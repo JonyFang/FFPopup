@@ -1,5 +1,5 @@
 PODS:
-  - FFPopup (0.1.0)
+  - FFPopup (0.1.1)
   - Masonry (1.1.0)
   - YYModel (1.0.4)
 
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FFPopup: 17c664c06e7abe2daecad05c1a058a8d928bcc4c
+  FFPopup: b31be8ff84947a2d0b19f92a34e1664c5ade8ca1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 

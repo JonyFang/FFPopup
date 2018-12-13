@@ -1,6 +1,6 @@
 {
   "name": "FFPopup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "Presenting custom views as a popup in iOS.",
   "description": "A lightweight library for presenting custom views as a popup in iOS.",
   "homepage": "https://github.com/JonyFang/FFPopup",
@@ -20,6 +20,6 @@
   "source_files": "FFPopup/Classes/*.{h,m}",
   "source": {
     "git": "https://github.com/JonyFang/FFPopup.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   }
 }
