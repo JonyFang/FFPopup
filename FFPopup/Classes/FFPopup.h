@@ -114,14 +114,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Animation transition for presenting contentView.
  
- @discussion The default value is `FFPopupShowType_ShrinkIn`.
+ @discussion The default value is `FFPopupShowType_BounceInFromTop`.
  */
 @property (nonatomic, assign) FFPopupShowType showType;
 
 /**
  Animation transition for dismissing contentView.
  
- @discussion The default value is `FFPopupDismissType_ShrinkOut`.
+ @discussion The default value is `FFPopupDismissType_BounceOutToBottom`.
  */
 @property (nonatomic, assign) FFPopupDismissType dismissType;
 
@@ -202,8 +202,8 @@ NS_ASSUME_NONNULL_BEGIN
  Creat a new popup with custom values.
  
  @param contentView The view you want to appear in popup.
- @param showType    The default value is `FFPopupShowType_ShrinkIn`.
- @param dismissType The default value is `FFPopupDismissType_ShrinkOut`.
+ @param showType    The default value is `FFPopupShowType_BounceInFromTop`.
+ @param dismissType The default value is `FFPopupDismissType_BounceOutToBottom`.
  @param maskType    The default value is `FFPopupMaskType_Dimmed`.
  @param shouldDismissOnBackgroundTouch  The default value is `YES`.
  @param shouldDismissOnContentTouch     The default value is `NO`.

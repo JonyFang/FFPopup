@@ -80,8 +80,8 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
         self.shouldDismissOnBackgroundTouch = YES;
         self.shouldDismissOnContentTouch = NO;
         
-        self.showType = FFPopupShowType_ShrinkIn;
-        self.dismissType = FFPopupDismissType_ShrinkOut;
+        self.showType = FFPopupShowType_BounceInFromTop;
+        self.dismissType = FFPopupDismissType_BounceOutToBottom;
         self.maskType = FFPopupMaskType_Dimmed;
         self.dimmedMaskAlpha = 0.5;
         
