@@ -58,7 +58,7 @@
 	- [x] Bottom
 	- [ ] Support custom
 
-- Controled whether to allow interaction with the underlying view
+- Controlled whether to allow interaction with the underlying view
 	- [x] Allow interaction with underlying view
 	- [x] Don't allow interaction with underlying view
 	- [x] Don't allow interaction with underlying view, dim background
@@ -157,7 +157,7 @@ FFPopup.dismiss(for:self.contentView animated:true)
 
 #### 1.FFPopupShowType
 
-Animation transition for presenting contentView. Controled how the popup will be presented.
+Animation transition for presenting contentView. Controlled how the popup will be presented.
 
 The default value is `FFPopupShowType_BounceInFromTop`.
 
@@ -179,7 +179,7 @@ The default value is `FFPopupShowType_BounceInFromTop`.
 
 #### 2.FFPopupDismissType
 
-Animation transition for dismissing contentView. Controled how the popup will be dismissed.
+Animation transition for dismissing contentView. Controlled how the popup will be dismissed.
 
 The default value is `FFPopupDismissType_BounceOutToBottom`.
 
@@ -201,7 +201,7 @@ The default value is `FFPopupDismissType_BounceOutToBottom`.
 
 #### 3.FFPopupMaskType
 
-Mask prevents background touches from passing to underlying views. Controled whether to allow interaction with the underlying view.
+Mask prevents background touches from passing to underlying views. Controlled whether to allow interaction with the underlying view.
 
 The default value is `FFPopupMaskType_Dimmed`.
 
@@ -251,18 +251,18 @@ The default value is `FFPopupMaskType_Dimmed`.
 
 #### 6.Convenience Initializers
 
-Creat a new popup with custom values.
+Create a new popup with custom values.
 
 ```objc
 /**
  Convenience Initializers
- Creat a new popup with `contentView`.
+ Create a new popup with `contentView`.
  */
 + (FFPopup *)popupWithContentView:(UIView *)contentView;
 
 /**
  Convenience Initializers
- Creat a new popup with custom values.
+ Create a new popup with custom values.
  
  @param contentView The view you want to appear in popup.
  @param showType    The default value is `FFPopupShowType_BounceInFromTop`.
