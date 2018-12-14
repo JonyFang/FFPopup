@@ -10,7 +10,7 @@
 
 /**
  FFPopupShowType
- Controled how the popup will be presented.
+ Controlled how the popup will be presented.
  */
 typedef NS_ENUM(NSUInteger, FFPopupShowType) {
     FFPopupShowType_None,
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, FFPopupShowType) {
 
 /**
  FFPopupDismissType
- Controled how the popup will be dismissed.
+ Controlled how the popup will be dismissed.
  */
 typedef NS_ENUM(NSUInteger, FFPopupDismissType) {
     FFPopupDismissType_None,
@@ -50,7 +50,7 @@ typedef NS_ENUM(NSUInteger, FFPopupDismissType) {
 
 /**
  FFPopupHorizontalLayout
- Controled the layout of the popup in the horizontal direction.
+ Controlled the layout of the popup in the horizontal direction.
  */
 typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
     FFPopupHorizontalLayout_Custom,
@@ -63,7 +63,7 @@ typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
 
 /**
  FFPopupVerticalLayout
- Controled the layout of the popup in the vertical direction.
+ Controlled the layout of the popup in the vertical direction.
  */
 typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
     FFPopupVerticalLayout_Custom,
@@ -76,7 +76,7 @@ typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
 
 /**
  FFPopupMaskType
- Controled whether to allow interaction with the underlying view.
+ Controlled whether to allow interaction with the underlying view.
  */
 typedef NS_ENUM(NSUInteger, FFPopupMaskType) {
     /// Allow interaction with underlying view.
@@ -193,13 +193,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Convenience Initializers
- Creat a new popup with `contentView`.
+ Create a new popup with `contentView`.
  */
 + (FFPopup *)popupWithContentView:(UIView *)contentView;
 
 /**
  Convenience Initializers
- Creat a new popup with custom values.
+ Create a new popup with custom values.
  
  @param contentView The view you want to appear in popup.
  @param showType    The default value is `FFPopupShowType_BounceInFromTop`.
