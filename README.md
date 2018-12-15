@@ -35,13 +35,11 @@
 <th>Grow in\nShrink out</th>
 <th>Bounce from Bottom\nSlide to Bottom</th>
 <th>Slide from Bottom\nSlide to Bottom</th>
-<th></th>
 </tr>
 <tr>
 <td><img src="/Resources/004_grow_in&shrink_out.gif"/></td>
 <td><img src="/Resources/005_bounce_from_bottom&slide_to_bottom.gif"/></td>
 <td><img src="/Resources/006_slide_from_bottom&slide_to_bottom.gif"/></td>
-<td></td>
 </tr>
 </table>
 
