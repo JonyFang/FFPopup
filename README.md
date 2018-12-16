@@ -4,6 +4,9 @@
 	<a href="http://cocoapods.org/pods/FFPopup">
         <img src="https://img.shields.io/cocoapods/v/FFPopup.svg" alt="Cocoapods Version">
     </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible">
+    </a>
     <a href="http://cocoapods.org/pods/FFPopup">
         <img src="https://img.shields.io/cocoapods/p/FFPopup.svg" alt="Platform">
     </a>
@@ -108,6 +111,12 @@ $ open FFPopup_Example.xcworkspace
 
 ## Installation
 
+There are three ways to use FFPopup in your project:
+
+- Installation with **CocoaPods**
+- Installation with **Carthage**
+- **Manually** install
+
 #### CocoaPods
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager, which automates and simplifies the process of using 3rd-party libraries like `FFPopup` in your projects. First, add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
@@ -129,6 +138,45 @@ Second, install `FFPopup` into your project:
 ```bash
 pod install
 ```
+
+#### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate `FFPopup` into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```bash
+github "JonyFang/FFPopup"
+```
+
+Run the following command to build the framework:
+
+```bash
+carthage update
+```
+
+Drag the built `FFPopup.framework` binaries from `Carthage/Build/iOS` into your application’s Xcode project.
+
+On your application targets’ `Build Phases` settings tab, click the `+ icon` and choose `New Run Script Phase`. Create a Run Script in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
+
+```bash
+/usr/local/bin/carthage copy-frameworks
+```
+
+Add the following paths to the frameworks you want to use under `“Input Files"`.
+
+```bash
+$(SRCROOT)/Carthage/Build/iOS/FFPopup.framework
+```
+
+For an in depth guide, read on from [Adding frameworks to an application](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application)
 
 #### Manually
 
