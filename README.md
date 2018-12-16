@@ -106,6 +106,7 @@ To run the `Example` project, clone the Repo, and start `Example` in Xcode.
 ```bash
 $ git clone https://github.com/JonyFang/FFPopup.git
 $ cd FFPopup/Example
+$ pod install
 $ open FFPopup_Example.xcworkspace
 ```
 
