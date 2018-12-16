@@ -54,8 +54,7 @@
 	- [x] Grow In
 	- [x] Shrink In
 	- [x] Slide In from top, bottom, left, right
-	- [x] Bounce In
-	- [x] Bounce In from top, bottom, left, right
+	- [x] Bounce In from top, bottom, left, right, center
 	- [ ] Support custom
 
 - Support several popup dismiss types
@@ -64,24 +63,23 @@
 	- [x] Grow Out
 	- [x] Shrink Out
 	- [x] Slide Out to top, bottom, left, right
-	- [x] Bounce Out
-	- [x] Bounce Out to top, bottom, left, right
+	- [x] Bounce Out to top, bottom, left, right, center
 	- [ ] Support custom
 
 - Layout the popup in the horizontal direction
 	- [x] Left
-	- [x] Left of center
-	- [x] Center
-	- [x] Right of center
 	- [x] Right
+	- [x] Center
+	- [x] Left of center
+	- [x] Right of center
 	- [ ] Support custom
 
 - Layout the popup in the vertical direction
 	- [x] Top
-	- [x] Above center
-	- [x] Center
-	- [x] Below center
 	- [x] Bottom
+	- [x] Center
+	- [x] Above center
+	- [x] Below center
 	- [ ] Support custom
 
 - Controlled whether to allow interaction with the underlying view
@@ -112,11 +110,11 @@ $ open FFPopup_Example.xcworkspace
 
 ## Installation
 
-There are three ways to use FFPopup in your project:
+There are three ways to use `FFPopup` in your project:
 
-- Installation with **CocoaPods**
-- Installation with **Carthage**
-- **Manually** install
+- Installation with `CocoaPods`
+- Installation with `Carthage`
+- `Manually` install
 
 #### CocoaPods
 
@@ -126,7 +124,7 @@ There are three ways to use FFPopup in your project:
 pod 'FFPopup'
 ```
 
-If you want to use the latest features of FFPopup use normal external source dependencies.
+If you want to use the latest features of `FFPopup` use normal external source dependencies.
 
 ```bash
 pod 'FFPopup', :git => 'https://github.com/JonyFang/FFPopup.git'
@@ -160,18 +158,18 @@ github "JonyFang/FFPopup"
 Run the following command to build the framework:
 
 ```bash
-carthage update
+$ carthage update
 ```
 
 Drag the built `FFPopup.framework` binaries from `Carthage/Build/iOS` into your application’s Xcode project.
 
-On your application targets’ `Build Phases` settings tab, click the `+ icon` and choose `New Run Script Phase`. Create a Run Script in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
+On your application targets’ `Build Phases` settings tab, click the `+ icon` and choose `New Run Script Phase`. Create a `Run Script` in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
 
 ```bash
 /usr/local/bin/carthage copy-frameworks
 ```
 
-Add the following paths to the frameworks you want to use under `“Input Files"`.
+Add the following paths to the frameworks you want to use under `Input Files`.
 
 ```bash
 $(SRCROOT)/Carthage/Build/iOS/FFPopup.framework
@@ -423,7 +421,7 @@ Create a new popup with custom values.
 
 ## TODO List
 
-This is the to-do list for the FFPopup project. You can join us to become a contributor.
+This is the to-do list for the `FFPopup` project. You can join us to become a contributor.
 
 - [ ] Support blur option for background mask
 - [ ] Support for keyboard show/hide
@@ -433,7 +431,7 @@ See the [CONTRIBUTING](/docs/CONTRIBUTING.md) file for contributing guidelines.
 
 ## Live Demo
 
-My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8) (Never Forget Important Days) is using FFPopup. You can download it and try it on your multiple devices to experience the effect.
+My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8) (Never Forget Important Days) is using `FFPopup`. You can download it and try it on your multiple devices to experience the effect.
 
 <a href="https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8">
   <img src="/Resources/download-on-the-appstore.png">
