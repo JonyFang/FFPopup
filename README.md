@@ -123,13 +123,13 @@ There are three ways to use `FFPopup` in your project:
 
 [CocoaPods](http://cocoapods.org/) is a dependency manager, which automates and simplifies the process of using 3rd-party libraries like `FFPopup` in your projects. First, add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
-```bash
+```ruby
 pod 'FFPopup'
 ```
 
 If you want to use the latest features of `FFPopup` use normal external source dependencies.
 
-```bash
+```ruby
 pod 'FFPopup', :git => 'https://github.com/JonyFang/FFPopup.git'
 ```
 
@@ -138,7 +138,7 @@ This pulls from the master branch directly.
 Second, install `FFPopup` into your project:
 
 ```bash
-pod install
+$ pod install
 ```
 
 #### Carthage
@@ -168,13 +168,13 @@ Drag the built `FFPopup.framework` binaries from `Carthage/Build/iOS` into your 
 
 On your application targets’ `Build Phases` settings tab, click the `+ icon` and choose `New Run Script Phase`. Create a `Run Script` in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
 
-```bash
+```sh
 /usr/local/bin/carthage copy-frameworks
 ```
 
 Add the following paths to the frameworks you want to use under `Input Files`.
 
-```bash
+```
 $(SRCROOT)/Carthage/Build/iOS/FFPopup.framework
 ```
 
@@ -192,7 +192,7 @@ Alternatively you can directly add the `FFPopup.h` and `FFPopup.m` source files 
 
 Even though `FFPopup` is written in Objective-C, it can be used in Swift with no hassle. If you use [CocoaPods](http://cocoapods.org/) add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
-```bash
+```ruby
 use_frameworks!
 ```
 
