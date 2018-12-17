@@ -7,6 +7,9 @@
     <a href="http://cocoapods.org/pods/FFPopup">
         <img src="https://img.shields.io/cocoapods/p/FFPopup.svg" alt="Platform">
     </a>
+    <a href="https://travis-ci.org/JonyFang/FFPopup">
+        <img src="https://travis-ci.org/JonyFang/FFPopup.svg?branch=master" alt="CI Status">
+    </a>
     <a href="LICENSE">
         <img src="https://img.shields.io/cocoapods/l/FFPopup.svg" alt="MIT License">
     </a>
