@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3DF1B2D21ABC73C00C6B2E2 /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DF1B2B21ABC73C00C6B2E2 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3DF1B3621ABC75500C6B2E2 /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */; };
+		D3DF1B3621ABC75500C6B2E2 /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3DF1B3721ABC75500C6B2E2 /* FFPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF1B3521ABC75500C6B2E2 /* FFPopup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3DF1B2821ABC73C00C6B2E2 /* FFPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3DF1B2B21ABC73C00C6B2E2 /* FFPopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopup.h; sourceTree = "<group>"; };
 		D3DF1B2C21ABC73C00C6B2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopup.h; sourceTree = "<group>"; };
 		D3DF1B3521ABC75500C6B2E2 /* FFPopup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPopup.m; sourceTree = "<group>"; };
@@ -51,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				D3DF1B3321ABC74300C6B2E2 /* Classes */,
-				D3DF1B2B21ABC73C00C6B2E2 /* FFPopup.h */,
 				D3DF1B2C21ABC73C00C6B2E2 /* Info.plist */,
 			);
 			path = FFPopup;
@@ -73,7 +70,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3DF1B2D21ABC73C00C6B2E2 /* FFPopup.h in Headers */,
 				D3DF1B3621ABC75500C6B2E2 /* FFPopup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +284,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonyfang.FFPopup;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -313,6 +311,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonyfang.FFPopup;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

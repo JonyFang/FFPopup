@@ -4,6 +4,9 @@
 	<a href="http://cocoapods.org/pods/FFPopup">
         <img src="https://img.shields.io/cocoapods/v/FFPopup.svg" alt="Cocoapods Version">
     </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible">
+    </a>
     <a href="http://cocoapods.org/pods/FFPopup">
         <img src="https://img.shields.io/cocoapods/p/FFPopup.svg" alt="Platform">
     </a>
@@ -23,6 +26,29 @@
 
 <p align="center">FFPopup is a lightweight library for presenting custom views as a popup.</p>
 
+<table>
+<tr>
+<th>Bounce from Top<br>&<br>Bounce to Bottom</th>
+<th>Bounce from Top<br>&<br>Bounce to Top</th>
+<th>Bounce in<br>&<br>Bounce out</th>
+</tr>
+<tr>
+<td><img src="/Resources/001_bounce_from_top&Bounce_to_bottom.gif"/></td>
+<td><img src="/Resources/002_bounce_from_top&bounce_to_top.gif"/></td>
+<td><img src="/Resources/003_bounce_in&bounce_out.gif"/></td>
+</tr>
+<tr>
+<th>Grow in<br>&<br>Shrink out</th>
+<th>Bounce from Bottom<br>&<br>Slide to Bottom</th>
+<th>Slide from Bottom<br>&<br>Slide to Bottom</th>
+</tr>
+<tr>
+<td><img src="/Resources/004_grow_in&shrink_out.gif"/></td>
+<td><img src="/Resources/005_bounce_from_bottom&slide_to_bottom.gif"/></td>
+<td><img src="/Resources/006_slide_from_bottom&slide_to_bottom.gif"/></td>
+</tr>
+</table>
+
 ## Features
 
 - Support several popup show types
@@ -31,8 +57,7 @@
 	- [x] Grow In
 	- [x] Shrink In
 	- [x] Slide In from top, bottom, left, right
-	- [x] Bounce In
-	- [x] Bounce In from top, bottom, left, right
+	- [x] Bounce In from top, bottom, left, right, center
 	- [ ] Support custom
 
 - Support several popup dismiss types
@@ -41,24 +66,23 @@
 	- [x] Grow Out
 	- [x] Shrink Out
 	- [x] Slide Out to top, bottom, left, right
-	- [x] Bounce Out
-	- [x] Bounce Out to top, bottom, left, right
+	- [x] Bounce Out to top, bottom, left, right, center
 	- [ ] Support custom
 
 - Layout the popup in the horizontal direction
 	- [x] Left
-	- [x] Left of center
-	- [x] Center
-	- [x] Right of center
 	- [x] Right
+	- [x] Center
+	- [x] Left of center
+	- [x] Right of center
 	- [ ] Support custom
 
 - Layout the popup in the vertical direction
 	- [x] Top
-	- [x] Above center
-	- [x] Center
-	- [x] Below center
 	- [x] Bottom
+	- [x] Center
+	- [x] Above center
+	- [x] Below center
 	- [ ] Support custom
 
 - Controlled whether to allow interaction with the underlying view
@@ -83,10 +107,17 @@ To run the `Example` project, clone the Repo, and start `Example` in Xcode.
 ```bash
 $ git clone https://github.com/JonyFang/FFPopup.git
 $ cd FFPopup/Example
+$ pod install
 $ open FFPopup_Example.xcworkspace
 ```
 
 ## Installation
+
+There are three ways to use `FFPopup` in your project:
+
+- Installation with `CocoaPods`
+- Installation with `Carthage`
+- `Manually` install
 
 #### CocoaPods
 
@@ -96,7 +127,7 @@ $ open FFPopup_Example.xcworkspace
 pod 'FFPopup'
 ```
 
-If you want to use the latest features of FFPopup use normal external source dependencies.
+If you want to use the latest features of `FFPopup` use normal external source dependencies.
 
 ```bash
 pod 'FFPopup', :git => 'https://github.com/JonyFang/FFPopup.git'
@@ -109,6 +140,45 @@ Second, install `FFPopup` into your project:
 ```bash
 pod install
 ```
+
+#### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate `FFPopup` into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```bash
+github "JonyFang/FFPopup"
+```
+
+Run the following command to build the framework:
+
+```bash
+$ carthage update
+```
+
+Drag the built `FFPopup.framework` binaries from `Carthage/Build/iOS` into your application’s Xcode project.
+
+On your application targets’ `Build Phases` settings tab, click the `+ icon` and choose `New Run Script Phase`. Create a `Run Script` in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
+
+```bash
+/usr/local/bin/carthage copy-frameworks
+```
+
+Add the following paths to the frameworks you want to use under `Input Files`.
+
+```bash
+$(SRCROOT)/Carthage/Build/iOS/FFPopup.framework
+```
+
+For an in depth guide, read on from [Adding frameworks to an application](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application)
 
 #### Manually
 
@@ -354,7 +424,7 @@ Create a new popup with custom values.
 
 ## TODO List
 
-This is the to-do list for the FFPopup project. You can join us to become a contributor.
+This is the to-do list for the `FFPopup` project. You can join us to become a contributor.
 
 - [ ] Support blur option for background mask
 - [ ] Support for keyboard show/hide
@@ -364,7 +434,7 @@ See the [CONTRIBUTING](/docs/CONTRIBUTING.md) file for contributing guidelines.
 
 ## Live Demo
 
-My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8) (Never Forget Important Days) is using FFPopup. You can download it and try it on your multiple devices to experience the effect.
+My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8) (Never Forget Important Days) is using `FFPopup`. You can download it and try it on your multiple devices to experience the effect.
 
 <a href="https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4%E5%8D%A1-%E7%B2%BE%E8%87%B4%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5%E5%8A%A9%E6%89%8B/id1347998487?mt=8">
   <img src="/Resources/download-on-the-appstore.png">
