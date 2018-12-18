@@ -440,17 +440,17 @@ My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4
   <img src="/Resources/download-on-the-appstore.png">
 </a>
 
-## Contributors
+<!-- ## Contributors
 
-This project exists thanks to all the people who have already contribute to FFPopup! [Contribute](docs/CONTRIBUTING.md)
+This project exists thanks to all the people who contribute. [Contribute](docs/CONTRIBUTING.md)
 
-<a href="https://opencollective.com/ffpopup#backer"><img src="https://opencollective.com/ffpopup/contributors.svg?width=890" /></a>
+<a href="https://opencollective.com/ffpopup#backer"><img src="https://opencollective.com/ffpopup/contributors.svg?width=890" /></a> -->
 
 ## Backers
 
-Thank you to all our backers!
+Thank you to all our backers! Your support is really important for the project and encourages us to continue. 🙏 [[Become a backer](https://opencollective.com/ffpopup#backer)]
 
-<a href="https://opencollective.com/ffpopup#backers" target="_blank"><img src="https://opencollective.com/ffpopup/backers.svg?width=890"></a>
+<a href="https://opencollective.com/ffpopup#backers" target="_blank"><img src="https://opencollective.com/ffpopup/sponsors.svg?width=890"></a>
 
 ## Sponsors
 
