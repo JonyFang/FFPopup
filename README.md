@@ -440,6 +440,22 @@ My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4
   <img src="/Resources/download-on-the-appstore.png">
 </a>
 
+## Contributors
+
+This project exists thanks to all the people who have already contribute to FFPopup! [Contribute](docs/CONTRIBUTING.md)
+
+<a href="graphs/contributors"><img src="https://opencollective.com/ffpopup/contributors.svg?width=890&button=false" /></a>
+
+## Backers
+
+Thank you to all our backers!
+
+<a href="https://opencollective.com/ffpopup#backers" target="_blank"><img src="https://opencollective.com/ffpopup/backers.svg?width=890"></a>
+
+## Sponsors
+
+Thank you to all our sponsors! [Become a sponsor](https://opencollective.com/ffpopup#sponsor)
+
 ## License
 
 `FFPopup` is available under the [MIT license](/LICENSE). See the LICENSE file for more info.
