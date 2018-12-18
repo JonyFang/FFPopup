@@ -448,7 +448,7 @@ This project exists thanks to all the people who contribute. [Contribute](docs/C
 
 ## Backers
 
-Thank you to all our backers! Your support is really important for the project and encourages us to continue. 🙏 [[Become a backer](https://opencollective.com/ffpopup#backer)]
+Thank you to all our backers! Your support is really important for the project and encourages us to continue. 🙏 [Become a backer](https://opencollective.com/ffpopup#backer)
 
 <a href="https://opencollective.com/ffpopup#backers" target="_blank"><img src="https://opencollective.com/ffpopup/sponsors.svg?width=890"></a>
 
