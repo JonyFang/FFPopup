@@ -440,6 +440,33 @@ My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4
   <img src="/Resources/download-on-the-appstore.png">
 </a>
 
+<!-- ## Contributors
+
+This project exists thanks to all the people who contribute. [Contribute](docs/CONTRIBUTING.md)
+
+<a href="https://opencollective.com/ffpopup#backer"><img src="https://opencollective.com/ffpopup/contributors.svg?width=890" /></a> -->
+
+## Backers
+
+Thank you to all our backers! Your support is really important for the project and encourages us to continue. 🙏 [[Become a backer](https://opencollective.com/ffpopup#backer)]
+
+<a href="https://opencollective.com/ffpopup#backers" target="_blank"><img src="https://opencollective.com/ffpopup/sponsors.svg?width=890"></a>
+
+## Sponsors
+
+Thank you to all our sponsors! [Become a sponsor](https://opencollective.com/ffpopup#sponsor)
+
+<a href="https://opencollective.com/ffpopup/sponsor/0/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/1/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/2/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/3/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/4/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/5/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/6/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/7/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/8/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/ffpopup/sponsor/9/website" target="_blank"><img src="https://opencollective.com/ffpopup/sponsor/9/avatar.svg"></a>
+
 ## License
 
 `FFPopup` is available under the [MIT license](/LICENSE). See the LICENSE file for more info.
