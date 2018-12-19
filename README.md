@@ -28,12 +28,12 @@
 
 <table>
 <tr>
-<th>Bounce from Top<br>&<br>Bounce to Bottom</th>
-<th>Bounce from Top<br>&<br>Bounce to Top</th>
-<th>Bounce in<br>&<br>Bounce out</th>
-<th>Grow in<br>&<br>Shrink out</th>
-<th>Bounce from Bottom<br>&<br>Slide to Bottom</th>
-<th>Slide from Bottom<br>&<br>Slide to Bottom</th>
+<th>Bounce from Top & Bounce to Bottom</th>
+<th>Bounce from Top & Bounce to Top</th>
+<th>Bounce in & Bounce out</th>
+<th>Grow in & Shrink out</th>
+<th>Bounce from Bottom & Slide to Bottom</th>
+<th>Slide from Bottom & Slide to Bottom</th>
 </tr>
 <tr>
 <td><img src="/Resources/001_bounce_from_top&Bounce_to_bottom.gif"/></td>
