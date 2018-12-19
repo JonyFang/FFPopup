@@ -28,21 +28,17 @@
 
 <table>
 <tr>
-<th>Bounce from Top<br>&<br>Bounce to Bottom</th>
-<th>Bounce from Top<br>&<br>Bounce to Top</th>
-<th>Bounce in<br>&<br>Bounce out</th>
+<th>Bounce from Top & Bounce to Bottom</th>
+<th>Bounce from Top & Bounce to Top</th>
+<th>Bounce in & Bounce out</th>
+<th>Grow in & Shrink out</th>
+<th>Bounce from Bottom & Slide to Bottom</th>
+<th>Slide from Bottom & Slide to Bottom</th>
 </tr>
 <tr>
 <td><img src="/Resources/001_bounce_from_top&Bounce_to_bottom.gif"/></td>
 <td><img src="/Resources/002_bounce_from_top&bounce_to_top.gif"/></td>
 <td><img src="/Resources/003_bounce_in&bounce_out.gif"/></td>
-</tr>
-<tr>
-<th>Grow in<br>&<br>Shrink out</th>
-<th>Bounce from Bottom<br>&<br>Slide to Bottom</th>
-<th>Slide from Bottom<br>&<br>Slide to Bottom</th>
-</tr>
-<tr>
 <td><img src="/Resources/004_grow_in&shrink_out.gif"/></td>
 <td><img src="/Resources/005_bounce_from_bottom&slide_to_bottom.gif"/></td>
 <td><img src="/Resources/006_slide_from_bottom&slide_to_bottom.gif"/></td>
