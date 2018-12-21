@@ -436,11 +436,11 @@ My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4
   <img src="/Resources/download-on-the-appstore.png">
 </a>
 
-<!-- ## Contributors
+## Contributors
 
 This project exists thanks to all the people who contribute. [Contribute](docs/CONTRIBUTING.md)
 
-<a href="https://opencollective.com/ffpopup#backer"><img src="https://opencollective.com/ffpopup/contributors.svg?width=890" /></a> -->
+<a href="https://opencollective.com/ffpopup#backer"><img src="https://opencollective.com/ffpopup/contributors.svg?width=890" /></a>
 
 ## Backers
 
