@@ -426,7 +426,7 @@ This is the to-do list for the `FFPopup` project. You can join us to become a co
 - [ ] Support for keyboard show/hide
 - [ ] Support for drag-to-dismiss
 
-See the [CONTRIBUTING](/docs/CONTRIBUTING.md) file for contributing guidelines.
+See the [CONTRIBUTING](./CONTRIBUTING.md) file for contributing guidelines.
 
 ## Live Demo
 
@@ -438,7 +438,7 @@ My app [Time Card -Countdown](https://itunes.apple.com/cn/app/%E6%97%B6%E9%97%B4
 
 ## Contributors
 
-This project exists thanks to all the people who contribute. [Contribute](docs/CONTRIBUTING.md)
+This project exists thanks to all the people who contribute. [Contribute](./CONTRIBUTING.md)
 
 <a href="https://opencollective.com/ffpopup#backer"><img src="https://opencollective.com/ffpopup/contributors.svg?width=890" /></a>
 
