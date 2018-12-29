@@ -40,13 +40,14 @@ DerivedData/
 #
 Example/Pods/
 Example/Podfile.lock
+Example/FFPopup_Example.xcworkspace
 
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
+#
+Example/Carthage/
+Example/Cartfile.resolved
 
 # fastlane
 #
@@ -54,7 +55,7 @@ Carthage/Build
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
-
+#
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
@@ -64,5 +65,5 @@ fastlane/test_output
 #
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
-
+#
 iOSInjectionProject/
