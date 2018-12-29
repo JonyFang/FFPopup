@@ -23,4 +23,4 @@ parsers:
 comment:
   layout: "header, diff, tree, changes"
   behavior: default
-  require_changes: no
+  require_changes: yes
