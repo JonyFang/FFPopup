@@ -1,14 +1,37 @@
 language: objective-c
 osx_image: xcode10.1
+
+xcode_workspace: Example/FFPopup_Example.xcworkspace
 xcode_project: FFPopup.xcodeproj
 xcode_scheme: FFPopup
+podfile: Example/Podfile
 
 before_install:
-- env
-- xcodebuild -version
-- xcodebuild -showsdks
-- xcpretty --version
+  - env
+  - locale
+  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - pod --version
+  - pod setup --silent > /dev/null
+  - pod repo update --silent
+  - xcpretty --version
+  - xcodebuild -version
+  - xcodebuild -showsdks
 
 script:
-- set -o pipefail
-- xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" | xcpretty
+  - set -o pipefail
+
+  - echo Check if the library described by the podspec can be built
+  - pod lib lint --allow-warnings
+
+  - echo Build as dynamic framework
+  - xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
+
+  - echo Build the Examples
+  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Example" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
+
+notifications:
+  email: false
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
