@@ -27,7 +27,7 @@ script:
   - echo Build as dynamic framework
   - xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
 
-  - echo Build the Demo apps
+  - echo Build the Examples
   - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Example" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
 
 notifications:
