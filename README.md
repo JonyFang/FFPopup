@@ -13,6 +13,9 @@
     <a href="https://travis-ci.org/JonyFang/FFPopup">
         <img src="https://travis-ci.org/JonyFang/FFPopup.svg?branch=master" alt="CI Status">
     </a>
+    <a href="https://codecov.io/gh/JonyFang/FFPopup">
+    	<img src="https://codecov.io/gh/JonyFang/FFPopup/branch/master/graph/badge.svg" alt="Codecov Status">
+	</a>
     <a href="LICENSE">
         <img src="https://img.shields.io/cocoapods/l/FFPopup.svg" alt="MIT License">
     </a>
