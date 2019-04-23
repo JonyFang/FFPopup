@@ -273,7 +273,7 @@ NS_ASSUME_NONNULL_BEGIN
  Dismiss popup.
  Use `dismissType` if animated is `YES`.
  */
-- (void)dismissAnimated:(BOOL)animated;
+- (void)dismissAnimated:(BOOL)animated NS_SWIFT_NAME(dismiss(animated:));
 
 #pragma mark - ReadOnly Properties
 @property (nonatomic, strong, readonly) UIView *backgroundView;
