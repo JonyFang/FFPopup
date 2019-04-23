@@ -33,20 +33,20 @@ typedef NS_ENUM(NSUInteger, FFPopupShowType) {
  Controlled how the popup will be dismissed.
  */
 typedef NS_ENUM(NSUInteger, FFPopupDismissType) {
-    FFPopupDismissType_None,
-    FFPopupDismissType_FadeOut,
-    FFPopupDismissType_GrowOut,
-    FFPopupDismissType_ShrinkOut,
-    FFPopupDismissType_SlideOutToTop,
-    FFPopupDismissType_SlideOutToBottom,
-    FFPopupDismissType_SlideOutToLeft,
-    FFPopupDismissType_SlideOutToRight,
-    FFPopupDismissType_BounceOut,
-    FFPopupDismissType_BounceOutToTop,
-    FFPopupDismissType_BounceOutToBottom,
-    FFPopupDismissType_BounceOutToLeft,
-    FFPopupDismissType_BounceOutToRight
-};
+    FFPopupDismissType_None NS_SWIFT_NAME(none),
+    FFPopupDismissType_FadeOut NS_SWIFT_NAME(fadeOut),
+    FFPopupDismissType_GrowOut NS_SWIFT_NAME(growOut),
+    FFPopupDismissType_ShrinkOut NS_SWIFT_NAME(shrinkOut),
+    FFPopupDismissType_SlideOutToTop NS_SWIFT_NAME(slideOutToTop),
+    FFPopupDismissType_SlideOutToBottom NS_SWIFT_NAME(slideOutToBottom),
+    FFPopupDismissType_SlideOutToLeft NS_SWIFT_NAME(slideOutToLeft),
+    FFPopupDismissType_SlideOutToRight NS_SWIFT_NAME(slideOutToRight),
+    FFPopupDismissType_BounceOut NS_SWIFT_NAME(bounceOut),
+    FFPopupDismissType_BounceOutToTop NS_SWIFT_NAME(bounceOutToTop),
+    FFPopupDismissType_BounceOutToBottom NS_SWIFT_NAME(bounceOutToBottom),
+    FFPopupDismissType_BounceOutToLeft NS_SWIFT_NAME(bounceOutToLeft),
+    FFPopupDismissType_BounceOutToRight NS_SWIFT_NAME(bounceOutToRight)
+} NS_SWIFT_NAME(FFpopup.DismissType);
 
 /**
  FFPopupHorizontalLayout
