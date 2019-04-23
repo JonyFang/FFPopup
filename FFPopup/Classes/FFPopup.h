@@ -242,32 +242,32 @@ NS_ASSUME_NONNULL_BEGIN
  Show popup with specified layout.
  Showing animation is determined by `showType`.
  */
-- (void)showWithLayout:(FFPopupLayout)layout NS_SWIFT_NAME(show(withLayout:));
+- (void)showWithLayout:(FFPopupLayout)layout NS_SWIFT_NAME(show(layout:));
 
 /**
  Show and then dismiss popup after `duration`.
  If duration is `0.0` or `less`, it will be considered infinity.
  */
-- (void)showWithDuration:(NSTimeInterval)duration;
+- (void)showWithDuration:(NSTimeInterval)duration NS_SWIFT_NAME(show(duration:));
 
 /**
  Show popup with specified `layout` and then dismissed after `duration`.
  If duration is `0.0` or `less`, it will be considered infinity.
  */
-- (void)showWithLayout:(FFPopupLayout)layout duration:(NSTimeInterval)duration;
+- (void)showWithLayout:(FFPopupLayout)layout duration:(NSTimeInterval)duration NS_SWIFT_NAME(show(layout:duration:));
 
 /**
  Show popup at point in view's coordinate system.
  If view is nil, will use screen base coordinates.
  */
-- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view;
+- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view NS_SWIFT_NAME(show(center:inView:));
 
 /**
  Show popup at point in view's coordinate system and then dismissed after duration.
  If view is nil, will use screen base coordinates.
  If duration is `0.0` or `less`, it will be considered infinity.
  */
-- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view duration:(NSTimeInterval)duration;
+- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view duration:(NSTimeInterval)duration NS_SWIFT_NAME(show(center:inView:duration:));
 
 /**
  Dismiss popup.
