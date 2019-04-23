@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, FFPopupShowType) {
     FFPopupShowType_BounceInFromBottom NS_SWIFT_NAME(bounceInFromBottom),
     FFPopupShowType_BounceInFromLeft NS_SWIFT_NAME(bounceInFromLeft),
     FFPopupShowType_BounceInFromRight NS_SWIFT_NAME(bounceInFromRight)
-} NS_SWIFT_NAME(FFpopup.ShowType);
+} NS_SWIFT_NAME(FFPopup.ShowType);
 
 /**
  FFPopupDismissType
@@ -46,7 +46,7 @@ typedef NS_ENUM(NSUInteger, FFPopupDismissType) {
     FFPopupDismissType_BounceOutToBottom NS_SWIFT_NAME(bounceOutToBottom),
     FFPopupDismissType_BounceOutToLeft NS_SWIFT_NAME(bounceOutToLeft),
     FFPopupDismissType_BounceOutToRight NS_SWIFT_NAME(bounceOutToRight)
-} NS_SWIFT_NAME(FFpopup.DismissType);
+} NS_SWIFT_NAME(FFPopup.DismissType);
 
 /**
  FFPopupHorizontalLayout
@@ -59,7 +59,7 @@ typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
     FFPopupHorizontalLayout_Center NS_SWIFT_NAME(center),
     FFPopupHorizontalLayout_RightOfCenter NS_SWIFT_NAME(rightOfCenter),
     FFPopupHoricontalLayout_Right NS_SWIFT_NAME(right)
-} NS_SWIFT_NAME(FFpopup.HorizontalLayout);
+} NS_SWIFT_NAME(FFPopup.HorizontalLayout);
 
 /**
  FFPopupVerticalLayout
@@ -72,7 +72,7 @@ typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
     FFPopupVerticalLayout_Center NS_SWIFT_NAME(center),
     FFPopupVerticalLayout_BelowCenter NS_SWIFT_NAME(belowCenter),
     FFPopupVerticalLayout_Bottom NS_SWIFT_NAME(bottom)
-} NS_SWIFT_NAME(FFpopup.VerticalLayout);
+} NS_SWIFT_NAME(FFPopup.VerticalLayout);
 
 /**
  FFPopupMaskType
@@ -85,7 +85,7 @@ typedef NS_ENUM(NSUInteger, FFPopupMaskType) {
     FFPopupMaskType_Clear NS_SWIFT_NAME(clear),
     /// Don't allow interaction with underlying view, dim background.
     FFPopupMaskType_Dimmed NS_SWIFT_NAME(dimmed)
-} NS_SWIFT_NAME(FFpopup.MaskType);
+} NS_SWIFT_NAME(FFPopup.MaskType);
 
 /** FFPopupLayout */
 struct FFPopupLayout {
@@ -97,7 +97,7 @@ typedef struct FFPopupLayout FFPopupLayout;
 
 extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical) NS_SWIFT_NAME(FFpopupLayout(horizontal:vertical:));
 
-extern FFPopupLayout const FFPopupLayout_Center NS_SWIFT_NAME(FFpopupLayout.Center);
+extern FFPopupLayout const FFPopupLayout_Center NS_SWIFT_NAME(FFPopupLayout.Center);
 
 NS_ASSUME_NONNULL_BEGIN
 
