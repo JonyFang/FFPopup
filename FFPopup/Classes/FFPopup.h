@@ -95,9 +95,9 @@ struct FFPopupLayout {
 
 typedef struct FFPopupLayout FFPopupLayout;
 
-extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical);
+extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical) NS_SWIFT_NAME(FFpopupLayout(horizontal:vertical:));
 
-extern const FFPopupLayout FFPopupLayout_Center;
+extern FFPopupLayout const FFPopupLayout_Center NS_SWIFT_NAME(FFpopupLayout.Center);
 
 NS_ASSUME_NONNULL_BEGIN
 
