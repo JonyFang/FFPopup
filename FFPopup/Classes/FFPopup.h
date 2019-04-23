@@ -80,12 +80,12 @@ typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
  */
 typedef NS_ENUM(NSUInteger, FFPopupMaskType) {
     /// Allow interaction with underlying view.
-    FFPopupMaskType_None,
+    FFPopupMaskType_None NS_SWIFT_NAME(none),
     /// Don't allow interaction with underlying view.
-    FFPopupMaskType_Clear,
+    FFPopupMaskType_Clear NS_SWIFT_NAME(clear),
     /// Don't allow interaction with underlying view, dim background.
-    FFPopupMaskType_Dimmed
-};
+    FFPopupMaskType_Dimmed NS_SWIFT_NAME(dimmed)
+} NS_SWIFT_NAME(FFpopup.MaskType);
 
 /** FFPopupLayout */
 struct FFPopupLayout {
