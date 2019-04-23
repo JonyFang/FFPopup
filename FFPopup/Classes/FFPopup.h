@@ -66,13 +66,13 @@ typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
  Controlled the layout of the popup in the vertical direction.
  */
 typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
-    FFPopupVerticalLayout_Custom,
-    FFPopupVerticalLayout_Top,
-    FFPopupVerticalLayout_AboveCenter,
-    FFPopupVerticalLayout_Center,
-    FFPopupVerticalLayout_BelowCenter,
-    FFPopupVerticalLayout_Bottom
-};
+    FFPopupVerticalLayout_Custom NS_SWIFT_NAME(custom),
+    FFPopupVerticalLayout_Top NS_SWIFT_NAME(top),
+    FFPopupVerticalLayout_AboveCenter NS_SWIFT_NAME(aboveCenter),
+    FFPopupVerticalLayout_Center NS_SWIFT_NAME(center),
+    FFPopupVerticalLayout_BelowCenter NS_SWIFT_NAME(belowCenter),
+    FFPopupVerticalLayout_Bottom NS_SWIFT_NAME(bottom)
+} NS_SWIFT_NAME(FFpopup.VerticalLayout);
 
 /**
  FFPopupMaskType
