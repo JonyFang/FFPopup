@@ -53,13 +53,13 @@ typedef NS_ENUM(NSUInteger, FFPopupDismissType) {
  Controlled the layout of the popup in the horizontal direction.
  */
 typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
-    FFPopupHorizontalLayout_Custom,
-    FFPopupHorizontalLayout_Left,
-    FFPopupHorizontalLayout_LeftOfCenter,
-    FFPopupHorizontalLayout_Center,
-    FFPopupHorizontalLayout_RightOfCenter,
-    FFPopupHoricontalLayout_Right
-};
+    FFPopupHorizontalLayout_Custom NS_SWIFT_NAME(custom),
+    FFPopupHorizontalLayout_Left NS_SWIFT_NAME(left),
+    FFPopupHorizontalLayout_LeftOfCenter NS_SWIFT_NAME(leftOfCenter),
+    FFPopupHorizontalLayout_Center NS_SWIFT_NAME(center),
+    FFPopupHorizontalLayout_RightOfCenter NS_SWIFT_NAME(rightOfCenter),
+    FFPopupHoricontalLayout_Right NS_SWIFT_NAME(right)
+} NS_SWIFT_NAME(FFpopup.HorizontalLayout);
 
 /**
  FFPopupVerticalLayout
