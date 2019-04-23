@@ -13,20 +13,20 @@
  Controlled how the popup will be presented.
  */
 typedef NS_ENUM(NSUInteger, FFPopupShowType) {
-    FFPopupShowType_None,
-    FFPopupShowType_FadeIn,
-    FFPopupShowType_GrowIn,
-    FFPopupShowType_ShrinkIn,
-    FFPopupShowType_SlideInFromTop,
-    FFPopupShowType_SlideInFromBottom,
-    FFPopupShowType_SlideInFromLeft,
-    FFPopupShowType_SlideInFromRight,
-    FFPopupShowType_BounceIn,
-    FFPopupShowType_BounceInFromTop,
-    FFPopupShowType_BounceInFromBottom,
-    FFPopupShowType_BounceInFromLeft,
-    FFPopupShowType_BounceInFromRight
-};
+    FFPopupShowType_None NS_SWIFT_NAME(none),
+    FFPopupShowType_FadeIn NS_SWIFT_NAME(fadeIn),
+    FFPopupShowType_GrowIn NS_SWIFT_NAME(growIn),
+    FFPopupShowType_ShrinkIn NS_SWIFT_NAME(shrinkIn),
+    FFPopupShowType_SlideInFromTop NS_SWIFT_NAME(slideInFromTop),
+    FFPopupShowType_SlideInFromBottom NS_SWIFT_NAME(slideInFromBottom),
+    FFPopupShowType_SlideInFromLeft NS_SWIFT_NAME(slideInFromLeft),
+    FFPopupShowType_SlideInFromRight NS_SWIFT_NAME(slideInFromRight),
+    FFPopupShowType_BounceIn NS_SWIFT_NAME(bounceIn),
+    FFPopupShowType_BounceInFromTop NS_SWIFT_NAME(bounceInFromTop),
+    FFPopupShowType_BounceInFromBottom NS_SWIFT_NAME(bounceInFromBottom),
+    FFPopupShowType_BounceInFromLeft NS_SWIFT_NAME(bounceInFromLeft),
+    FFPopupShowType_BounceInFromRight NS_SWIFT_NAME(bounceInFromRight)
+} NS_SWIFT_NAME(FFpopup.ShowType);
 
 /**
  FFPopupDismissType
