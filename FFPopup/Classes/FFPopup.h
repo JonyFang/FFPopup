@@ -242,7 +242,7 @@ NS_ASSUME_NONNULL_BEGIN
  Show popup with specified layout.
  Showing animation is determined by `showType`.
  */
-- (void)showWithLayout:(FFPopupLayout)layout;
+- (void)showWithLayout:(FFPopupLayout)layout NS_SWIFT_NAME(show(withLayout:));
 
 /**
  Show and then dismiss popup after `duration`.
