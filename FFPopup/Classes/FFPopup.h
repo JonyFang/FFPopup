@@ -229,7 +229,7 @@ NS_ASSUME_NONNULL_BEGIN
  Dismiss super popup.
  Iterate over superviews until you find a `FFPopup` and dismiss it.
  */
-+ (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated;
++ (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated NS_SWIFT_NAME(dismissSuperPopup(inView:animated:));
 
 /**
  Show popup with center layout.
