@@ -223,7 +223,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Dismiss the popup for contentView.
  */
-+ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated;
++ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated NS_SWIFT_NAME(dismiss(contentView:animated:));
 
 /**
  Dismiss super popup.
