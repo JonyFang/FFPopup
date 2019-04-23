@@ -125,10 +125,10 @@
             timestampString = "566365117.806278"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
-            landmarkName = "@interface FFPopup"
-            landmarkType = "2">
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "+popupWithContentView:showType:dismissType:maskType:dismissOnBackgroundTouch:dismissOnContentTouch:"
+            landmarkType = "6">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
