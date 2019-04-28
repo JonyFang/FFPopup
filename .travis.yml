@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode10.2
+osx_image: xcode10.1
 
 xcode_workspace: FFPopup.xcworkspace
 xcode_project: FFPopup.xcodeproj
@@ -29,7 +29,7 @@ script:
 
   - echo Build the Demo apps
   - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Objc" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
-  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Swift" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
+  #- xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Swift" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
 
 notifications:
   email: false
