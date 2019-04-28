@@ -16,6 +16,10 @@ class BLCustomContentView: UIView {
         setupViews()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: Private Methods
     fileprivate func setupViews() {
         backgroundColor = .white
