@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AAFC31700E8AC65EDE11E3F /* Pods_FFPopup_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45249909A507F7DD9F9E4DC3 /* Pods_FFPopup_Swift.framework */; };
+		A8353D5555D859BE67402813 /* Pods_FFPopup_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E032BF456B8C493DEAFCCF40 /* Pods_FFPopup_Example.framework */; };
+		D3160D0E2275AEA3000180F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D0D2275AEA3000180F0 /* AppDelegate.swift */; };
+		D3160D102275AEA3000180F0 /* FFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D0F2275AEA3000180F0 /* FFHomeViewController.swift */; };
+		D3160D132275AEA3000180F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3160D112275AEA3000180F0 /* Main.storyboard */; };
+		D3160D152275AEA5000180F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3160D142275AEA5000180F0 /* Assets.xcassets */; };
+		D3160D3D2275B72D000180F0 /* FFSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D3C2275B72D000180F0 /* FFSelectionViewController.swift */; };
+		D3160D402275B7A2000180F0 /* BLCustomContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D3F2275B7A2000180F0 /* BLCustomContentView.swift */; };
+		D3160D432275B83D000180F0 /* FFPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D422275B83D000180F0 /* FFPopupModel.swift */; };
+		D3160D462275B866000180F0 /* FFPopupHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D452275B866000180F0 /* FFPopupHelper.swift */; };
+		D3472EC621BF95C200E86376 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = D3472EC521BF95C200E86376 /* default.json */; };
+		D3472ECA21BF983900E86376 /* FFPopupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472EC921BF983900E86376 /* FFPopupModel.m */; };
+		D3472ECD21BF9F6C00E86376 /* FFPopupHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */; };
+		D3472ED021BFC66C00E86376 /* FFSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472ECF21BFC66C00E86376 /* FFSectionHeader.m */; };
+		D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F72C21AF790C005888D9 /* AppDelegate.m */; };
+		D3A5F73521AF790F005888D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73421AF790F005888D9 /* Assets.xcassets */; };
+		D3A5F73821AF790F005888D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */; };
+		D3A5F73B21AF790F005888D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F73A21AF790F005888D9 /* main.m */; };
+		D3A5F74321AF851F005888D9 /* FFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74221AF851F005888D9 /* FFHomeViewController.m */; };
+		D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */; };
+		D3A5F74F21AF9868005888D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */; };
+		D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */; };
+		D3B4C21821C11B5000DCF5EB /* UIColor+FFHex.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B4C21721C11B5000DCF5EB /* UIColor+FFHex.m */; };
+		D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */; };
+		D3CA120E21BE6D4400EC8FC7 /* FFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */; };
+		D3CA121121BE765200EC8FC7 /* FFSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA121021BE765200EC8FC7 /* FFSelectionTableViewCell.m */; };
+		D3CA121421BE96A600EC8FC7 /* FFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA121321BE96A600EC8FC7 /* FFTableView.m */; };
+		DE2095F6250F971A59A5E63C /* Pods_FFPopup_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CB7A291F008668F5AC8E5F /* Pods_FFPopup_Objc.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0CA38F5E6DD644F4FAC9ABA7 /* Pods-FFPopup_Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc.debug.xcconfig"; sourceTree = "<group>"; };
+		22CB7A291F008668F5AC8E5F /* Pods_FFPopup_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFPopup_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3891C7947739192ABAF695 /* Pods-FFPopup_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		45249909A507F7DD9F9E4DC3 /* Pods_FFPopup_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFPopup_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F52FD92C50AEB5C478D1659 /* Pods-FFPopup_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		8BAF3C4D1055B7B281713989 /* Pods-FFPopup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A547F60EAF0166EADA26703E /* Pods-FFPopup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D3160D0B2275AEA3000180F0 /* FFPopup_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFPopup_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3160D0D2275AEA3000180F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3160D0F2275AEA3000180F0 /* FFHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHomeViewController.swift; sourceTree = "<group>"; };
+		D3160D122275AEA3000180F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3160D142275AEA5000180F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3160D192275AEA5000180F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3160D3C2275B72D000180F0 /* FFSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFSelectionViewController.swift; sourceTree = "<group>"; };
+		D3160D3F2275B7A2000180F0 /* BLCustomContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLCustomContentView.swift; sourceTree = "<group>"; };
+		D3160D422275B83D000180F0 /* FFPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPopupModel.swift; sourceTree = "<group>"; };
+		D3160D452275B866000180F0 /* FFPopupHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPopupHelper.swift; sourceTree = "<group>"; };
+		D3472EC521BF95C200E86376 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
+		D3472EC821BF983900E86376 /* FFPopupModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopupModel.h; sourceTree = "<group>"; };
+		D3472EC921BF983900E86376 /* FFPopupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPopupModel.m; sourceTree = "<group>"; };
+		D3472ECB21BF9F6C00E86376 /* FFPopupHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopupHelper.h; sourceTree = "<group>"; };
+		D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPopupHelper.m; sourceTree = "<group>"; };
+		D3472ECE21BFC66C00E86376 /* FFSectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFSectionHeader.h; sourceTree = "<group>"; };
+		D3472ECF21BFC66C00E86376 /* FFSectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSectionHeader.m; sourceTree = "<group>"; };
+		D3A5F72821AF790C005888D9 /* FFPopup_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFPopup_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A5F72B21AF790C005888D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D3A5F72C21AF790C005888D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D3A5F73421AF790F005888D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3A5F73721AF790F005888D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3A5F73921AF790F005888D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A5F73A21AF790F005888D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3A5F74121AF851F005888D9 /* FFHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeViewController.h; sourceTree = "<group>"; };
+		D3A5F74221AF851F005888D9 /* FFHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeViewController.m; sourceTree = "<group>"; };
+		D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFSelectionViewController.h; sourceTree = "<group>"; };
+		D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSelectionViewController.m; sourceTree = "<group>"; };
+		D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFPopup_Example-Prefix.pch"; sourceTree = "<group>"; };
+		D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCustomContentView.h; sourceTree = "<group>"; };
+		D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCustomContentView.m; sourceTree = "<group>"; };
+		D3B4C21621C11B5000DCF5EB /* UIColor+FFHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+FFHex.h"; sourceTree = "<group>"; };
+		D3B4C21721C11B5000DCF5EB /* UIColor+FFHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FFHex.m"; sourceTree = "<group>"; };
+		D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFHomeTableViewCell.h; sourceTree = "<group>"; };
+		D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFHomeTableViewCell.m; sourceTree = "<group>"; };
+		D3CA120C21BE6D4400EC8FC7 /* FFTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTableViewCell.h; sourceTree = "<group>"; };
+		D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTableViewCell.m; sourceTree = "<group>"; };
+		D3CA120F21BE765200EC8FC7 /* FFSelectionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFSelectionTableViewCell.h; sourceTree = "<group>"; };
+		D3CA121021BE765200EC8FC7 /* FFSelectionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSelectionTableViewCell.m; sourceTree = "<group>"; };
+		D3CA121221BE96A600EC8FC7 /* FFTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTableView.h; sourceTree = "<group>"; };
+		D3CA121321BE96A600EC8FC7 /* FFTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTableView.m; sourceTree = "<group>"; };
+		E032BF456B8C493DEAFCCF40 /* Pods_FFPopup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFPopup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0249A7EA08379026156980D /* Pods-FFPopup_Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3160D082275AEA3000180F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AAFC31700E8AC65EDE11E3F /* Pods_FFPopup_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A5F72521AF790C005888D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8353D5555D859BE67402813 /* Pods_FFPopup_Example.framework in Frameworks */,
+				DE2095F6250F971A59A5E63C /* Pods_FFPopup_Objc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45EBEDD81142857643998DC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E032BF456B8C493DEAFCCF40 /* Pods_FFPopup_Example.framework */,
+				22CB7A291F008668F5AC8E5F /* Pods_FFPopup_Objc.framework */,
+				45249909A507F7DD9F9E4DC3 /* Pods_FFPopup_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3160D0C2275AEA3000180F0 /* FFPopup_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D3160D392275B271000180F0 /* Classes */,
+				D3160D3A2275B289000180F0 /* Resources */,
+				D3160D112275AEA3000180F0 /* Main.storyboard */,
+			);
+			path = FFPopup_Swift;
+			sourceTree = "<group>";
+		};
+		D3160D392275B271000180F0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D3160D0D2275AEA3000180F0 /* AppDelegate.swift */,
+				D3160D3B2275B3B3000180F0 /* Controllers */,
+				D3160D3E2275B73E000180F0 /* Views */,
+				D3160D412275B81E000180F0 /* Models */,
+				D3160D442275B84E000180F0 /* Others */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D3160D3A2275B289000180F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3160D142275AEA5000180F0 /* Assets.xcassets */,
+				D3160D192275AEA5000180F0 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3160D3B2275B3B3000180F0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3160D0F2275AEA3000180F0 /* FFHomeViewController.swift */,
+				D3160D3C2275B72D000180F0 /* FFSelectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D3160D3E2275B73E000180F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3160D3F2275B7A2000180F0 /* BLCustomContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3160D412275B81E000180F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3160D422275B83D000180F0 /* FFPopupModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D3160D442275B84E000180F0 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D3160D452275B866000180F0 /* FFPopupHelper.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		D3472EC721BF97EF00E86376 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3472EC821BF983900E86376 /* FFPopupModel.h */,
+				D3472EC921BF983900E86376 /* FFPopupModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D3A5F71F21AF790C005888D9 = {
+			isa = PBXGroup;
+			children = (
+				D3A5F72A21AF790C005888D9 /* FFPopup_Objc */,
+				D3160D0C2275AEA3000180F0 /* FFPopup_Swift */,
+				D3A5F72921AF790C005888D9 /* Products */,
+				E9486B7EDF37473CCCFDCE5A /* Pods */,
+				45EBEDD81142857643998DC3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D3A5F72921AF790C005888D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3A5F72821AF790C005888D9 /* FFPopup_Objc.app */,
+				D3160D0B2275AEA3000180F0 /* FFPopup_Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3A5F72A21AF790C005888D9 /* FFPopup_Objc */ = {
+			isa = PBXGroup;
+			children = (
+				D3A5F74A21AF897B005888D9 /* Classes */,
+				D3A5F74B21AF8987005888D9 /* Resources */,
+			);
+			path = FFPopup_Objc;
+			sourceTree = "<group>";
+		};
+		D3A5F74A21AF897B005888D9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D3A5F72B21AF790C005888D9 /* AppDelegate.h */,
+				D3A5F72C21AF790C005888D9 /* AppDelegate.m */,
+				D3A5F75621AFF216005888D9 /* Controllers */,
+				D3A5F75521AFF20D005888D9 /* Views */,
+				D3472EC721BF97EF00E86376 /* Models */,
+				D3B4C21521C11B0E00DCF5EB /* Others */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D3A5F74B21AF8987005888D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3472EC521BF95C200E86376 /* default.json */,
+				D3A5F75021AFB641005888D9 /* FFPopup_Example-Prefix.pch */,
+				D3A5F74E21AF9868005888D9 /* Default-568h@2x.png */,
+				D3A5F73421AF790F005888D9 /* Assets.xcassets */,
+				D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */,
+				D3A5F73921AF790F005888D9 /* Info.plist */,
+				D3A5F73A21AF790F005888D9 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3A5F75521AFF20D005888D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3CA121521BE976E00EC8FC7 /* Common */,
+				D3472ECE21BFC66C00E86376 /* FFSectionHeader.h */,
+				D3472ECF21BFC66C00E86376 /* FFSectionHeader.m */,
+				D3A5F75221AFDA0B005888D9 /* BLCustomContentView.h */,
+				D3A5F75321AFDA0B005888D9 /* BLCustomContentView.m */,
+				D3CA120921BE69E100EC8FC7 /* FFHomeTableViewCell.h */,
+				D3CA120A21BE69E100EC8FC7 /* FFHomeTableViewCell.m */,
+				D3CA120F21BE765200EC8FC7 /* FFSelectionTableViewCell.h */,
+				D3CA121021BE765200EC8FC7 /* FFSelectionTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3A5F75621AFF216005888D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3A5F74121AF851F005888D9 /* FFHomeViewController.h */,
+				D3A5F74221AF851F005888D9 /* FFHomeViewController.m */,
+				D3A5F74721AF8596005888D9 /* FFSelectionViewController.h */,
+				D3A5F74821AF8596005888D9 /* FFSelectionViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D3B4C21521C11B0E00DCF5EB /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D3472ECB21BF9F6C00E86376 /* FFPopupHelper.h */,
+				D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */,
+				D3B4C21621C11B5000DCF5EB /* UIColor+FFHex.h */,
+				D3B4C21721C11B5000DCF5EB /* UIColor+FFHex.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		D3CA121521BE976E00EC8FC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D3CA120C21BE6D4400EC8FC7 /* FFTableViewCell.h */,
+				D3CA120D21BE6D4400EC8FC7 /* FFTableViewCell.m */,
+				D3CA121221BE96A600EC8FC7 /* FFTableView.h */,
+				D3CA121321BE96A600EC8FC7 /* FFTableView.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E9486B7EDF37473CCCFDCE5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A547F60EAF0166EADA26703E /* Pods-FFPopup_Example.debug.xcconfig */,
+				8BAF3C4D1055B7B281713989 /* Pods-FFPopup_Example.release.xcconfig */,
+				0CA38F5E6DD644F4FAC9ABA7 /* Pods-FFPopup_Objc.debug.xcconfig */,
+				F0249A7EA08379026156980D /* Pods-FFPopup_Objc.release.xcconfig */,
+				2B3891C7947739192ABAF695 /* Pods-FFPopup_Swift.debug.xcconfig */,
+				6F52FD92C50AEB5C478D1659 /* Pods-FFPopup_Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3160D0A2275AEA3000180F0 /* FFPopup_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3160D302275AEA5000180F0 /* Build configuration list for PBXNativeTarget "FFPopup_Swift" */;
+			buildPhases = (
+				F059A62E969627C2967DC37B /* [CP] Check Pods Manifest.lock */,
+				D3160D072275AEA3000180F0 /* Sources */,
+				D3160D082275AEA3000180F0 /* Frameworks */,
+				D3160D092275AEA3000180F0 /* Resources */,
+				12725F3AEB124C43DE2AA351 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFPopup_Swift;
+			productName = FFPopup_Swift;
+			productReference = D3160D0B2275AEA3000180F0 /* FFPopup_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3A5F72721AF790C005888D9 /* FFPopup_Objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A5F73E21AF790F005888D9 /* Build configuration list for PBXNativeTarget "FFPopup_Objc" */;
+			buildPhases = (
+				4C40D7D4500AC4FB69BFDB68 /* [CP] Check Pods Manifest.lock */,
+				D3A5F72421AF790C005888D9 /* Sources */,
+				D3A5F72521AF790C005888D9 /* Frameworks */,
+				D3A5F72621AF790C005888D9 /* Resources */,
+				D85C04EEF92BF6A673D6ABEB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFPopup_Objc;
+			productName = FFPopup_Example;
+			productReference = D3A5F72821AF790C005888D9 /* FFPopup_Objc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3A5F72021AF790C005888D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = JonyFang;
+				TargetAttributes = {
+					D3160D0A2275AEA3000180F0 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D3A5F72721AF790C005888D9 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = D3A5F72321AF790C005888D9 /* Build configuration list for PBXProject "FFPopup_Demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3A5F71F21AF790C005888D9;
+			productRefGroup = D3A5F72921AF790C005888D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3A5F72721AF790C005888D9 /* FFPopup_Objc */,
+				D3160D0A2275AEA3000180F0 /* FFPopup_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3160D092275AEA3000180F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3160D152275AEA5000180F0 /* Assets.xcassets in Resources */,
+				D3160D132275AEA3000180F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A5F72621AF790C005888D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A5F73821AF790F005888D9 /* LaunchScreen.storyboard in Resources */,
+				D3472EC621BF95C200E86376 /* default.json in Resources */,
+				D3A5F73521AF790F005888D9 /* Assets.xcassets in Resources */,
+				D3A5F74F21AF9868005888D9 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12725F3AEB124C43DE2AA351 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FFPopup/FFPopup.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFPopup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C40D7D4500AC4FB69BFDB68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FFPopup_Objc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D85C04EEF92BF6A673D6ABEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FFPopup/FFPopup.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFPopup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F059A62E969627C2967DC37B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FFPopup_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3160D072275AEA3000180F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3160D462275B866000180F0 /* FFPopupHelper.swift in Sources */,
+				D3160D432275B83D000180F0 /* FFPopupModel.swift in Sources */,
+				D3160D3D2275B72D000180F0 /* FFSelectionViewController.swift in Sources */,
+				D3160D102275AEA3000180F0 /* FFHomeViewController.swift in Sources */,
+				D3160D0E2275AEA3000180F0 /* AppDelegate.swift in Sources */,
+				D3160D402275B7A2000180F0 /* BLCustomContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A5F72421AF790C005888D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A5F74321AF851F005888D9 /* FFHomeViewController.m in Sources */,
+				D3A5F73B21AF790F005888D9 /* main.m in Sources */,
+				D3472ECD21BF9F6C00E86376 /* FFPopupHelper.m in Sources */,
+				D3472ECA21BF983900E86376 /* FFPopupModel.m in Sources */,
+				D3CA121121BE765200EC8FC7 /* FFSelectionTableViewCell.m in Sources */,
+				D3CA121421BE96A600EC8FC7 /* FFTableView.m in Sources */,
+				D3CA120E21BE6D4400EC8FC7 /* FFTableViewCell.m in Sources */,
+				D3A5F74921AF8596005888D9 /* FFSelectionViewController.m in Sources */,
+				D3A5F72D21AF790C005888D9 /* AppDelegate.m in Sources */,
+				D3B4C21821C11B5000DCF5EB /* UIColor+FFHex.m in Sources */,
+				D3CA120B21BE69E100EC8FC7 /* FFHomeTableViewCell.m in Sources */,
+				D3472ED021BFC66C00E86376 /* FFSectionHeader.m in Sources */,
+				D3A5F75421AFDA0B005888D9 /* BLCustomContentView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D3160D112275AEA3000180F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3160D122275AEA3000180F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3A5F73721AF790F005888D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3160D312275AEA5000180F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B3891C7947739192ABAF695 /* Pods-FFPopup_Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				INFOPLIST_FILE = FFPopup_Swift/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3160D322275AEA5000180F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F52FD92C50AEB5C478D1659 /* Pods-FFPopup_Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				INFOPLIST_FILE = FFPopup_Swift/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3A5F73C21AF790F005888D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D3A5F73D21AF790F005888D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3A5F73F21AF790F005888D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CA38F5E6DD644F4FAC9ABA7 /* Pods-FFPopup_Objc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FFPopup_Objc/Resources/FFPopup_Example-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/FFPopup_Objc/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3A5F74021AF790F005888D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0249A7EA08379026156980D /* Pods-FFPopup_Objc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FFPopup_Objc/Resources/FFPopup_Example-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/FFPopup_Objc/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3160D302275AEA5000180F0 /* Build configuration list for PBXNativeTarget "FFPopup_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3160D312275AEA5000180F0 /* Debug */,
+				D3160D322275AEA5000180F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A5F72321AF790C005888D9 /* Build configuration list for PBXProject "FFPopup_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A5F73C21AF790F005888D9 /* Debug */,
+				D3A5F73D21AF790F005888D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A5F73E21AF790F005888D9 /* Build configuration list for PBXNativeTarget "FFPopup_Objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A5F73F21AF790F005888D9 /* Debug */,
+				D3A5F74021AF790F005888D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3A5F72021AF790C005888D9 /* Project object */;
+}

@@ -1,0 +1,31 @@
+PODS:
+  - FFPopup (1.0.0)
+  - Masonry (1.1.0)
+  - SnapKit (4.2.0)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - FFPopup (from `../`)
+  - Masonry
+  - SnapKit
+  - YYModel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+    - SnapKit
+    - YYModel
+
+EXTERNAL SOURCES:
+  FFPopup:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FFPopup: a23175a42e2a973a38661709acbe9ba17a25975c
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 18a49b868b236326533c9e483ffe476b9468d81d
+
+COCOAPODS: 1.5.3
