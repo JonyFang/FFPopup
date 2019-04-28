@@ -1,6 +1,0 @@
-framework module FFPopup {
-  umbrella header "FFPopup-umbrella.h"
-
-  export *
-  module * { export * }
-}
