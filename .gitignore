@@ -31,13 +31,12 @@ DerivedData/
 *.dSYM
 
 # CocoaPods
-Example/Pods/
-Example/Podfile.lock
-Example/FFPopup_Example.xcworkspace
+Demo/Pods/
+Demo/Podfile.lock
 
 # Carthage
-Example/Carthage/
-Example/Cartfile.resolved
+Demo/Carthage/
+Demo/Cartfile.resolved
 
 # fastlane
 fastlane/report.xml
