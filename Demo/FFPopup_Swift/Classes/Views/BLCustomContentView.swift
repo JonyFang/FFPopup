@@ -8,8 +8,17 @@
 
 import UIKit
 
-class BLCustomContentView: UView {
+class BLCustomContentView: UIView {
     
     // MARK: Life Cycle
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+    
+    // MARK: Private Methods
+    fileprivate func setupViews() {
+        backgroundColor = .white
+    }
     
 }

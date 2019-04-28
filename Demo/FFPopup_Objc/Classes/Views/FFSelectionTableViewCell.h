@@ -10,11 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *kFFSelectionTableViewCell;
+
 @interface FFSelectionTableViewCell : FFTableViewCell
 - (void)updateTitle:(NSString *)title selected:(BOOL)selected;
 + (CGFloat)height;
 @end
 
 NS_ASSUME_NONNULL_END
-
-extern NSString *kFFSelectionTableViewCell;
