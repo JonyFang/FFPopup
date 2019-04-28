@@ -1,10 +1,10 @@
 language: objective-c
 osx_image: xcode10.1
 
-xcode_workspace: Example/FFPopup_Example.xcworkspace
+xcode_workspace: FFPopup.xcworkspace
 xcode_project: FFPopup.xcodeproj
 xcode_scheme: FFPopup
-podfile: Example/Podfile
+podfile: Demo/Podfile
 
 before_install:
   - env
@@ -27,8 +27,9 @@ script:
   - echo Build as dynamic framework
   - xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
 
-  - echo Build the Examples
-  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Example" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
+  - echo Build the Demo apps
+  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Objc" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
+  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Swift" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
 
 notifications:
   email: false
