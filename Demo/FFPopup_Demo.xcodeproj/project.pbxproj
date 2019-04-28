@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6AAFC31700E8AC65EDE11E3F /* Pods_FFPopup_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45249909A507F7DD9F9E4DC3 /* Pods_FFPopup_Swift.framework */; };
-		A8353D5555D859BE67402813 /* Pods_FFPopup_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E032BF456B8C493DEAFCCF40 /* Pods_FFPopup_Example.framework */; };
 		D3160D0E2275AEA3000180F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D0D2275AEA3000180F0 /* AppDelegate.swift */; };
 		D3160D102275AEA3000180F0 /* FFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D0F2275AEA3000180F0 /* FFHomeViewController.swift */; };
 		D3160D132275AEA3000180F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3160D112275AEA3000180F0 /* Main.storyboard */; };
@@ -43,8 +42,6 @@
 		2B3891C7947739192ABAF695 /* Pods-FFPopup_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		45249909A507F7DD9F9E4DC3 /* Pods_FFPopup_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFPopup_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F52FD92C50AEB5C478D1659 /* Pods-FFPopup_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift.release.xcconfig"; sourceTree = "<group>"; };
-		8BAF3C4D1055B7B281713989 /* Pods-FFPopup_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A547F60EAF0166EADA26703E /* Pods-FFPopup_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Example/Pods-FFPopup_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D3160D0B2275AEA3000180F0 /* FFPopup_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFPopup_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3160D0D2275AEA3000180F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3160D0F2275AEA3000180F0 /* FFHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHomeViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 		D3CA121021BE765200EC8FC7 /* FFSelectionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFSelectionTableViewCell.m; sourceTree = "<group>"; };
 		D3CA121221BE96A600EC8FC7 /* FFTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFTableView.h; sourceTree = "<group>"; };
 		D3CA121321BE96A600EC8FC7 /* FFTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTableView.m; sourceTree = "<group>"; };
-		E032BF456B8C493DEAFCCF40 /* Pods_FFPopup_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFPopup_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0249A7EA08379026156980D /* Pods-FFPopup_Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFPopup_Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8353D5555D859BE67402813 /* Pods_FFPopup_Example.framework in Frameworks */,
 				DE2095F6250F971A59A5E63C /* Pods_FFPopup_Objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +110,6 @@
 		45EBEDD81142857643998DC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E032BF456B8C493DEAFCCF40 /* Pods_FFPopup_Example.framework */,
 				22CB7A291F008668F5AC8E5F /* Pods_FFPopup_Objc.framework */,
 				45249909A507F7DD9F9E4DC3 /* Pods_FFPopup_Swift.framework */,
 			);
@@ -303,8 +297,6 @@
 		E9486B7EDF37473CCCFDCE5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A547F60EAF0166EADA26703E /* Pods-FFPopup_Example.debug.xcconfig */,
-				8BAF3C4D1055B7B281713989 /* Pods-FFPopup_Example.release.xcconfig */,
 				0CA38F5E6DD644F4FAC9ABA7 /* Pods-FFPopup_Objc.debug.xcconfig */,
 				F0249A7EA08379026156980D /* Pods-FFPopup_Objc.release.xcconfig */,
 				2B3891C7947739192ABAF695 /* Pods-FFPopup_Swift.debug.xcconfig */,
