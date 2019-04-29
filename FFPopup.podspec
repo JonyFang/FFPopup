@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "FFPopup"
-  s.version             = "1.1.0"
+  s.version             = "1.1.1"
   s.summary             = "Presenting custom views as a popup in iOS."
 
   s.description         = <<-DESC
