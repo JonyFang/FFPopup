@@ -13,66 +13,66 @@
  Controlled how the popup will be presented.
  */
 typedef NS_ENUM(NSUInteger, FFPopupShowType) {
-    FFPopupShowType_None,
-    FFPopupShowType_FadeIn,
-    FFPopupShowType_GrowIn,
-    FFPopupShowType_ShrinkIn,
-    FFPopupShowType_SlideInFromTop,
-    FFPopupShowType_SlideInFromBottom,
-    FFPopupShowType_SlideInFromLeft,
-    FFPopupShowType_SlideInFromRight,
-    FFPopupShowType_BounceIn,
-    FFPopupShowType_BounceInFromTop,
-    FFPopupShowType_BounceInFromBottom,
-    FFPopupShowType_BounceInFromLeft,
-    FFPopupShowType_BounceInFromRight
-};
+    FFPopupShowType_None NS_SWIFT_NAME(none),
+    FFPopupShowType_FadeIn NS_SWIFT_NAME(fadeIn),
+    FFPopupShowType_GrowIn NS_SWIFT_NAME(growIn),
+    FFPopupShowType_ShrinkIn NS_SWIFT_NAME(shrinkIn),
+    FFPopupShowType_SlideInFromTop NS_SWIFT_NAME(slideInFromTop),
+    FFPopupShowType_SlideInFromBottom NS_SWIFT_NAME(slideInFromBottom),
+    FFPopupShowType_SlideInFromLeft NS_SWIFT_NAME(slideInFromLeft),
+    FFPopupShowType_SlideInFromRight NS_SWIFT_NAME(slideInFromRight),
+    FFPopupShowType_BounceIn NS_SWIFT_NAME(bounceIn),
+    FFPopupShowType_BounceInFromTop NS_SWIFT_NAME(bounceInFromTop),
+    FFPopupShowType_BounceInFromBottom NS_SWIFT_NAME(bounceInFromBottom),
+    FFPopupShowType_BounceInFromLeft NS_SWIFT_NAME(bounceInFromLeft),
+    FFPopupShowType_BounceInFromRight NS_SWIFT_NAME(bounceInFromRight)
+} NS_SWIFT_NAME(FFPopup.ShowType);
 
 /**
  FFPopupDismissType
  Controlled how the popup will be dismissed.
  */
 typedef NS_ENUM(NSUInteger, FFPopupDismissType) {
-    FFPopupDismissType_None,
-    FFPopupDismissType_FadeOut,
-    FFPopupDismissType_GrowOut,
-    FFPopupDismissType_ShrinkOut,
-    FFPopupDismissType_SlideOutToTop,
-    FFPopupDismissType_SlideOutToBottom,
-    FFPopupDismissType_SlideOutToLeft,
-    FFPopupDismissType_SlideOutToRight,
-    FFPopupDismissType_BounceOut,
-    FFPopupDismissType_BounceOutToTop,
-    FFPopupDismissType_BounceOutToBottom,
-    FFPopupDismissType_BounceOutToLeft,
-    FFPopupDismissType_BounceOutToRight
-};
+    FFPopupDismissType_None NS_SWIFT_NAME(none),
+    FFPopupDismissType_FadeOut NS_SWIFT_NAME(fadeOut),
+    FFPopupDismissType_GrowOut NS_SWIFT_NAME(growOut),
+    FFPopupDismissType_ShrinkOut NS_SWIFT_NAME(shrinkOut),
+    FFPopupDismissType_SlideOutToTop NS_SWIFT_NAME(slideOutToTop),
+    FFPopupDismissType_SlideOutToBottom NS_SWIFT_NAME(slideOutToBottom),
+    FFPopupDismissType_SlideOutToLeft NS_SWIFT_NAME(slideOutToLeft),
+    FFPopupDismissType_SlideOutToRight NS_SWIFT_NAME(slideOutToRight),
+    FFPopupDismissType_BounceOut NS_SWIFT_NAME(bounceOut),
+    FFPopupDismissType_BounceOutToTop NS_SWIFT_NAME(bounceOutToTop),
+    FFPopupDismissType_BounceOutToBottom NS_SWIFT_NAME(bounceOutToBottom),
+    FFPopupDismissType_BounceOutToLeft NS_SWIFT_NAME(bounceOutToLeft),
+    FFPopupDismissType_BounceOutToRight NS_SWIFT_NAME(bounceOutToRight)
+} NS_SWIFT_NAME(FFPopup.DismissType);
 
 /**
  FFPopupHorizontalLayout
  Controlled the layout of the popup in the horizontal direction.
  */
 typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
-    FFPopupHorizontalLayout_Custom,
-    FFPopupHorizontalLayout_Left,
-    FFPopupHorizontalLayout_LeftOfCenter,
-    FFPopupHorizontalLayout_Center,
-    FFPopupHorizontalLayout_RightOfCenter,
-    FFPopupHoricontalLayout_Right
-};
+    FFPopupHorizontalLayout_Custom NS_SWIFT_NAME(custom),
+    FFPopupHorizontalLayout_Left NS_SWIFT_NAME(left),
+    FFPopupHorizontalLayout_LeftOfCenter NS_SWIFT_NAME(leftOfCenter),
+    FFPopupHorizontalLayout_Center NS_SWIFT_NAME(center),
+    FFPopupHorizontalLayout_RightOfCenter NS_SWIFT_NAME(rightOfCenter),
+    FFPopupHoricontalLayout_Right NS_SWIFT_NAME(right)
+} NS_SWIFT_NAME(FFPopup.HorizontalLayout);
 
 /**
  FFPopupVerticalLayout
  Controlled the layout of the popup in the vertical direction.
  */
 typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
-    FFPopupVerticalLayout_Custom,
-    FFPopupVerticalLayout_Top,
-    FFPopupVerticalLayout_AboveCenter,
-    FFPopupVerticalLayout_Center,
-    FFPopupVerticalLayout_BelowCenter,
-    FFPopupVerticalLayout_Bottom
-};
+    FFPopupVerticalLayout_Custom NS_SWIFT_NAME(custom),
+    FFPopupVerticalLayout_Top NS_SWIFT_NAME(top),
+    FFPopupVerticalLayout_AboveCenter NS_SWIFT_NAME(aboveCenter),
+    FFPopupVerticalLayout_Center NS_SWIFT_NAME(center),
+    FFPopupVerticalLayout_BelowCenter NS_SWIFT_NAME(belowCenter),
+    FFPopupVerticalLayout_Bottom NS_SWIFT_NAME(bottom)
+} NS_SWIFT_NAME(FFPopup.VerticalLayout);
 
 /**
  FFPopupMaskType
@@ -80,12 +80,12 @@ typedef NS_ENUM(NSUInteger, FFPopupVerticalLayout) {
  */
 typedef NS_ENUM(NSUInteger, FFPopupMaskType) {
     /// Allow interaction with underlying view.
-    FFPopupMaskType_None,
+    FFPopupMaskType_None NS_SWIFT_NAME(none),
     /// Don't allow interaction with underlying view.
-    FFPopupMaskType_Clear,
+    FFPopupMaskType_Clear NS_SWIFT_NAME(clear),
     /// Don't allow interaction with underlying view, dim background.
-    FFPopupMaskType_Dimmed
-};
+    FFPopupMaskType_Dimmed NS_SWIFT_NAME(dimmed)
+} NS_SWIFT_NAME(FFPopup.MaskType);
 
 /** FFPopupLayout */
 struct FFPopupLayout {
@@ -95,9 +95,9 @@ struct FFPopupLayout {
 
 typedef struct FFPopupLayout FFPopupLayout;
 
-extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical);
+extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical) NS_SWIFT_NAME(FFpopupLayout(horizontal:vertical:));
 
-extern const FFPopupLayout FFPopupLayout_Center;
+extern FFPopupLayout const FFPopupLayout_Center NS_SWIFT_NAME(FFPopupLayout.Center);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -213,7 +213,7 @@ NS_ASSUME_NONNULL_BEGIN
                       dismissType:(FFPopupDismissType)dismissType
                          maskType:(FFPopupMaskType)maskType
          dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch
-            dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch;
+            dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch NS_SWIFT_NAME(popup(contetnView:showType:dismissType:maskType:dismissOnBackgroundTouch:dismissOnContentTouch:));
 
 /**
  Dismiss all the popups in the app.
@@ -223,13 +223,13 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Dismiss the popup for contentView.
  */
-+ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated;
++ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated NS_SWIFT_NAME(dismiss(contentView:animated:));
 
 /**
  Dismiss super popup.
  Iterate over superviews until you find a `FFPopup` and dismiss it.
  */
-+ (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated;
++ (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated NS_SWIFT_NAME(dismissSuperPopup(inView:animated:));
 
 /**
  Show popup with center layout.
@@ -242,38 +242,38 @@ NS_ASSUME_NONNULL_BEGIN
  Show popup with specified layout.
  Showing animation is determined by `showType`.
  */
-- (void)showWithLayout:(FFPopupLayout)layout;
+- (void)showWithLayout:(FFPopupLayout)layout NS_SWIFT_NAME(show(layout:));
 
 /**
  Show and then dismiss popup after `duration`.
  If duration is `0.0` or `less`, it will be considered infinity.
  */
-- (void)showWithDuration:(NSTimeInterval)duration;
+- (void)showWithDuration:(NSTimeInterval)duration NS_SWIFT_NAME(show(duration:));
 
 /**
  Show popup with specified `layout` and then dismissed after `duration`.
  If duration is `0.0` or `less`, it will be considered infinity.
  */
-- (void)showWithLayout:(FFPopupLayout)layout duration:(NSTimeInterval)duration;
+- (void)showWithLayout:(FFPopupLayout)layout duration:(NSTimeInterval)duration NS_SWIFT_NAME(show(layout:duration:));
 
 /**
  Show popup at point in view's coordinate system.
  If view is nil, will use screen base coordinates.
  */
-- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view;
+- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view NS_SWIFT_NAME(show(center:inView:));
 
 /**
  Show popup at point in view's coordinate system and then dismissed after duration.
  If view is nil, will use screen base coordinates.
  If duration is `0.0` or `less`, it will be considered infinity.
  */
-- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view duration:(NSTimeInterval)duration;
+- (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view duration:(NSTimeInterval)duration NS_SWIFT_NAME(show(center:inView:duration:));
 
 /**
  Dismiss popup.
  Use `dismissType` if animated is `YES`.
  */
-- (void)dismissAnimated:(BOOL)animated;
+- (void)dismissAnimated:(BOOL)animated NS_SWIFT_NAME(dismiss(animated:));
 
 #pragma mark - ReadOnly Properties
 @property (nonatomic, strong, readonly) UIView *backgroundView;
