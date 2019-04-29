@@ -2,8 +2,6 @@ language: objective-c
 osx_image: xcode10.2
 
 xcode_workspace: FFPopup.xcworkspace
-xcode_project: FFPopup.xcodeproj
-xcode_scheme: FFPopup
 podfile: Demo/Podfile
 
 before_install:
@@ -24,15 +22,25 @@ script:
   - echo Check if the library described by the podspec can be built
   - pod lib lint --allow-warnings
 
+  - echo Build as static library
+  - xcodebuild build -workspace '$TRAVIS_XCODE_WORKSPACE' -scheme 'FFPopup_Static' -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
+
   - echo Build as dynamic framework
-  - xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
+  - xcodebuild build -workspace '$TRAVIS_XCODE_WORKSPACE' -scheme 'FFPopup' -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
 
   - echo Build the Demo apps
-  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Objc" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
-  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Swift" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
+  - pod install --project-directory=Demo
+  - xcodebuild build -workspace '$TRAVIS_XCODE_WORKSPACE' -scheme 'FFPopup_Objc' -configuration Debug -destination 'name=iPhone XS' | xcpretty -c
+  - xcodebuild build -workspace '$TRAVIS_XCODE_WORKSPACE' -scheme 'FFPopup_Swift' -configuration Debug -destination 'name=iPhone XS' | xcpretty -c
+
+  - echo Clean DerivedData
+  - rm -rf ~/Library/Developer/Xcode/DerivedData/
+  - mkdir DerivedData
 
 notifications:
   email: false
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J 'FFPopup'
+  - export PATH="/usr/local/opt/curl/bin:$PATH"
+  - curl --version
+  - bash <(curl -s https://codecov.io/bash) -D './DerivedData/iOS' -J '^FFPopup$' -c -X gcov -F ios
