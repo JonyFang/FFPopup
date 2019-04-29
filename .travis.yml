@@ -1,16 +1,14 @@
 language: objective-c
-osx_image: xcode10.1
+osx_image: xcode10.2
 
-xcode_workspace: Example/FFPopup_Example.xcworkspace
-xcode_project: FFPopup.xcodeproj
-xcode_scheme: FFPopup
-podfile: Example/Podfile
+xcode_workspace: FFPopup.xcworkspace
+podfile: Demo/Podfile
 
 before_install:
   - env
   - locale
-  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install cocoapods --no-document --quiet
+  - gem install xcpretty --no-document --quiet
   - pod --version
   - pod setup --silent > /dev/null
   - pod repo update --silent
@@ -24,14 +22,25 @@ script:
   - echo Check if the library described by the podspec can be built
   - pod lib lint --allow-warnings
 
-  - echo Build as dynamic framework
-  - xcodebuild clean build -project "$TRAVIS_XCODE_PROJECT"  -scheme "$TRAVIS_XCODE_SCHEME" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
+  - echo Build as static library
+  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Static" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
 
-  - echo Build the Examples
-  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Example" -configuration Debug -destination 'name=iPhone X' | xcpretty -c
+  - echo Build as dynamic framework
+  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
+
+  - echo Build the Demo apps
+  - pod install --project-directory=Demo
+  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Objc" -configuration Debug -destination "name=iPhone XS" | xcpretty -c
+  - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Swift" -configuration Debug -destination "name=iPhone XS" | xcpretty -c
+
+  - echo Clean DerivedData
+  - rm -rf ~/Library/Developer/Xcode/DerivedData/
+  - mkdir DerivedData
 
 notifications:
   email: false
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - export PATH="/usr/local/opt/curl/bin:$PATH"
+  - curl --version
+  - bash <(curl -s https://codecov.io/bash) -D './DerivedData/iOS' -J '^FFPopup$' -c -X gcov -F ios

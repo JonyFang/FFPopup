@@ -1,0 +1,11 @@
+
+coverage:
+  ignore:
+    - "Demo"
+    - "docs"
+    - "Resources"
+  status:
+    project:
+      default: off
+      ios:
+        flags: ios

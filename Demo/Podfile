@@ -1,0 +1,30 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+inhibit_all_warnings!
+use_frameworks!
+
+project 'FFPopup_Demo'
+workspace '../FFPopup'
+
+def local_pods
+  pod 'FFPopup', :path => '../'
+end
+
+def shared_objc_pods
+  pod 'Masonry'
+  pod 'YYModel'
+end
+
+def shared_swift_pods
+  pod 'SnapKit'
+end
+
+target 'FFPopup_Objc' do
+  local_pods
+  shared_objc_pods
+end
+
+target 'FFPopup_Swift' do
+  local_pods
+  shared_swift_pods
+end
