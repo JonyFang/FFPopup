@@ -29,6 +29,7 @@ script:
   - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup" -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
 
   - echo Build the Demo apps
+  - pod install --project-directory=Demo
   - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Objc" -configuration Debug -destination "name=iPhone XS" | xcpretty -c
   - xcodebuild build -workspace "$TRAVIS_XCODE_WORKSPACE" -scheme "FFPopup_Swift" -configuration Debug -destination "name=iPhone XS" | xcpretty -c
 
