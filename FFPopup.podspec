@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.summary             = "Presenting custom views as a popup in iOS."
 
   s.description         = <<-DESC
-  A lightweight library for presenting custom views as a popup in iOS.
-                        DESC
+                          A lightweight library for presenting custom views as a popup in iOS.
+                          DESC
 
   s.homepage            = "https://github.com/JonyFang/FFPopup"
   s.license             = { :type => "MIT", :file => "LICENSE" }
