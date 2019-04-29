@@ -195,7 +195,7 @@ NS_ASSUME_NONNULL_BEGIN
  Convenience Initializers
  Create a new popup with `contentView`.
  */
-+ (FFPopup *)popupWithContentView:(UIView *)contentView;
++ (FFPopup *)popupWithContentView:(UIView *)contentView NS_SWIFT_NAME(init(contentView:));
 
 /**
  Convenience Initializers
@@ -213,12 +213,12 @@ NS_ASSUME_NONNULL_BEGIN
                       dismissType:(FFPopupDismissType)dismissType
                          maskType:(FFPopupMaskType)maskType
          dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch
-            dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch NS_SWIFT_NAME(popup(contetnView:showType:dismissType:maskType:dismissOnBackgroundTouch:dismissOnContentTouch:));
+            dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch NS_SWIFT_NAME(init(contetnView:showType:dismissType:maskType:dismissOnBackgroundTouch:dismissOnContentTouch:));
 
 /**
  Dismiss all the popups in the app.
  */
-+ (void)dismissAllPopups;
++ (void)dismissAllPopups NS_SWIFT_NAME(dismissAll);
 
 /**
  Dismiss the popup for contentView.
