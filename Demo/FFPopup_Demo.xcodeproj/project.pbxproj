@@ -52,6 +52,7 @@
 		D3160D422275B83D000180F0 /* FFPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPopupModel.swift; sourceTree = "<group>"; };
 		D3160D452275B866000180F0 /* FFPopupHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPopupHelper.swift; sourceTree = "<group>"; };
 		D33A7209227689E600F0C7F5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D33A720B22768C2E00F0C7F5 /* FFPopupSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFPopupSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3472EC521BF95C200E86376 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
 		D3472EC821BF983900E86376 /* FFPopupModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopupModel.h; sourceTree = "<group>"; };
 		D3472EC921BF983900E86376 /* FFPopupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPopupModel.m; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 				D3160D142275AEA5000180F0 /* Assets.xcassets */,
 				D3160D192275AEA5000180F0 /* Info.plist */,
 				D33A7209227689E600F0C7F5 /* LaunchScreen.storyboard */,
+				D33A720B22768C2E00F0C7F5 /* FFPopupSwift-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -567,6 +569,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FFPopup_Swift/Resources/FFPopupSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,6 +592,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FFPopup_Swift/Resources/FFPopupSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -22,7 +22,7 @@ class BLCustomContentView: UIView {
     
     // MARK: Private Methods
     fileprivate func setupViews() {
-        backgroundColor = .white
+        backgroundColor = .red
     }
     
 }
