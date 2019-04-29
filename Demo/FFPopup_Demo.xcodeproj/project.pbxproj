@@ -10,12 +10,12 @@
 		6AAFC31700E8AC65EDE11E3F /* Pods_FFPopup_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45249909A507F7DD9F9E4DC3 /* Pods_FFPopup_Swift.framework */; };
 		D3160D0E2275AEA3000180F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D0D2275AEA3000180F0 /* AppDelegate.swift */; };
 		D3160D102275AEA3000180F0 /* FFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D0F2275AEA3000180F0 /* FFHomeViewController.swift */; };
-		D3160D132275AEA3000180F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3160D112275AEA3000180F0 /* Main.storyboard */; };
 		D3160D152275AEA5000180F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3160D142275AEA5000180F0 /* Assets.xcassets */; };
 		D3160D3D2275B72D000180F0 /* FFSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D3C2275B72D000180F0 /* FFSelectionViewController.swift */; };
 		D3160D402275B7A2000180F0 /* BLCustomContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D3F2275B7A2000180F0 /* BLCustomContentView.swift */; };
 		D3160D432275B83D000180F0 /* FFPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D422275B83D000180F0 /* FFPopupModel.swift */; };
 		D3160D462275B866000180F0 /* FFPopupHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3160D452275B866000180F0 /* FFPopupHelper.swift */; };
+		D33A720A227689E600F0C7F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33A7209227689E600F0C7F5 /* LaunchScreen.storyboard */; };
 		D3472EC621BF95C200E86376 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = D3472EC521BF95C200E86376 /* default.json */; };
 		D3472ECA21BF983900E86376 /* FFPopupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472EC921BF983900E86376 /* FFPopupModel.m */; };
 		D3472ECD21BF9F6C00E86376 /* FFPopupHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3472ECC21BF9F6C00E86376 /* FFPopupHelper.m */; };
@@ -45,13 +45,13 @@
 		D3160D0B2275AEA3000180F0 /* FFPopup_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFPopup_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3160D0D2275AEA3000180F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3160D0F2275AEA3000180F0 /* FFHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFHomeViewController.swift; sourceTree = "<group>"; };
-		D3160D122275AEA3000180F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3160D142275AEA5000180F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3160D192275AEA5000180F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3160D3C2275B72D000180F0 /* FFSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFSelectionViewController.swift; sourceTree = "<group>"; };
 		D3160D3F2275B7A2000180F0 /* BLCustomContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLCustomContentView.swift; sourceTree = "<group>"; };
 		D3160D422275B83D000180F0 /* FFPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPopupModel.swift; sourceTree = "<group>"; };
 		D3160D452275B866000180F0 /* FFPopupHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFPopupHelper.swift; sourceTree = "<group>"; };
+		D33A7209227689E600F0C7F5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3472EC521BF95C200E86376 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
 		D3472EC821BF983900E86376 /* FFPopupModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopupModel.h; sourceTree = "<group>"; };
 		D3472EC921BF983900E86376 /* FFPopupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPopupModel.m; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 			children = (
 				D3160D392275B271000180F0 /* Classes */,
 				D3160D3A2275B289000180F0 /* Resources */,
-				D3160D112275AEA3000180F0 /* Main.storyboard */,
 			);
 			path = FFPopup_Swift;
 			sourceTree = "<group>";
@@ -143,6 +142,7 @@
 			children = (
 				D3160D142275AEA5000180F0 /* Assets.xcassets */,
 				D3160D192275AEA5000180F0 /* Info.plist */,
+				D33A7209227689E600F0C7F5 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3160D152275AEA5000180F0 /* Assets.xcassets in Resources */,
-				D3160D132275AEA3000180F0 /* Main.storyboard in Resources */,
+				D33A720A227689E600F0C7F5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,14 +540,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D3160D112275AEA3000180F0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3160D122275AEA3000180F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D3A5F73621AF790F005888D9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -729,7 +721,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -749,7 +741,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
