@@ -317,7 +317,7 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
                         finalContainerFrame.origin.x = 0.0;
                         containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleRightMargin;
                         break;
-                    case FFPopupHoricontalLayout_Right:
+                    case FFPopupHorizontalLayout_Right:
                         finalContainerFrame.origin.x = CGRectGetWidth(strongSelf.bounds) - CGRectGetWidth(containerFrame);
                         containerAutoresizingMask = containerAutoresizingMask | UIViewAutoresizingFlexibleLeftMargin;
                         break;

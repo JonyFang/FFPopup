@@ -58,7 +58,7 @@ typedef NS_ENUM(NSUInteger, FFPopupHorizontalLayout) {
     FFPopupHorizontalLayout_LeftOfCenter NS_SWIFT_NAME(leftOfCenter),
     FFPopupHorizontalLayout_Center NS_SWIFT_NAME(center),
     FFPopupHorizontalLayout_RightOfCenter NS_SWIFT_NAME(rightOfCenter),
-    FFPopupHoricontalLayout_Right NS_SWIFT_NAME(right)
+    FFPopupHorizontalLayout_Right NS_SWIFT_NAME(right)
 } NS_SWIFT_NAME(FFPopup.HorizontalLayout);
 
 /**
@@ -95,7 +95,7 @@ struct FFPopupLayout {
 
 typedef struct FFPopupLayout FFPopupLayout;
 
-extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical) NS_SWIFT_NAME(FFpopupLayout(horizontal:vertical:));
+extern FFPopupLayout FFPopupLayoutMake(FFPopupHorizontalLayout horizontal, FFPopupVerticalLayout vertical) NS_SWIFT_NAME(FFPopupLayout(horizontal:vertical:));
 
 extern FFPopupLayout const FFPopupLayout_Center NS_SWIFT_NAME(FFPopupLayout.Center);
 

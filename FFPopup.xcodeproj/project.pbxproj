@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33A72192276A3A800F0C7F5 /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D33A721A2276A3AB00F0C7F5 /* FFPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF1B3521ABC75500C6B2E2 /* FFPopup.m */; };
 		D3DF1B3621ABC75500C6B2E2 /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3DF1B3721ABC75500C6B2E2 /* FFPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF1B3521ABC75500C6B2E2 /* FFPopup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D33A72112276A38500F0C7F5 /* FFPopup_Static.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFPopup_Static.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33A72142276A38500F0C7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DF1B2821ABC73C00C6B2E2 /* FFPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DF1B2C21ABC73C00C6B2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPopup.h; sourceTree = "<group>"; };
@@ -19,6 +23,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D33A720E2276A38500F0C7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3DF1B2521ABC73C00C6B2E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +40,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D33A72122276A38500F0C7F5 /* FFPopup_Static */ = {
+			isa = PBXGroup;
+			children = (
+				D33A72142276A38500F0C7F5 /* Info.plist */,
+			);
+			path = FFPopup_Static;
+			sourceTree = "<group>";
+		};
 		D3DF1B1E21ABC73C00C6B2E2 = {
 			isa = PBXGroup;
 			children = (
 				D3DF1B2A21ABC73C00C6B2E2 /* FFPopup */,
+				D33A72122276A38500F0C7F5 /* FFPopup_Static */,
 				D3DF1B2921ABC73C00C6B2E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				D3DF1B2821ABC73C00C6B2E2 /* FFPopup.framework */,
+				D33A72112276A38500F0C7F5 /* FFPopup_Static.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +87,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D33A720C2276A38500F0C7F5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33A72192276A3A800F0C7F5 /* FFPopup.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3DF1B2321ABC73C00C6B2E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,6 +106,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D33A72102276A38500F0C7F5 /* FFPopup_Static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33A72182276A38500F0C7F5 /* Build configuration list for PBXNativeTarget "FFPopup_Static" */;
+			buildPhases = (
+				D33A720C2276A38500F0C7F5 /* Headers */,
+				D33A720D2276A38500F0C7F5 /* Sources */,
+				D33A720E2276A38500F0C7F5 /* Frameworks */,
+				D33A720F2276A38500F0C7F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFPopup_Static;
+			productName = FFPopup_Static;
+			productReference = D33A72112276A38500F0C7F5 /* FFPopup_Static.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D3DF1B2721ABC73C00C6B2E2 /* FFPopup */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3DF1B3021ABC73C00C6B2E2 /* Build configuration list for PBXNativeTarget "FFPopup" */;
@@ -104,6 +151,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = JonyFang;
 				TargetAttributes = {
+					D33A72102276A38500F0C7F5 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					D3DF1B2721ABC73C00C6B2E2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -122,11 +172,19 @@
 			projectRoot = "";
 			targets = (
 				D3DF1B2721ABC73C00C6B2E2 /* FFPopup */,
+				D33A72102276A38500F0C7F5 /* FFPopup_Static */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D33A720F2276A38500F0C7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3DF1B2621ABC73C00C6B2E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +195,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D33A720D2276A38500F0C7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D33A721A2276A3AB00F0C7F5 /* FFPopup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3DF1B2421ABC73C00C6B2E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +214,64 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D33A72162276A38500F0C7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FFPopup_Static/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Static";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D33A72172276A38500F0C7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 26SQZQ89WS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FFPopup_Static/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonyfang.FFPopup-Static";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D3DF1B2E21ABC73C00C6B2E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -323,6 +447,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D33A72182276A38500F0C7F5 /* Build configuration list for PBXNativeTarget "FFPopup_Static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33A72162276A38500F0C7F5 /* Debug */,
+				D33A72172276A38500F0C7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D3DF1B2221ABC73C00C6B2E2 /* Build configuration list for PBXProject "FFPopup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
