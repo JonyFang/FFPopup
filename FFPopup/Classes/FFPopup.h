@@ -218,7 +218,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Dismiss all the popups in the app.
  */
-+ (void)dismissAllPopups NS_SWIFT_NAME(dismissAll);
++ (void)dismissAllPopups NS_SWIFT_NAME(dismissAll());
 
 /**
  Dismiss the popup for contentView.
