@@ -415,22 +415,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FFPopup/FFPopup.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFPopup.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FFPopup_Swift/Pods-FFPopup_Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C40D7D4500AC4FB69BFDB68 /* [CP] Check Pods Manifest.lock */ = {
@@ -461,24 +454,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FFPopup/FFPopup.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFPopup.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FFPopup_Objc/Pods-FFPopup_Objc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F059A62E969627C2967DC37B /* [CP] Check Pods Manifest.lock */ = {
