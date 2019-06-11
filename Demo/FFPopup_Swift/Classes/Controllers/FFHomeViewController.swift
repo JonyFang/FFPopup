@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class FFHomeViewController: UIViewController {
 
@@ -19,15 +20,19 @@ class FFHomeViewController: UIViewController {
     // MARK: Private Methods
     fileprivate func setupViews() {
         view.backgroundColor = .white
-        let tap = UITapGestureRecognizer(target: self, action: #selector(showPopup))
-        tap.numberOfTapsRequired = 1
-        self.view.addGestureRecognizer(tap)
+        view.addSubview(popButton)
+        
+        popButton.snp.makeConstraints {
+            $0.centerY.equalTo(view.snp_centerY);
+            $0.centerX.equalTo(view.snp_centerX);
+            $0.width.height.equalTo(200);
+        }
     }
     
     @objc fileprivate func showPopup() {
-//        let popup = FFPopup(contentView: self.alertView, showType: .bounceIn, dismissType: .shrinkOut, maskType: .dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: false)
-//        let layout = FFPopupLayout(horizontal: FFPopupHorizontalLayout.horizontalLayout_Center, vertical: .center)
-//        popup.show(with: layout)
+        let popup = FFPopup(contetnView: self.alertView, showType: .bounceIn, dismissType: .shrinkOut, maskType: .dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: false)
+        let layout = FFPopupLayout(horizontal: .center, vertical: .center)
+        popup.show(layout: layout)
     }
     
     // MARK: Properties
@@ -38,6 +43,18 @@ class FFHomeViewController: UIViewController {
         let view = BLCustomContentView(frame: frame)
         view.backgroundColor = .purple
         return view
+    }()
+    fileprivate lazy var popButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Pop", for: .normal)
+        button.setTitle("Pop", for: .selected)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitleColor(UIColor.white, for: .selected)
+        button.backgroundColor = UIColor.blue
+        button.layer.cornerRadius = 100
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(showPopup), for: .touchUpInside)
+        return button
     }()
 
 }
