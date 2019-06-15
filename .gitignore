@@ -1,6 +1,9 @@
 # OS X
 .DS_Store
 
+# Gemfile
+Vender/Bundle/
+
 # Xcode
 
 ## Build generated
