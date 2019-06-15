@@ -101,13 +101,12 @@
 
 ## Example
 
-To run the `Example` project, clone the Repo, and start `Example` in Xcode.
+To run the `FFPopup` project, clone the Repo, and start `FFPopup` in Xcode.
 
 ```bash
 $ git clone https://github.com/JonyFang/FFPopup.git
-$ cd FFPopup/Example
-$ pod install
-$ open FFPopup_Example.xcworkspace
+$ cd Shell && sh install-bundle.sh && sh install-pods.sh && cd ..
+$ open FFPopup.xcworkspace
 ```
 
 ## Installation
@@ -206,11 +205,11 @@ Import the library where you want to use it.
 ```objc
 #import <FFPopup.h>
 
-[[FFPopup popupWithContentView:self.contentView] show];
-
-// Do something...
-
-[FFPopup dismissPopupForView:self.contentView animated: YES];
+- (void)showPopup {
+    FFPopup *popup = [FFPopup popupWithContentView:self.contentView showType:FFPopupShowType_BounceIn dismissType:FFPopupDismissType_ShrinkOut maskType:FFPopupMaskType_Dimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
+    FFPopupLayout layout = FFPopupLayoutMake(FFPopupHorizontalLayout_Center, FFPopupVerticalLayout_Center);
+    [popup showWithLayout:layout];
+}
 ``` 
 
 - Swift
@@ -218,11 +217,11 @@ Import the library where you want to use it.
 ```swift
 import FFPopup
 
-FFPopup.init(contentView:self.contentView).show()
-
-// Do something...
-
-FFPopup.dismiss(for:self.contentView animated:true)
+func showPopup() {
+    let popup = FFPopup(contetnView: self.contentView, showType: .bounceIn, dismissType: .shrinkOut, maskType: .dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: false)
+    let layout = FFPopupLayout(horizontal: .center, vertical: .center)
+    popup.show(layout: layout)
+}
 ```
 
 ## Customization
