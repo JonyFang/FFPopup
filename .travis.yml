@@ -7,11 +7,12 @@ podfile: Demo/Podfile
 before_install:
   - env
   - locale
+  - bundle install
   - gem install cocoapods --no-document --quiet
   - gem install xcpretty --no-document --quiet
-  - pod --version
-  - pod setup --silent > /dev/null
-  - pod repo update --silent
+  - bundler exec pod --version
+  - bundler exec pod setup --silent > /dev/null
+  - bundler exec pod repo update --silent
   - xcpretty --version
   - xcodebuild -version
   - xcodebuild -showsdks
