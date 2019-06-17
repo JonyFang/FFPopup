@@ -105,6 +105,7 @@ To run the `FFPopup` project, clone the Repo, and start `FFPopup` in Xcode.
 
 ```bash
 $ git clone https://github.com/JonyFang/FFPopup.git
+$ cd FFPopup
 $ cd Shell && sh install-bundle.sh && sh install-pods.sh && cd ..
 $ open FFPopup.xcworkspace
 ```
