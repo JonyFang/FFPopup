@@ -210,7 +210,7 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
             if (!strongSelf.superview) {
                 NSEnumerator *reverseWindows = [[[UIApplication sharedApplication] windows] reverseObjectEnumerator];
                 for (UIWindow *window in reverseWindows) {
-                    if (window.windowLevel == UIWindowLevelNormal) {
+                    if (window.windowLevel == UIWindowLevelNormal && !window.hidden) {
                         [window addSubview:self];
                         break;
                     }
