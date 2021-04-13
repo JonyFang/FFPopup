@@ -30,7 +30,7 @@ class FFHomeViewController: UIViewController {
     }
     
     @objc fileprivate func showPopup() {
-        let popup = FFPopup(contetnView: self.alertView, showType: .bounceIn, dismissType: .shrinkOut, maskType: .dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: false)
+        let popup = FFPopup(contentView: self.alertView, showType: .bounceIn, dismissType: .shrinkOut, maskType: .dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: false)
         let layout = FFPopupLayout(horizontal: .center, vertical: .center)
         popup.show(layout: layout)
     }
