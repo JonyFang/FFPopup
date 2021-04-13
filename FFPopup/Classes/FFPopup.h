@@ -213,7 +213,7 @@ NS_ASSUME_NONNULL_BEGIN
                       dismissType:(FFPopupDismissType)dismissType
                          maskType:(FFPopupMaskType)maskType
          dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch
-            dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch NS_SWIFT_NAME(init(contetnView:showType:dismissType:maskType:dismissOnBackgroundTouch:dismissOnContentTouch:));
+            dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch NS_SWIFT_NAME(init(contentView:showType:dismissType:maskType:dismissOnBackgroundTouch:dismissOnContentTouch:));
 
 /**
  Dismiss all the popups in the app.
