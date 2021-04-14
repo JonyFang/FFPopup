@@ -88,7 +88,7 @@
 	- [x] Allow interaction with underlying view
 	- [x] Don't allow interaction with underlying view
 	- [x] Don't allow interaction with underlying view, dim background
-	- [ ] Don't allow interaction with underlying view, blur background
+	- [x] Don't allow interaction with underlying view, blur background
 	- [ ] Support custom
 
 - Others
@@ -425,7 +425,6 @@ Create a new popup with custom values.
 
 This is the to-do list for the `FFPopup` project. You can join us to become a contributor.
 
-- [ ] Support blur option for background mask
 - [ ] Support for keyboard show/hide
 - [ ] Support for drag-to-dismiss
 

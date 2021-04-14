@@ -228,6 +228,18 @@ const FFPopupLayout FFPopupLayout_Center = { FFPopupHorizontalLayout_Center, FFP
             strongSelf.backgroundView.alpha = 0.0;
             if (strongSelf.maskType == FFPopupMaskType_Dimmed) {
                 strongSelf.backgroundView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:strongSelf.dimmedMaskAlpha];
+            } else if (strongSelf.maskType == FFPopupMaskType_BlurLight) {
+                UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+                UIVisualEffectView *visualBlur = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+                visualBlur.frame = strongSelf.backgroundView.frame;
+                [visualBlur.contentView addSubview:strongSelf.backgroundView];
+                [self insertSubview:visualBlur belowSubview:strongSelf.containerView];
+            } else if (strongSelf.maskType == FFPopupMaskType_BlurDark) {
+                UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+                UIVisualEffectView *visualBlur = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+                visualBlur.frame = strongSelf.backgroundView.frame;
+                [visualBlur.contentView addSubview:strongSelf.backgroundView];
+                [self insertSubview:visualBlur belowSubview:strongSelf.containerView];
             } else {
                 strongSelf.backgroundView.backgroundColor = UIColor.clearColor;
             }

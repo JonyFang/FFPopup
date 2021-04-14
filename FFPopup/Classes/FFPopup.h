@@ -84,7 +84,11 @@ typedef NS_ENUM(NSUInteger, FFPopupMaskType) {
     /// Don't allow interaction with underlying view.
     FFPopupMaskType_Clear NS_SWIFT_NAME(clear),
     /// Don't allow interaction with underlying view, dim background.
-    FFPopupMaskType_Dimmed NS_SWIFT_NAME(dimmed)
+    FFPopupMaskType_Dimmed NS_SWIFT_NAME(dimmed),
+    /// Don't allow interaction with underlying view, blurred background
+    FFPopupMaskType_BlurLight NS_SWIFT_NAME(blurLight),
+    /// Don't allow interaction with underlying view, blurred background
+    FFPopupMaskType_BlurDark NS_SWIFT_NAME(blurDark),
 } NS_SWIFT_NAME(FFPopup.MaskType);
 
 /** FFPopupLayout */
