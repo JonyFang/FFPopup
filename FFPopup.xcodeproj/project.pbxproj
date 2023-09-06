@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0DDF29D2AA8428C009EF717 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDF29C2AA8428B009EF717 /* Package.swift */; };
 		D33A72192276A3A800F0C7F5 /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D33A721A2276A3AB00F0C7F5 /* FFPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DF1B3521ABC75500C6B2E2 /* FFPopup.m */; };
 		D3DF1B3621ABC75500C6B2E2 /* FFPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DF1B3421ABC75500C6B2E2 /* FFPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0DDF29C2AA8428B009EF717 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		D33A72112276A38500F0C7F5 /* FFPopup_Static.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFPopup_Static.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33A72142276A38500F0C7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DF1B2821ABC73C00C6B2E2 /* FFPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 		D3DF1B1E21ABC73C00C6B2E2 = {
 			isa = PBXGroup;
 			children = (
+				B0DDF29C2AA8428B009EF717 /* Package.swift */,
 				D3DF1B2A21ABC73C00C6B2E2 /* FFPopup */,
 				D33A72122276A38500F0C7F5 /* FFPopup_Static */,
 				D3DF1B2921ABC73C00C6B2E2 /* Products */,
@@ -156,6 +159,7 @@
 					};
 					D3DF1B2721ABC73C00C6B2E2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -207,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0DDF29D2AA8428C009EF717 /* Package.swift in Sources */,
 				D3DF1B3721ABC75500C6B2E2 /* FFPopup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +398,7 @@
 		D3DF1B3121ABC73C00C6B2E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -413,6 +419,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonyfang.FFPopup;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -420,6 +428,7 @@
 		D3DF1B3221ABC73C00C6B2E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -440,6 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonyfang.FFPopup;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
